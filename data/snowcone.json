@@ -1,0 +1,169 @@
+{
+  "game": "Snowcone Stand",
+  "slug": "snowcone-stand",
+  "developer": "Independent Roblox experience (fan tools by MiniGameWiki)",
+  "robloxUrl": "https://www.roblox.com/",
+  "description": "Run a snowcone stand in Roblox: unlock flavors, stack mutations, time your blender, and climb the economy.",
+  "perfectMult": 1.5,
+  "codes": [],
+  "codesLastChecked": "2026-07-29",
+  "codesNote": "As of the last check date, there are no active public promo codes for Snowcone Stand. We do not invent codes. This page will be updated when verified codes appear.",
+  "flavors": [
+    { "id": "vanilla", "name": "Vanilla", "tier": "C", "baseValue": 10, "unlock": "Starter", "notes": "Reliable early cash." },
+    { "id": "strawberry", "name": "Strawberry", "tier": "B", "baseValue": 18, "unlock": "Level 5", "notes": "Solid mid-early pick." },
+    { "id": "blueberry", "name": "Blueberry", "tier": "B", "baseValue": 22, "unlock": "Level 8", "notes": "Slightly slower blend, higher payout." },
+    { "id": "mango", "name": "Mango", "tier": "A", "baseValue": 35, "unlock": "Level 12", "notes": "Best mid-game cash per blend." },
+    { "id": "mint-chip", "name": "Mint Chip", "tier": "A", "baseValue": 40, "unlock": "Level 15", "notes": "Pairs well with cool mutations." },
+    { "id": "rainbow", "name": "Rainbow", "tier": "S", "baseValue": 75, "unlock": "Late unlock / event", "notes": "Top-tier base before mutations." },
+    { "id": "void-berry", "name": "Void Berry", "tier": "S", "baseValue": 90, "unlock": "Endgame", "notes": "Highest base; watch blend time." }
+  ],
+  "mutations": [
+    { "id": "none", "name": "None", "reduceMult": 1, "rarity": "Common", "notes": "No mutation applied." },
+    { "id": "frosted", "name": "Frosted", "reduceMult": 1.15, "rarity": "Uncommon", "notes": "Mild value bump." },
+    { "id": "sparkling", "name": "Sparkling", "reduceMult": 1.35, "rarity": "Rare", "notes": "Strong mid-tier mutation." },
+    { "id": "golden", "name": "Golden", "reduceMult": 1.75, "rarity": "Epic", "notes": "Excellent for farming." },
+    { "id": "prismatic", "name": "Prismatic", "reduceMult": 2.25, "rarity": "Legendary", "notes": "Best common endgame mut." },
+    { "id": "cursed", "name": "Cursed", "reduceMult": 0.85, "rarity": "Special", "notes": "Lower value but may unlock niche recipes." }
+  ],
+  "totems": [
+    { "id": "none", "name": "No Totem", "stackMult": 1, "notes": "Baseline." },
+    { "id": "sugar", "name": "Sugar Totem", "stackMult": 1.1, "notes": "+10% unit value." },
+    { "id": "ice", "name": "Ice Totem", "stackMult": 1.2, "notes": "+20% unit value." },
+    { "id": "festival", "name": "Festival Totem", "stackMult": 1.35, "notes": "Event / premium stack." },
+    { "id": "dual", "name": "Dual Stack (Ice+Sugar)", "stackMult": 1.32, "notes": "Approximate combined stack when both apply." }
+  ],
+  "tierList": {
+    "updatedAt": "2026-07-29",
+    "summary": "Tiers reflect mid-to-late game cash efficiency assuming Perfect Blend and at least Sparkling mutation. Early game, prefer unlock order over raw tier.",
+    "ranks": [
+      { "tier": "S", "items": ["Rainbow", "Void Berry", "Prismatic mutation", "Festival Totem"] },
+      { "tier": "A", "items": ["Mango", "Mint Chip", "Golden mutation", "Ice Totem"] },
+      { "tier": "B", "items": ["Blueberry", "Strawberry", "Sparkling mutation", "Sugar Totem"] },
+      { "tier": "C", "items": ["Vanilla", "Frosted mutation", "No Totem"] },
+      { "tier": "D", "items": ["Cursed mutation (cash farming)"] }
+    ]
+  },
+  "guides": [
+    {
+      "slug": "beginner-economy-loop",
+      "title": "Beginner Economy Loop: First Hour in Snowcone Stand",
+      "updatedAt": "2026-07-28",
+      "excerpt": "A clear first-hour plan: unlock order, when to chase Perfect Blend, and how not to waste early cash on vanity upgrades.",
+      "content": [
+        "Snowcone Stand rewards players who treat the blender as a timed economy, not a spam button. Your first hour should prioritize consistent Perfect Blends and unlocking the next flavor tier before cosmetic spending.",
+        "## Unlock priority",
+        "- Buy the next flavor unlock before decorative stand pieces.",
+        "- Keep at least one upgrade path aimed at blend time reduction.",
+        "- Ignore rare mutations until your base flavor is at least mid-tier.",
+        "## Perfect Blend habit",
+        "A Perfect Blend multiplies unit value by **1.5**. Missing the window repeatedly costs more than a slightly slower flavor with reliable timing.",
+        "## Cash checkpoints",
+        "Aim to reach Strawberry or Blueberry before heavy totem investment. Totems amplify what you already produce; they do not fix a weak base loop.",
+        "Once you can land Perfect Blends on autopilot, move to the Blender Planner on this site and test Mango with Sparkling versus Blueberry with Golden."
+      ]
+    },
+    {
+      "slug": "perfect-blend-timing",
+      "title": "Perfect Blend Timing: How the 1.5x Window Works",
+      "updatedAt": "2026-07-27",
+      "excerpt": "Why Perfect Blend is the highest-ROI skill in Snowcone Stand and how to practice the timing window without burning ingredients.",
+      "content": [
+        "Perfect Blend is the single most important multiplier you control every cycle. The planner on MiniGameWiki models it as a flat **1.5x** on base value before mutations and totems.",
+        "## Why timing beats raw base",
+        "A mid-tier flavor with consistent Perfect Blends often outpaces a higher base flavor with sloppy timing. Unit value is:",
+        "unit = base × (perfect ? 1.5 : 1) × mutation × totem",
+        "## Practice drill",
+        "- Run ten Vanilla blends focusing only on the Perfect window.",
+        "- Then raise blend speed one notch and repeat.",
+        "- Log your Perfect rate; if it drops below ~70%, slow the blender back down.",
+        "## Planner tip",
+        "Use per-second output (unit ÷ blend time) when comparing setups. A higher unit with a much longer blend can lose to a lower unit with faster cycles."
+      ]
+    },
+    {
+      "slug": "mutation-stacking-guide",
+      "title": "Mutation Stacking Guide for Mid-Game Farms",
+      "updatedAt": "2026-07-26",
+      "excerpt": "Which mutations are worth chasing, when Cursed is a trap, and how mutation multipliers interact with Perfect Blend.",
+      "content": [
+        "Mutations multiply after Perfect Blend in our model. That means Perfect + Golden is multiplicative, not additive — missing Perfect hurts more once you invest in rare muts.",
+        "## Recommended chase order",
+        "- Frosted for early learning (cheap, mild).",
+        "- Sparkling as the default mid-game farm mut.",
+        "- Golden when your flavor base is Mango or higher.",
+        "- Prismatic for endgame Rainbow / Void Berry lines.",
+        "## Cursed caveat",
+        "Cursed reduces cash efficiency. Only keep it if a quest, recipe, or collection goal explicitly requires it.",
+        "## Table workflow",
+        "Open the Flavor × Mutation table, filter by the flavors you own, and mark any combination whose planner per-second beats your current stand setup by 15% or more."
+      ]
+    },
+    {
+      "slug": "totem-efficiency",
+      "title": "Totem Efficiency: When Stacks Are Worth the Cost",
+      "updatedAt": "2026-07-25",
+      "excerpt": "Sugar, Ice, and Festival totems explained with simple break-even thinking so you do not overspend for a tiny stack.",
+      "content": [
+        "Totems apply last in the unit formula. They scale everything you already do right — and everything you do wrong.",
+        "## Simple break-even",
+        "If a totem costs a large cash dump, estimate how many blends you need at the new stackMult to recover that cost. Use the Blender Planner: note unit before and after, then divide cost by the unit delta.",
+        "## Stack choices",
+        "- Sugar Totem: cheap starter stack.",
+        "- Ice Totem: better default once mid-game cash is stable.",
+        "- Festival Totem: best raw mult; buy when you will actively farm for a long session.",
+        "- Dual Stack: use the planner's Dual option as an approximation when multiple buffs apply.",
+        "Do not buy a premium totem to \"fix\" a low Perfect rate. Fix timing first."
+      ]
+    },
+    {
+      "slug": "flavor-tier-explainer",
+      "title": "How We Rank Flavors (And When to Ignore the Tier List)",
+      "updatedAt": "2026-07-24",
+      "excerpt": "Our S–D flavor tiers assume Perfect Blend and mid mutations. Early unlock order can beat the published list.",
+      "content": [
+        "Tier lists are decision aids, not absolute truth. Snowcone Stand progression gates matter more than theoretical S-tier until you can actually craft those flavors.",
+        "## Our assumptions",
+        "- Perfect Blend available and practiced.",
+        "- At least Sparkling mutation for mid/late rankings.",
+        "- Per-second thinking, not peak unit alone.",
+        "## When to ignore tiers",
+        "- First hour: follow unlock price, not S-tier.",
+        "- Questlines that force specific flavors.",
+        "- Event-only ingredients that change temporary value.",
+        "Cross-check any upgrade with the Blender Planner before spending a large cash pile."
+      ]
+    },
+    {
+      "slug": "codes-policy",
+      "title": "Our Codes Policy: No Fake Promo Codes",
+      "updatedAt": "2026-07-23",
+      "excerpt": "Why the codes page may be empty, how we verify drops, and how to report a working code.",
+      "content": [
+        "Many Roblox wiki sites list expired or invented codes. MiniGameWiki does not. If our Snowcone Stand codes table is empty, that is an honest status — not a missing page.",
+        "## Verification rules",
+        "- A code must be publicly announced or reproducibly redeemable.",
+        "- Expired codes are removed, not grayed out forever as clickbait.",
+        "- We record a last-checked date on the codes page.",
+        "## Found a code?",
+        "Use the Contact page with the code text, where you saw it, and whether it still redeems. We will verify before publishing.",
+        "Subscribe to the codes page (bookmark it) rather than trusting random social screenshots."
+      ]
+    },
+    {
+      "slug": "endgame-farm-route",
+      "title": "Endgame Farm Route: Rainbow and Void Berry Setups",
+      "updatedAt": "2026-07-22",
+      "excerpt": "Two practical endgame blender setups and how to compare them with per-second math.",
+      "content": [
+        "Late game is a comparison problem: Rainbow with Prismatic versus Void Berry with Golden can flip depending on blend time and totem stack.",
+        "## Setup A — Rainbow Prismatic",
+        "High base, legendary mut, Festival totem if affordable. Watch blend duration; if Perfect rate falls, this setup loses hard.",
+        "## Setup B — Void Berry Golden",
+        "Slightly different base/mut tradeoff. Plug both into the Blender Planner with the same Perfect toggle and totem.",
+        "## Decision rule",
+        "Choose the higher **per-second** figure at your real Perfect success rate. If you Perfect only half the time, model half your blends at 1.0x and half at 1.5x mentally, or run the planner twice and average.",
+        "Revisit the tier list after any major balance patch; numbers here are fan-maintained planning aids."
+      ]
+    }
+  ]
+}

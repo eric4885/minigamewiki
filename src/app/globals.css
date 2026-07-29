@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply min-h-screen bg-bg font-sans text-fg antialiased;
+}
+
+a {
+  @apply text-inherit;
+}
+
+::selection {
+  @apply bg-brand/30 text-fg;
+}
