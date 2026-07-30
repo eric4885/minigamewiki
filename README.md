@@ -33,3 +33,20 @@ Site URL: https://minigamewiki.com
 ## Content
 
 All Snowcone Stand data lives in `data/snowcone.json`. Pages import JSON only — no filesystem markdown reads.
+
+## Optional env (Cloudflare Pages)
+
+See `.env.example`:
+
+- `NEXT_PUBLIC_GA_MEASUREMENT_ID` — enables GA4
+- `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` — optional GSC meta tag (DNS TXT is preferred)
+
+Rebuild after changing env vars.
+
+## Post-deploy checklist (manual)
+
+1. Cloudflare Email Routing for `hello@minigamewiki.com`
+2. Google Search Console — verify domain + submit `/sitemap.xml`
+3. Create GA4 property → set env → redeploy
+4. Prefer cancelling `minigameviki.com`; if kept, 301 to `minigamewiki.com`
+5. Pick apex or `www` as canonical and 301 the other in Cloudflare

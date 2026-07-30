@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
+import { RelatedLinks } from "@/components/RelatedLinks";
+import { SiteDisclaimer } from "@/components/SiteDisclaimer";
 import {
   getAllGuideSlugs,
   getGuideBySlug,
@@ -32,6 +34,9 @@ export async function generateMetadata({
   return {
     title: guide.title,
     description: guide.excerpt,
+    alternates: {
+      canonical: `/games/snowcone-stand/guides/${guide.slug}`,
+    },
   };
 }
 
@@ -86,6 +91,8 @@ export default async function GuideArticlePage({ params }: PageProps) {
         <p className="mt-4 text-muted">{guide.excerpt}</p>
       </div>
       <div dangerouslySetInnerHTML={{ __html: html }} />
+      <SiteDisclaimer className="pt-4" />
+      <RelatedLinks />
     </article>
   );
 }

@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { CONTACT_EMAIL } from "@/lib/snowcone";
 
 export const metadata: Metadata = {
   title: "Terms of Use",
   description: "Terms of Use for MiniGameWiki.com.",
+  alternates: { canonical: "/terms" },
 };
 
 export default function TermsPage() {
   return (
     <article className="space-y-6 text-muted">
       <h1 className="text-3xl font-semibold text-fg">Terms of Use</h1>
-      <p className="text-sm">Last updated: July 29, 2026</p>
+      <p className="text-sm">Last updated: July 30, 2026</p>
 
       <p>
         By accessing MiniGameWiki.com (the &quot;Site&quot;), you agree to these
@@ -45,6 +48,15 @@ export default function TermsPage() {
         not present our work as official Roblox or game-developer material.
       </p>
 
+      <h2 className="text-xl font-semibold text-fg">Copyright complaints</h2>
+      <p>
+        Rights holders should follow the process on our{" "}
+        <Link href="/dmca" className="text-accent hover:underline">
+          DMCA page
+        </Link>
+        .
+      </p>
+
       <h2 className="text-xl font-semibold text-fg">Limitation of Liability</h2>
       <p>
         To the fullest extent permitted by law, MiniGameWiki is not liable for
@@ -55,8 +67,11 @@ export default function TermsPage() {
       <h2 className="text-xl font-semibold text-fg">Contact</h2>
       <p>
         Questions about these Terms:{" "}
-        <a href="mailto:hello@minigamewiki.com" className="text-accent hover:underline">
-          hello@minigamewiki.com
+        <a
+          href={`mailto:${CONTACT_EMAIL}`}
+          className="text-accent hover:underline"
+        >
+          {CONTACT_EMAIL}
         </a>
         .
       </p>

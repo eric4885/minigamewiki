@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { CONTACT_EMAIL } from "@/lib/snowcone";
 
 export const metadata: Metadata = {
   title: "About",
   description:
     "About MiniGameWiki — independent Roblox mini-game tools and guides, starting with Snowcone Stand.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
@@ -22,6 +25,15 @@ export default function AboutPage() {
         verify in-game after patches.
       </p>
 
+      <h2 className="text-xl font-semibold text-fg">Who maintains this site</h2>
+      <p className="text-muted">
+        MiniGameWiki is maintained by an independent editor-operator (published
+        under the MiniGameWiki name). We aim to review Snowcone Stand numbers and
+        the codes page at least weekly, and after major game patches when we are
+        aware of them. There is no separate corporate newsroom behind these
+        pages.
+      </p>
+
       <h2 className="text-xl font-semibold text-fg">
         Independent Author Statement
       </h2>
@@ -37,8 +49,18 @@ export default function AboutPage() {
           MiniGameWiki for informational and entertainment purposes only. We do
           not claim official status, do not sell Roblox accounts or items, and
           do not guarantee in-game outcomes. If you are a rights holder and
-          believe content should be corrected or removed, contact us via the
-          Contact page and we will respond promptly.
+          believe content should be corrected or removed, contact us via the{" "}
+          <Link href="/dmca" className="text-accent hover:underline">
+            DMCA
+          </Link>{" "}
+          page or{" "}
+          <a
+            href={`mailto:${CONTACT_EMAIL}`}
+            className="text-accent hover:underline"
+          >
+            {CONTACT_EMAIL}
+          </a>{" "}
+          and we will respond promptly.
         </p>
       </blockquote>
     </article>

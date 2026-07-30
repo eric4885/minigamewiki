@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Roblox Snowcone Stand Tools & Calculators",
   description:
     "Free Snowcone Stand tools for Roblox: blender planner, flavor × mutation table, tier list, codes tracker, and guides.",
+  alternates: { canonical: "/" },
 };
 
 const tools = [

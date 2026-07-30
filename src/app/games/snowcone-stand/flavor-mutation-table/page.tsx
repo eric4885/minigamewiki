@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { RelatedLinks } from "@/components/RelatedLinks";
+import { SiteDisclaimer } from "@/components/SiteDisclaimer";
 import { Table, Td } from "@/components/ui/Table";
 import { snowcone } from "@/lib/snowcone";
 
@@ -7,6 +9,7 @@ export const metadata: Metadata = {
   title: "Flavor × Mutation Table",
   description:
     "Snowcone Stand flavor base values and mutation multipliers in one reference table for Roblox players.",
+  alternates: { canonical: "/games/snowcone-stand/flavor-mutation-table" },
 };
 
 export default function FlavorMutationTablePage() {
@@ -77,6 +80,9 @@ export default function FlavorMutationTablePage() {
           ))}
         </Table>
       </section>
+
+      <SiteDisclaimer />
+      <RelatedLinks excludeHref="/games/snowcone-stand/flavor-mutation-table" />
     </div>
   );
 }

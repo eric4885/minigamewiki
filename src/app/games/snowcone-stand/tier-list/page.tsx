@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { RelatedLinks } from "@/components/RelatedLinks";
+import { SiteDisclaimer } from "@/components/SiteDisclaimer";
 import { Card } from "@/components/ui/Card";
 import { snowcone } from "@/lib/snowcone";
 
@@ -7,6 +9,7 @@ export const metadata: Metadata = {
   title: "Snowcone Stand Tier List",
   description:
     "Snowcone Stand S–D tier list for flavors, mutations, and totems with clear ranking assumptions.",
+  alternates: { canonical: "/games/snowcone-stand/tier-list" },
 };
 
 export default function TierListPage() {
@@ -64,6 +67,9 @@ export default function TierListPage() {
           </Card>
         ))}
       </div>
+
+      <SiteDisclaimer />
+      <RelatedLinks excludeHref="/games/snowcone-stand/tier-list" />
     </div>
   );
 }

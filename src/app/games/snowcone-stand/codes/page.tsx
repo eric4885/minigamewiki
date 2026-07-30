@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
+import { RelatedLinks } from "@/components/RelatedLinks";
+import { SiteDisclaimer } from "@/components/SiteDisclaimer";
 import { Table, Td } from "@/components/ui/Table";
 import { SITE_URL, snowcone } from "@/lib/snowcone";
 
@@ -8,6 +11,7 @@ export const metadata: Metadata = {
   title: "Snowcone Stand Codes",
   description:
     "Verified Snowcone Stand codes for Roblox. We list only confirmed codes — the table stays empty when none are active.",
+  alternates: { canonical: "/games/snowcone-stand/codes" },
 };
 
 export default function CodesPage() {
@@ -39,12 +43,13 @@ export default function CodesPage() {
       <JsonLd data={dataCatalogLd} />
 
       <div>
-        <p className="text-sm text-brand">
-          <Link href="/games/snowcone-stand" className="hover:underline">
-            {snowcone.game}
-          </Link>{" "}
-          / Codes
-        </p>
+        <Breadcrumbs
+          items={[
+            { href: "/games", label: "Games" },
+            { href: "/games/snowcone-stand", label: snowcone.game },
+            { label: "Codes" },
+          ]}
+        />
         <h1 className="mt-2 text-3xl font-semibold text-fg">
           Snowcone Stand Codes
         </h1>
@@ -55,9 +60,14 @@ export default function CodesPage() {
           around untrusted links. This page exists to answer one question
           honestly: are there any verified public codes right now? We do not
           fabricate entries to look &quot;complete.&quot; When the table is empty,
-          that is the status — not a broken page. Bookmark this hub, check the
-          last-reviewed date, and use Contact if you have a code we can
-          independently redeem and confirm before publishing.
+          that is the status — not a broken page. See also{" "}
+          <Link
+            href="/games/snowcone-stand/how-to-redeem-codes"
+            className="text-accent hover:underline"
+          >
+            how to redeem codes
+          </Link>
+          .
         </p>
       </div>
 
@@ -95,6 +105,9 @@ export default function CodesPage() {
           ))
         )}
       </Table>
+
+      <SiteDisclaimer />
+      <RelatedLinks excludeHref="/games/snowcone-stand/codes" />
     </div>
   );
 }

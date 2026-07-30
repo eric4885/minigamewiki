@@ -37,12 +37,19 @@ export type TierRank = {
   items: string[];
 };
 
+export type ChangelogEntry = {
+  date: string;
+  items: string[];
+};
+
 export type SnowconeData = {
   game: string;
   slug: string;
   developer: string;
   robloxUrl: string;
+  robloxSearchUrl: string;
   description: string;
+  dataReviewedAt: string;
   perfectMult: number;
   codes: { code: string; reward: string; status: string }[];
   codesLastChecked: string;
@@ -56,10 +63,12 @@ export type SnowconeData = {
     ranks: TierRank[];
   };
   guides: Guide[];
+  changelog: ChangelogEntry[];
 };
 
 export const SITE_URL = "https://minigamewiki.com";
 export const SITE_NAME = "MiniGameWiki";
+export const CONTACT_EMAIL = "hello@minigamewiki.com";
 
 export const snowcone = data as SnowconeData;
 

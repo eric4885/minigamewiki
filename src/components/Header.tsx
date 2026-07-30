@@ -1,11 +1,5 @@
 import Link from "next/link";
-
-const nav = [
-  { href: "/", label: "Home" },
-  { href: "/games", label: "Games" },
-  { href: "/games/snowcone-stand", label: "Snowcone Stand" },
-  { href: "/about", label: "About" },
-];
+import { NavLinks } from "@/components/NavLinks";
 
 export function Header() {
   return (
@@ -14,17 +8,7 @@ export function Header() {
         <Link href="/" className="font-semibold tracking-tight text-fg">
           <span className="text-brand">Mini</span>GameWiki
         </Link>
-        <nav className="flex flex-wrap items-center justify-end gap-x-4 gap-y-1 text-sm text-muted">
-          {nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="transition hover:text-brand"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+        <NavLinks />
       </div>
     </header>
   );

@@ -2,12 +2,29 @@
   "game": "Snowcone Stand",
   "slug": "snowcone-stand",
   "developer": "Independent Roblox experience (fan tools by MiniGameWiki)",
-  "robloxUrl": "https://www.roblox.com/",
+  "robloxUrl": "https://www.roblox.com/discover/?Keyword=Snowcone%20Stand",
+  "robloxSearchUrl": "https://www.roblox.com/discover/?Keyword=Snowcone%20Stand",
   "description": "Run a snowcone stand in Roblox: unlock flavors, stack mutations, time your blender, and climb the economy.",
+  "dataReviewedAt": "2026-07-30",
   "perfectMult": 1.5,
   "codes": [],
-  "codesLastChecked": "2026-07-29",
+  "codesLastChecked": "2026-07-30",
   "codesNote": "As of the last check date, there are no active public promo codes for Snowcone Stand. We do not invent codes. This page will be updated when verified codes appear.",
+  "changelog": [
+    {
+      "date": "2026-07-30",
+      "items": [
+        "Site hardening: FAQ, redeem-codes guide, changelog, DMCA page, SEO metadata, and trust disclaimers.",
+        "Codes last-checked date refreshed; still no verified active codes."
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "items": [
+        "Initial public data set: flavors, mutations, totems, tier list, blender formula, and starter guides."
+      ]
+    }
+  ],
   "flavors": [
     { "id": "vanilla", "name": "Vanilla", "tier": "C", "baseValue": 10, "unlock": "Starter", "notes": "Reliable early cash." },
     { "id": "strawberry", "name": "Strawberry", "tier": "B", "baseValue": 18, "unlock": "Level 5", "notes": "Solid mid-early pick." },

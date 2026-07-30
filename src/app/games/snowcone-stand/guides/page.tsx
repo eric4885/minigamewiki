@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { RelatedLinks } from "@/components/RelatedLinks";
+import { SiteDisclaimer } from "@/components/SiteDisclaimer";
 import { Card } from "@/components/ui/Card";
 import { getGuidesSorted, snowcone } from "@/lib/snowcone";
 
@@ -7,6 +9,7 @@ export const metadata: Metadata = {
   title: "Snowcone Stand Guides",
   description:
     "Snowcone Stand guides for Roblox: economy loops, Perfect Blend timing, mutations, totems, and endgame farms.",
+  alternates: { canonical: "/games/snowcone-stand/guides" },
 };
 
 export default function GuidesIndexPage() {
@@ -53,6 +56,9 @@ export default function GuidesIndexPage() {
           </li>
         ))}
       </ul>
+
+      <SiteDisclaimer />
+      <RelatedLinks excludeHref="/games/snowcone-stand/guides" />
     </div>
   );
 }
