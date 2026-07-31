@@ -7,16 +7,34 @@ function escapeHtml(text: string): string {
     .replace(/'/g, "&#39;");
 }
 
-/** Convert **bold** segments to <b> after escaping. */
+/**
+ * Inline: [label](/path) or http(s) links → <a>, then **bold** → <b>.
+ * Links are extracted before HTML escape so brackets survive.
+ */
 function formatInline(text: string): string {
-  const escaped = escapeHtml(text);
-  return escaped.replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
+  const slots: string[] = [];
+  const marked = text.replace(
+    /\[([^\]]+)\]\(((?:\/|https?:\/\/)[^)\s]+)\)/g,
+    (_m, label: string, href: string) => {
+      const i = slots.length;
+      slots.push(
+        `<a href="${escapeHtml(href)}" class="text-accent hover:underline">${escapeHtml(label)}</a>`
+      );
+      return `%%LINK${i}%%`;
+    }
+  );
+
+  let html = escapeHtml(marked).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
+  slots.forEach((anchor, i) => {
+    html = html.replace(`%%LINK${i}%%`, anchor);
+  });
+  return html;
 }
 
 /**
  * Render guide content blocks from JSON string[].
  * Supports: ## heading → h2, - item → li (grouped), otherwise → p.
- * Inline **bold** → <b>. No react-markdown.
+ * Inline **bold** and [label](/path) links. No react-markdown.
  */
 export function renderBlocks(blocks: string[]): string {
   const html: string[] = [];
