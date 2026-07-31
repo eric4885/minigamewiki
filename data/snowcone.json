@@ -14,6 +14,7 @@
     {
       "date": "2026-07-30",
       "items": [
+        "Added in-guide internal links between tools and related articles; markdown link rendering in guides.",
         "Added three guides: faster cash, beginner mistakes, and mutations in plain English.",
         "Site hardening: FAQ, redeem-codes guide, changelog, DMCA page, SEO metadata, and trust disclaimers.",
         "Codes last-checked date refreshed; still no verified active codes."
@@ -75,15 +76,15 @@
         "If you have a choice between a tiny blend-time upgrade and a decoration, take the speed. Shorter cycles mean more chances to hit Perfect in the same play session.",
         "Skip expensive totems until your flavor is at least mid-tier and you’re landing Perfect more often than not. Totems multiply whatever you’re already doing — including mistakes.",
         "## Perfect is the real money skill",
-        "On our planner, Perfect is modeled as a **1.5×** bump on unit value. That’s not a small bonus. Two players with the same flavor can end a night far apart just on timing.",
-        "If you’re missing the window constantly, slow down. A slightly slower blender with a high Perfect rate usually prints more than a fast one you keep flubbing.",
+        "On our [Blender Planner](/games/snowcone-stand/blender-planner), Perfect is modeled as a **1.5×** bump on unit value. That’s not a small bonus. Two players with the same flavor can end a night far apart just on timing.",
+        "If you’re missing the window constantly, slow down. A slightly slower blender with a high Perfect rate usually prints more than a fast one you keep flubbing. We wrote a short [Perfect Blend timing](/games/snowcone-stand/guides/perfect-blend-timing) note if you want drills.",
         "## A simple cash routine",
         "- Warm up on Vanilla or your current unlock until Perfect feels automatic.",
         "- Dump earnings into the next flavor unlock, then repeat.",
-        "- Once you’re on something like Mango, open the Blender Planner and compare setups with your real blend time.",
-        "Don’t wait for a mythical code dump to “fix” your economy. If our codes page is empty, that’s the honest status — keep farming.",
+        "- Once you’re on something like Mango, open the [Blender Planner](/games/snowcone-stand/blender-planner) and compare setups with your real blend time.",
+        "Don’t wait for a mythical code dump to “fix” your economy. If our [codes page](/games/snowcone-stand/codes) is empty, that’s the honest status — keep farming.",
         "## When the numbers lie",
-        "Patches move values. If a flavor suddenly feels weak, check the table again and re-run the planner. Treat this site as a worksheet, not a promise."
+        "Patches move values. If a flavor suddenly feels weak, check the [flavor table](/games/snowcone-stand/flavor-mutation-table) again and re-run the planner. Treat this site as a worksheet, not a promise."
       ]
     },
     {
@@ -97,15 +98,15 @@
         "Pretty stands don’t raise base value. Unlock the next flavor when you can. Decorate after the economy isn’t gasping.",
         "## 2. Treating Perfect like a nice-to-have",
         "Missing Perfect isn’t “almost as good.” At **1.5×**, it’s the difference between a session that snowballs and one that feels stuck.",
-        "If your Perfect rate is rough, practice on a cheap flavor before you buy speed upgrades that make the window harder.",
+        "If your Perfect rate is rough, practice on a cheap flavor before you buy speed upgrades that make the window harder. See [Perfect Blend timing](/games/snowcone-stand/guides/perfect-blend-timing).",
         "## 3. Totems on a weak loop",
-        "A totem on Vanilla with messy timing looks exciting in the shop and disappointing in the pocket. Get the loop stable first, then stack.",
+        "A totem on Vanilla with messy timing looks exciting in the shop and disappointing in the pocket. Get the loop stable first, then stack. [Totem efficiency](/games/snowcone-stand/guides/totem-efficiency) covers break-even thinking.",
         "## 4. Keeping Cursed for cash",
-        "Cursed can matter for a quest or collection. For raw money, it’s usually a trap — our table shows it cutting value. Park it unless you need it for something specific.",
+        "Cursed can matter for a quest or collection. For raw money, it’s usually a trap — our [flavor × mutation table](/games/snowcone-stand/flavor-mutation-table) shows it cutting value. Park it unless you need it for something specific.",
         "## 5. Reading the tier list as law",
-        "S-tier flavors you haven’t unlocked yet don’t help tonight. Early on, buy what you can reach. Later, use the tier list with the planner, not instead of it.",
+        "S-tier flavors you haven’t unlocked yet don’t help tonight. Early on, buy what you can reach. Later, use the [tier list](/games/snowcone-stand/tier-list) with the [Blender Planner](/games/snowcone-stand/blender-planner), not instead of it.",
         "## Quick fix if you’re already stuck",
-        "Sell the habit of impulse buys for one session. Run ten clean Perfect blends, unlock the next flavor you can afford, and only then look at totems. It’s not glamorous. It works."
+        "Sell the habit of impulse buys for one session. Run ten clean Perfect blends, unlock the next flavor you can afford, and only then look at totems. If you want a fuller first-hour plan, read the [beginner economy loop](/games/snowcone-stand/guides/beginner-economy-loop)."
       ]
     },
     {
@@ -115,7 +116,7 @@
       "excerpt": "What mutReduce means in practice, which mutations are worth chasing for cash, and when to ignore the flashy ones.",
       "content": [
         "Mutations sound like collectible stickers. For money, they’re just multipliers sitting on top of your flavor base — after Perfect, in the way we model it here.",
-        "We call that multiplier **mutReduce** on the tables. Bigger number, bigger payout, assuming everything else stays equal.",
+        "We call that multiplier **mutReduce** on the [tables](/games/snowcone-stand/flavor-mutation-table). Bigger number, bigger payout, assuming everything else stays equal.",
         "## The short ladder",
         "- Frosted: small bump. Fine while you’re learning.",
         "- Sparkling: the first mutation that usually feels “worth the chase” for mid-game farms.",
@@ -123,12 +124,12 @@
         "- Prismatic: endgame candy. Pair it with high bases when you can keep Perfect steady.",
         "- Cursed: lower cash. Keep it for goals that require it, not for grinding money.",
         "## Perfect still matters more than you want",
-        "A rare mutation doesn’t save bad timing. Perfect multiplies first in our formula, so whiffing the window taxes Golden and Prismatic the same way it taxes Frosted — just with bigger numbers on the receipt.",
+        "A rare mutation doesn’t save bad timing. Perfect multiplies first in our formula, so whiffing the window taxes Golden and Prismatic the same way it taxes Frosted — just with bigger numbers on the receipt. Timing notes: [Perfect Blend timing](/games/snowcone-stand/guides/perfect-blend-timing).",
         "## How to use this site",
-        "Open the Flavor × Mutation table when you’re deciding what to chase. Then plug the same combo into the Blender Planner with your blend time.",
-        "If two options look close on paper, pick the one you can Perfect consistently. Hands beat theory screenshots.",
+        "Open the [Flavor × Mutation table](/games/snowcone-stand/flavor-mutation-table) when you’re deciding what to chase. Then plug the same combo into the [Blender Planner](/games/snowcone-stand/blender-planner) with your blend time.",
+        "If two options look close on paper, pick the one you can Perfect consistently. Hands beat theory screenshots. For a longer mid-game chase order, see the [mutation stacking guide](/games/snowcone-stand/guides/mutation-stacking-guide).",
         "## Patches",
-        "If the live game nerfs or buffs a mutation, our JSON will lag until we re-check. Send a correction via Contact if you catch a mismatch — bring a screenshot if you can."
+        "If the live game nerfs or buffs a mutation, our JSON will lag until we re-check. Send a correction via [Contact](/contact) if you catch a mismatch — bring a screenshot if you can."
       ]
     },
     {
@@ -146,7 +147,7 @@
         "A Perfect Blend multiplies unit value by **1.5**. Missing the window repeatedly costs more than a slightly slower flavor with reliable timing.",
         "## Cash checkpoints",
         "Aim to reach Strawberry or Blueberry before heavy totem investment. Totems amplify what you already produce; they do not fix a weak base loop.",
-        "Once you can land Perfect Blends on autopilot, move to the Blender Planner on this site and test Mango with Sparkling versus Blueberry with Golden."
+        "Once you can land Perfect Blends on autopilot, move to the [Blender Planner](/games/snowcone-stand/blender-planner) and test Mango with Sparkling versus Blueberry with Golden. For a cash-first checklist, see [how to make money faster](/games/snowcone-stand/guides/make-money-fast)."
       ]
     },
     {
@@ -155,7 +156,7 @@
       "updatedAt": "2026-07-27",
       "excerpt": "Why Perfect Blend is the highest-ROI skill in Snowcone Stand and how to practice the timing window without burning ingredients.",
       "content": [
-        "Perfect Blend is the single most important multiplier you control every cycle. The planner on MiniGameWiki models it as a flat **1.5x** on base value before mutations and totems.",
+        "Perfect Blend is the single most important multiplier you control every cycle. The [Blender Planner](/games/snowcone-stand/blender-planner) models it as a flat **1.5x** on base value before mutations and totems.",
         "## Why timing beats raw base",
         "A mid-tier flavor with consistent Perfect Blends often outpaces a higher base flavor with sloppy timing. Unit value is:",
         "unit = base × (perfect ? 1.5 : 1) × mutation × totem",
@@ -164,7 +165,7 @@
         "- Then raise blend speed one notch and repeat.",
         "- Log your Perfect rate; if it drops below ~70%, slow the blender back down.",
         "## Planner tip",
-        "Use per-second output (unit ÷ blend time) when comparing setups. A higher unit with a much longer blend can lose to a lower unit with faster cycles."
+        "Use per-second output (unit ÷ blend time) when comparing setups. A higher unit with a much longer blend can lose to a lower unit with faster cycles. Pair this with the [flavor table](/games/snowcone-stand/flavor-mutation-table) when you change flavors."
       ]
     },
     {
@@ -182,7 +183,7 @@
         "## Cursed caveat",
         "Cursed reduces cash efficiency. Only keep it if a quest, recipe, or collection goal explicitly requires it.",
         "## Table workflow",
-        "Open the Flavor × Mutation table, filter by the flavors you own, and mark any combination whose planner per-second beats your current stand setup by 15% or more."
+        "Open the [Flavor × Mutation table](/games/snowcone-stand/flavor-mutation-table), filter by the flavors you own, and mark any combination whose [planner](/games/snowcone-stand/blender-planner) per-second beats your current stand setup by 15% or more. Prefer the plain-English [mutations overview](/games/snowcone-stand/guides/mutations-plain-english) if the labels feel noisy."
       ]
     },
     {
@@ -193,13 +194,13 @@
       "content": [
         "Totems apply last in the unit formula. They scale everything you already do right — and everything you do wrong.",
         "## Simple break-even",
-        "If a totem costs a large cash dump, estimate how many blends you need at the new stackMult to recover that cost. Use the Blender Planner: note unit before and after, then divide cost by the unit delta.",
+        "If a totem costs a large cash dump, estimate how many blends you need at the new stackMult to recover that cost. Use the [Blender Planner](/games/snowcone-stand/blender-planner): note unit before and after, then divide cost by the unit delta.",
         "## Stack choices",
         "- Sugar Totem: cheap starter stack.",
         "- Ice Totem: better default once mid-game cash is stable.",
         "- Festival Totem: best raw mult; buy when you will actively farm for a long session.",
         "- Dual Stack: use the planner's Dual option as an approximation when multiple buffs apply.",
-        "Do not buy a premium totem to \"fix\" a low Perfect rate. Fix timing first."
+        "Do not buy a premium totem to \"fix\" a low Perfect rate. Fix timing first — see [Perfect Blend timing](/games/snowcone-stand/guides/perfect-blend-timing)."
       ]
     },
     {
@@ -217,7 +218,7 @@
         "- First hour: follow unlock price, not S-tier.",
         "- Questlines that force specific flavors.",
         "- Event-only ingredients that change temporary value.",
-        "Cross-check any upgrade with the Blender Planner before spending a large cash pile."
+        "Cross-check any upgrade with the [Blender Planner](/games/snowcone-stand/blender-planner) before spending a large cash pile. The live [tier list](/games/snowcone-stand/tier-list) is the ranked view; this article is the “when to ignore it” note."
       ]
     },
     {
@@ -226,14 +227,14 @@
       "updatedAt": "2026-07-23",
       "excerpt": "Why the codes page may be empty, how we verify drops, and how to report a working code.",
       "content": [
-        "Many Roblox wiki sites list expired or invented codes. MiniGameWiki does not. If our Snowcone Stand codes table is empty, that is an honest status — not a missing page.",
+        "Many Roblox wiki sites list expired or invented codes. MiniGameWiki does not. If our [Snowcone Stand codes](/games/snowcone-stand/codes) table is empty, that is an honest status — not a missing page.",
         "## Verification rules",
         "- A code must be publicly announced or reproducibly redeemable.",
         "- Expired codes are removed, not grayed out forever as clickbait.",
         "- We record a last-checked date on the codes page.",
         "## Found a code?",
-        "Use the Contact page with the code text, where you saw it, and whether it still redeems. We will verify before publishing.",
-        "Subscribe to the codes page (bookmark it) rather than trusting random social screenshots."
+        "Use [Contact](/contact) with the code text, where you saw it, and whether it still redeems. We will verify before publishing. New to redeeming? Read [how to redeem codes](/games/snowcone-stand/how-to-redeem-codes).",
+        "Bookmark the [codes page](/games/snowcone-stand/codes) rather than trusting random social screenshots."
       ]
     },
     {
@@ -246,10 +247,10 @@
         "## Setup A — Rainbow Prismatic",
         "High base, legendary mut, Festival totem if affordable. Watch blend duration; if Perfect rate falls, this setup loses hard.",
         "## Setup B — Void Berry Golden",
-        "Slightly different base/mut tradeoff. Plug both into the Blender Planner with the same Perfect toggle and totem.",
+        "Slightly different base/mut tradeoff. Plug both into the [Blender Planner](/games/snowcone-stand/blender-planner) with the same Perfect toggle and totem.",
         "## Decision rule",
         "Choose the higher **per-second** figure at your real Perfect success rate. If you Perfect only half the time, model half your blends at 1.0x and half at 1.5x mentally, or run the planner twice and average.",
-        "Revisit the tier list after any major balance patch; numbers here are fan-maintained planning aids."
+        "Revisit the [tier list](/games/snowcone-stand/tier-list) after any major balance patch; numbers here are fan-maintained planning aids. Mutation picks still start from the [table](/games/snowcone-stand/flavor-mutation-table)."
       ]
     }
   ]
