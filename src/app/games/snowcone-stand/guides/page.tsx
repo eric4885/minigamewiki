@@ -31,10 +31,28 @@ export default function GuidesIndexPage() {
           Tools answer &quot;what number,&quot; guides answer &quot;what
           next.&quot; These articles walk through first-hour economy loops,
           Perfect Blend practice, mutation chase order, totem break-evens, and
-          endgame farm comparisons — written to pair with the Blender Planner and
-          reference tables on this site. No filler chapters and no invented
-          codes; when we discuss codes policy, we explain why an empty list can
-          be the correct answer.
+          endgame farm comparisons — written to pair with the{" "}
+          <Link
+            href="/games/snowcone-stand/blender-planner"
+            className="text-accent hover:underline"
+          >
+            Blender Calculator
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="/games/snowcone-stand/flavor-mutation-table"
+            className="text-accent hover:underline"
+          >
+            flavor table
+          </Link>
+          . For promo drops, use the{" "}
+          <Link
+            href="/games/snowcone-stand/codes"
+            className="text-accent hover:underline"
+          >
+            latest codes status
+          </Link>{" "}
+          — an empty list can be the correct answer.
         </p>
       </div>
 

@@ -18,6 +18,11 @@ const tools = [
     body: "Model Perfect Blend, mutations, and totems. Compare unit value and per-second output before you spend cash.",
   },
   {
+    href: "/games/snowcone-stand/codes",
+    title: "Latest Codes",
+    body: "Live codes status for Roblox Snowcone Stand — verified only, empty when none are active.",
+  },
+  {
     href: "/games/snowcone-stand/flavor-mutation-table",
     title: "Flavor × Mutation Table",
     body: "Scan every flavor and mutation multiplier in one scrollable table built for mobile and desktop.",
@@ -53,6 +58,12 @@ export default function HomePage() {
               Open Blender Calculator
             </Link>
             <Link
+              href="/games/snowcone-stand/codes"
+              className="inline-flex rounded-md border border-border bg-surface px-4 py-2 text-sm font-medium text-fg transition hover:border-brand/50"
+            >
+              Latest codes status
+            </Link>
+            <Link
               href="/games/snowcone-stand"
               className="inline-flex rounded-md border border-border bg-surface px-4 py-2 text-sm font-medium text-fg transition hover:border-brand/50"
             >
@@ -73,7 +84,7 @@ export default function HomePage() {
 
       <section>
         <h2 className="mb-4 text-xl font-semibold text-fg">Tools</h2>
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2">
           {tools.map((tool) => (
             <Card key={tool.href} href={tool.href}>
               <h3 className="font-semibold text-fg">{tool.title}</h3>

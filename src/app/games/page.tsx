@@ -31,7 +31,28 @@ export default function GamesPage() {
       </Card>
 
       <p className="text-sm text-muted">
-        Looking for something else?{" "}
+        Jump to{" "}
+        <Link
+          href="/games/snowcone-stand/blender-planner"
+          className="text-accent hover:underline"
+        >
+          Blender Calculator
+        </Link>
+        ,{" "}
+        <Link
+          href="/games/snowcone-stand/codes"
+          className="text-accent hover:underline"
+        >
+          latest codes status
+        </Link>
+        , or{" "}
+        <Link
+          href="/games/snowcone-stand/tier-list"
+          className="text-accent hover:underline"
+        >
+          tier list
+        </Link>
+        . Looking for something else?{" "}
         <Link href="/contact" className="text-accent hover:underline">
           Suggest a game
         </Link>

@@ -32,10 +32,24 @@ export default function FlavorMutationTablePage() {
           before Perfect and totems, and what each mutation does as{" "}
           <span className="font-mono text-fg">mutReduce</span>. This table is
           that reference: scrollable on phones, readable on desktop, and wired
-          to the same JSON the Blender Planner uses so numbers do not drift
-          between pages. Use it to shortlist combinations, then confirm
-          per-second output in the planner with your real blend time. Values are
-          fan-maintained planning data — re-check in-game after balance patches.
+          to the same JSON the{" "}
+          <Link
+            href="/games/snowcone-stand/blender-planner"
+            className="text-accent hover:underline"
+          >
+            Blender Calculator
+          </Link>{" "}
+          uses so numbers do not drift between pages. Use it to shortlist
+          combinations, then confirm per-second output in the calculator with
+          your real blend time. Looking for free drops instead? See the{" "}
+          <Link
+            href="/games/snowcone-stand/codes"
+            className="text-accent hover:underline"
+          >
+            latest codes status
+          </Link>
+          . Values are fan-maintained planning data — re-check in-game after
+          balance patches.
         </p>
       </div>
 

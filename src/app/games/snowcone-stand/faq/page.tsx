@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { RelatedLinks } from "@/components/RelatedLinks";
@@ -13,29 +14,106 @@ export const metadata: Metadata = {
   alternates: { canonical: "/games/snowcone-stand/faq" },
 };
 
-const faqs = [
+type FaqItem = {
+  q: string;
+  plain: string;
+  a: ReactNode;
+};
+
+const faqs: FaqItem[] = [
   {
     q: "Is MiniGameWiki an official Snowcone Stand or Roblox wiki?",
+    plain:
+      "No. We are an independent fan site. We are not affiliated with Roblox Corporation or the game’s developers.",
     a: "No. We are an independent fan site. We are not affiliated with Roblox Corporation or the game’s developers.",
   },
   {
     q: "Why is the codes page empty?",
-    a: "Because we only list codes we can verify. An empty table means no confirmed active public codes at the last check date — not a broken page.",
+    plain:
+      "Because we only list codes we can verify. An empty table means no confirmed active public codes at the last check date — not a broken page.",
+    a: (
+      <>
+        Because we only list codes we can verify. An empty table on the{" "}
+        <Link
+          href="/games/snowcone-stand/codes"
+          className="text-accent hover:underline"
+        >
+          latest codes status page
+        </Link>{" "}
+        means no confirmed active public codes at the last check date — not a
+        broken page. See also{" "}
+        <Link
+          href="/games/snowcone-stand/how-to-redeem-codes"
+          className="text-accent hover:underline"
+        >
+          how to redeem codes
+        </Link>
+        .
+      </>
+    ),
   },
   {
-    q: "How does the Blender Planner formula work?",
-    a: `unit = base × (perfect ? ${snowcone.perfectMult} : 1) × mutReduce × totemStack, then perSec = unit ÷ blendTime. Perfect Blend is modeled as a ${snowcone.perfectMult}× multiplier.`,
+    q: "How does the Blender Calculator formula work?",
+    plain: `unit = base × (perfect ? ${snowcone.perfectMult} : 1) × mutReduce × totemStack, then perSec = unit ÷ blendTime. Perfect Blend is modeled as a ${snowcone.perfectMult}× multiplier.`,
+    a: (
+      <>
+        On the{" "}
+        <Link
+          href="/games/snowcone-stand/blender-planner"
+          className="text-accent hover:underline"
+        >
+          Blender Calculator
+        </Link>
+        : unit = base × (perfect ? {snowcone.perfectMult} : 1) × mutReduce ×
+        totemStack, then perSec = unit ÷ blendTime. Perfect Blend is modeled as
+        a {snowcone.perfectMult}× multiplier.
+      </>
+    ),
   },
   {
     q: "Should I trust the tier list over unlock order?",
-    a: "Early game, unlock order and cash on hand matter more. Our tiers assume mid-to-late play with Perfect Blend practice. Read the assumptions on the tier list page.",
+    plain:
+      "Early game, unlock order and cash on hand matter more. Our tiers assume mid-to-late play with Perfect Blend practice. Read the assumptions on the tier list page.",
+    a: (
+      <>
+        Early game, unlock order and cash on hand matter more. Our tiers assume
+        mid-to-late play with Perfect Blend practice. Read the assumptions on
+        the{" "}
+        <Link
+          href="/games/snowcone-stand/tier-list"
+          className="text-accent hover:underline"
+        >
+          tier list
+        </Link>{" "}
+        and confirm upgrades in the{" "}
+        <Link
+          href="/games/snowcone-stand/blender-planner"
+          className="text-accent hover:underline"
+        >
+          Blender Calculator
+        </Link>
+        .
+      </>
+    ),
   },
   {
     q: "What if a number is wrong after a patch?",
-    a: "Email hello@minigamewiki.com with the page URL, what changed in-game, and a screenshot if possible. We update JSON data after verification.",
+    plain:
+      "Email hello@minigamewiki.com with the page URL, what changed in-game, and a screenshot if possible. We update JSON data after verification.",
+    a: (
+      <>
+        Email hello@minigamewiki.com with the page URL, what changed in-game,
+        and a screenshot if possible. You can also use{" "}
+        <Link href="/contact" className="text-accent hover:underline">
+          Contact
+        </Link>
+        . We update JSON data after verification.
+      </>
+    ),
   },
   {
     q: "Do you sell Roblox accounts or items?",
+    plain: "No. We only publish tools and guides.",
     a: "No. We only publish tools and guides.",
   },
 ];
@@ -49,7 +127,7 @@ export default function SnowconeFaqPage() {
       name: item.q,
       acceptedAnswer: {
         "@type": "Answer",
-        text: item.a,
+        text: item.plain,
       },
     })),
     url: `${SITE_URL}/games/snowcone-stand/faq`,
@@ -71,12 +149,19 @@ export default function SnowconeFaqPage() {
         </h1>
         <p className="mt-4 max-w-prose text-muted">
           Short answers about how MiniGameWiki tools work, why codes may be
-          empty, and how we handle updates. For step-by-step redeem help, see{" "}
+          empty, and how we handle updates. Start with the{" "}
           <Link
-            href="/games/snowcone-stand/how-to-redeem-codes"
+            href="/games/snowcone-stand/codes"
             className="text-accent hover:underline"
           >
-            How to redeem codes
+            latest codes status
+          </Link>{" "}
+          or the{" "}
+          <Link
+            href="/games/snowcone-stand/blender-planner"
+            className="text-accent hover:underline"
+          >
+            Blender Calculator
           </Link>
           .
         </p>

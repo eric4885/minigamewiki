@@ -34,8 +34,21 @@ export default function TierListPage() {
           peak unit value. This list ranks flavors, mutations, and totems for
           mid-to-late cash efficiency assuming Perfect Blend and at least a
           mid-tier mutation mindset. Read the summary, treat D-tier Cursed as a
-          quest exception, and always validate a promotion with the Blender
-          Planner using your blend time. Updated{" "}
+          quest exception, and always validate a promotion with the{" "}
+          <Link
+            href="/games/snowcone-stand/blender-planner"
+            className="text-accent hover:underline"
+          >
+            Blender Calculator
+          </Link>{" "}
+          using your blend time. For promo drops, check the{" "}
+          <Link
+            href="/games/snowcone-stand/codes"
+            className="text-accent hover:underline"
+          >
+            latest codes status
+          </Link>
+          . Updated{" "}
           <span className="font-mono text-fg">{tierList.updatedAt}</span> —
           re-rank after patches.
         </p>

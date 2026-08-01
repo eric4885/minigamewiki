@@ -1,16 +1,17 @@
 import Link from "next/link";
 import { Card } from "@/components/ui/Card";
 
+/** Priority order: calculator + codes first for SEO equity. */
 const defaultLinks = [
   {
     href: "/games/snowcone-stand/blender-planner",
-    title: "Blender Planner",
+    title: "Blender Calculator",
     body: "Compare unit value and per-second output.",
   },
   {
-    href: "/games/snowcone-stand/flavor-mutation-table",
-    title: "Flavor × Mutation Table",
-    body: "Reference bases and multipliers.",
+    href: "/games/snowcone-stand/codes",
+    title: "Latest Codes",
+    body: "Live status — empty when none verified.",
   },
   {
     href: "/games/snowcone-stand/tier-list",
@@ -18,9 +19,14 @@ const defaultLinks = [
     body: "S–D ranks with explicit assumptions.",
   },
   {
-    href: "/games/snowcone-stand/codes",
-    title: "Codes",
-    body: "Honest tracker — empty when none verified.",
+    href: "/games/snowcone-stand/flavor-mutation-table",
+    title: "Flavor × Mutation Table",
+    body: "Reference bases and multipliers.",
+  },
+  {
+    href: "/games/snowcone-stand/how-to-redeem-codes",
+    title: "How to Redeem Codes",
+    body: "Redeem steps and no-fake-codes policy.",
   },
   {
     href: "/games/snowcone-stand/guides",
@@ -39,7 +45,7 @@ type RelatedLinksProps = {
   limit?: number;
 };
 
-export function RelatedLinks({ excludeHref, limit = 4 }: RelatedLinksProps) {
+export function RelatedLinks({ excludeHref, limit = 6 }: RelatedLinksProps) {
   const links = defaultLinks
     .filter((l) => l.href !== excludeHref)
     .slice(0, limit);
@@ -61,6 +67,20 @@ export function RelatedLinks({ excludeHref, limit = 4 }: RelatedLinksProps) {
           className="text-accent hover:underline"
         >
           Snowcone Stand hub
+        </Link>
+        {" · "}
+        <Link
+          href="/games/snowcone-stand/codes"
+          className="text-accent hover:underline"
+        >
+          Latest codes
+        </Link>
+        {" · "}
+        <Link
+          href="/games/snowcone-stand/blender-planner"
+          className="text-accent hover:underline"
+        >
+          Blender calculator
         </Link>
         {" · "}
         <Link

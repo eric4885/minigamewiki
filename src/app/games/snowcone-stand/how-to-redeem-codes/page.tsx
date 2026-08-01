@@ -63,6 +63,25 @@ export default function HowToRedeemCodesPage() {
           <li>An empty table is a status report, not a missing feature.</li>
         </ul>
         <p className="text-muted">{snowcone.codesNote}</p>
+        <p className="rounded-xl border border-border bg-surface p-4 text-sm text-muted">
+          Bookmark the{" "}
+          <Link
+            href="/games/snowcone-stand/codes"
+            className="font-medium text-accent hover:underline"
+          >
+            latest Snowcone Stand codes status page
+          </Link>{" "}
+          (last checked{" "}
+          <span className="font-mono text-fg">{snowcone.codesLastChecked}</span>
+          ). After you redeem, use the{" "}
+          <Link
+            href="/games/snowcone-stand/blender-planner"
+            className="text-accent hover:underline"
+          >
+            Blender Calculator
+          </Link>{" "}
+          to decide what to buy with the reward cash.
+        </p>
       </section>
 
       <section className="space-y-3">
