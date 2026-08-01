@@ -29,11 +29,18 @@ export default function CodesPage() {
       url: SITE_URL,
     },
     dateModified: snowcone.codesLastChecked,
+    license: `${SITE_URL}/terms`,
     dataset: {
       "@type": "Dataset",
       name: "Active Snowcone Stand codes",
       description:
         "Verified public promo codes for Roblox Snowcone Stand. May be empty.",
+      license: `${SITE_URL}/terms`,
+      creator: {
+        "@type": "Organization",
+        name: "MiniGameWiki",
+        url: SITE_URL,
+      },
       variableMeasured: ["code", "reward", "status"],
     },
   };
