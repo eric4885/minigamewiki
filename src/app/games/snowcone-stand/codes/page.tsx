@@ -8,14 +8,15 @@ import { Table, Td } from "@/components/ui/Table";
 import { SITE_URL, snowcone } from "@/lib/snowcone";
 
 export const metadata: Metadata = {
-  title: "Snowcone Stand Codes",
-  description:
-    "Verified Snowcone Stand codes for Roblox. We list only confirmed codes — the table stays empty when none are active.",
+  title: "Latest Snowcone Stand Codes",
+  description: `Latest verified Snowcone Stand codes for Roblox. Last checked ${snowcone.codesLastChecked}. We list only confirmed codes — the table stays empty when none are active.`,
   alternates: { canonical: "/games/snowcone-stand/codes" },
 };
 
 export default function CodesPage() {
   const codes = snowcone.codes;
+  const expired = snowcone.expiredCodes ?? [];
+  const hasActive = codes.length > 0;
 
   const dataCatalogLd = {
     "@context": "https://schema.org",
@@ -42,6 +43,7 @@ export default function CodesPage() {
         url: SITE_URL,
       },
       variableMeasured: ["code", "reward", "status"],
+      dateModified: snowcone.codesLastChecked,
     },
   };
 
@@ -58,16 +60,16 @@ export default function CodesPage() {
           ]}
         />
         <h1 className="mt-2 text-3xl font-semibold text-fg">
-          Snowcone Stand Codes
+          Latest Snowcone Stand Codes
         </h1>
+        <p className="mt-2 font-mono text-xs text-muted">
+          Status page · Last checked {snowcone.codesLastChecked}
+        </p>
         <p className="mt-4 max-w-prose text-muted">
-          Searching for working Snowcone Stand codes usually means wading through
-          expired lists, screenshot spam, and pages that invent rewards to farm
-          clicks. That wastes your time and can get accounts into bad habits
-          around untrusted links. This page exists to answer one question
-          honestly: are there any verified public codes right now? We do not
-          fabricate entries to look &quot;complete.&quot; When the table is empty,
-          that is the status — not a broken page. See also{" "}
+          This is a live codes status page for Roblox Snowcone Stand — not a
+          recycled screenshot dump. We answer one question: are there any
+          verified public codes right now? We do not invent entries to look
+          complete. When the active table is empty, that is the status. See also{" "}
           <Link
             href="/games/snowcone-stand/how-to-redeem-codes"
             className="text-accent hover:underline"
@@ -79,39 +81,99 @@ export default function CodesPage() {
       </div>
 
       <div className="rounded-xl border border-border bg-surface p-5">
-        <p className="font-medium text-fg">Honest status</p>
-        <p className="mt-2 text-sm text-muted">{snowcone.codesNote}</p>
-        <p className="mt-3 font-mono text-xs text-muted">
-          Last checked: {snowcone.codesLastChecked}
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <p className="font-medium text-fg">Current status</p>
+          <p
+            className={`rounded-md px-2.5 py-1 text-xs font-medium ${
+              hasActive
+                ? "bg-brand/15 text-brand"
+                : "bg-border/60 text-muted"
+            }`}
+          >
+            {hasActive ? "Active codes listed" : "No active verified codes"}
+          </p>
+        </div>
+        <p className="mt-3 text-sm text-muted">{snowcone.codesNote}</p>
+        <dl className="mt-4 grid gap-2 text-sm sm:grid-cols-2">
+          <div className="flex justify-between gap-3 border-b border-border pb-2 sm:block sm:border-0 sm:pb-0">
+            <dt className="text-muted">Last checked</dt>
+            <dd className="font-mono text-fg">{snowcone.codesLastChecked}</dd>
+          </div>
+          <div className="flex justify-between gap-3 sm:block">
+            <dt className="text-muted">Active codes</dt>
+            <dd className="font-mono text-fg">{codes.length}</dd>
+          </div>
+        </dl>
+        <p className="mt-4 text-sm text-muted">
+          Think you found a working code?{" "}
+          <Link href="/contact" className="text-accent hover:underline">
+            Report it on Contact
+          </Link>{" "}
+          with the code text and where you saw it. We verify before publishing.
         </p>
       </div>
 
-      <Table
-        headers={["Code", "Reward", "Status"]}
-        caption={
-          codes.length === 0
-            ? "No active verified codes at last check."
-            : "Verified codes"
-        }
-      >
-        {codes.length === 0 ? (
-          <tr>
-            <Td>—</Td>
-            <Td>None listed</Td>
-            <Td>No active codes</Td>
-          </tr>
-        ) : (
-          codes.map((row) => (
-            <tr key={row.code}>
-              <Td mono className="text-fg">
-                {row.code}
-              </Td>
-              <Td>{row.reward}</Td>
-              <Td>{row.status}</Td>
+      <section className="space-y-3">
+        <h2 className="text-xl font-semibold text-fg">Active verified codes</h2>
+        <Table
+          headers={["Code", "Reward", "Status"]}
+          caption={
+            hasActive
+              ? "Verified codes currently listed"
+              : "No active verified codes at last check"
+          }
+        >
+          {hasActive ? (
+            codes.map((row) => (
+              <tr key={row.code}>
+                <Td mono className="text-fg">
+                  {row.code}
+                </Td>
+                <Td>{row.reward}</Td>
+                <Td>{row.status}</Td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <Td>—</Td>
+              <Td>None listed</Td>
+              <Td>No active codes</Td>
             </tr>
-          ))
+          )}
+        </Table>
+      </section>
+
+      <section className="space-y-3">
+        <h2 className="text-xl font-semibold text-fg">
+          Expired / retired archive
+        </h2>
+        <p className="max-w-prose text-sm text-muted">
+          Expired codes move here so the page keeps historical value without
+          pretending dead codes still work. Unverified social screenshots are
+          never archived as “maybe.”
+        </p>
+        {expired.length === 0 ? (
+          <div className="rounded-xl border border-dashed border-border bg-surface/50 p-5 text-sm text-muted">
+            No expired codes archived yet. When a verified code stops redeeming,
+            it will appear in this archive with a retired note.
+          </div>
+        ) : (
+          <Table
+            headers={["Code", "Reward", "Status"]}
+            caption="Retired codes kept for reference"
+          >
+            {expired.map((row) => (
+              <tr key={row.code}>
+                <Td mono className="text-fg">
+                  {row.code}
+                </Td>
+                <Td>{row.reward}</Td>
+                <Td>{row.status}</Td>
+              </tr>
+            ))}
+          </Table>
         )}
-      </Table>
+      </section>
 
       <SiteDisclaimer />
       <RelatedLinks excludeHref="/games/snowcone-stand/codes" />

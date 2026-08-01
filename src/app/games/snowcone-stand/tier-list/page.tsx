@@ -6,9 +6,9 @@ import { Card } from "@/components/ui/Card";
 import { snowcone } from "@/lib/snowcone";
 
 export const metadata: Metadata = {
-  title: "Snowcone Stand Tier List",
+  title: "Snowcone Stand Tier List (Roblox)",
   description:
-    "Snowcone Stand S–D tier list for flavors, mutations, and totems with clear ranking assumptions.",
+    "Snowcone Stand tier list for Roblox: S–D rankings for flavors, mutations, and totems with clear assumptions.",
   alternates: { canonical: "/games/snowcone-stand/tier-list" },
 };
 
@@ -25,7 +25,7 @@ export default function TierListPage() {
           / Tier List
         </p>
         <h1 className="mt-2 text-3xl font-semibold text-fg">
-          Snowcone Stand Tier List
+          Snowcone Stand Tier List for Roblox
         </h1>
         <p className="mt-4 max-w-prose text-muted">
           Tier lists become harmful when they hide their assumptions. Early

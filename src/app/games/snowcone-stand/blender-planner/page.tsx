@@ -4,9 +4,9 @@ import { RelatedLinks } from "@/components/RelatedLinks";
 import { SiteDisclaimer } from "@/components/SiteDisclaimer";
 
 export const metadata: Metadata = {
-  title: "Blender Planner",
+  title: "Snowcone Stand Blender Calculator",
   description:
-    "Snowcone Stand blender planner for Roblox: Perfect Blend, mutation, and totem math with unit value and per-second output.",
+    "Free Snowcone Stand blender calculator for Roblox: Perfect Blend, mutation, and totem math with unit value, per-second output, presets, and shareable build links.",
   alternates: { canonical: "/games/snowcone-stand/blender-planner" },
 };
 

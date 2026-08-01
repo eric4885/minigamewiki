@@ -6,9 +6,9 @@ import { Table, Td } from "@/components/ui/Table";
 import { snowcone } from "@/lib/snowcone";
 
 export const metadata: Metadata = {
-  title: "Flavor × Mutation Table",
+  title: "Snowcone Stand Flavor & Mutation Table",
   description:
-    "Snowcone Stand flavor base values and mutation multipliers in one reference table for Roblox players.",
+    "Snowcone Stand flavor base values and mutation multipliers in one Roblox reference table for planning blends.",
   alternates: { canonical: "/games/snowcone-stand/flavor-mutation-table" },
 };
 
@@ -23,7 +23,7 @@ export default function FlavorMutationTablePage() {
           / Flavor × Mutation Table
         </p>
         <h1 className="mt-2 text-3xl font-semibold text-fg">
-          Flavor × Mutation Table
+          Snowcone Stand Flavor & Mutation Table
         </h1>
         <p className="mt-4 max-w-prose text-muted">
           Mid-game Snowcone Stand decisions stall when flavor bases and mutation

@@ -52,6 +52,7 @@ export type SnowconeData = {
   dataReviewedAt: string;
   perfectMult: number;
   codes: { code: string; reward: string; status: string }[];
+  expiredCodes: { code: string; reward: string; status: string }[];
   codesLastChecked: string;
   codesNote: string;
   flavors: Flavor[];

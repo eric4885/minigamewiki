@@ -8,9 +8,18 @@
   "dataReviewedAt": "2026-07-30",
   "perfectMult": 1.5,
   "codes": [],
-  "codesLastChecked": "2026-07-30",
-  "codesNote": "As of the last check date, there are no active public promo codes for Snowcone Stand. We do not invent codes. This page will be updated when verified codes appear.",
+  "codesLastChecked": "2026-08-01",
+  "codesNote": "As of the last check date, there are no active public promo codes for Snowcone Stand. We do not invent codes. Bookmark this status page — when verified codes appear, they land in the active table first.",
   "changelog": [
+    {
+      "date": "2026-08-01",
+      "items": [
+        "SEO titles/H1s strengthened with Roblox wiki & tools wording to filter non-game intent.",
+        "Codes page rebuilt as a live status page with last-checked badge, active table, and expired archive.",
+        "Blender Calculator: presets, Perfect ON/OFF compare, shareable URL params, and copy-build summary.",
+        "Codes last-checked date refreshed; still no verified active codes."
+      ]
+    },
     {
       "date": "2026-07-30",
       "items": [
@@ -28,38 +37,184 @@
     }
   ],
   "flavors": [
-    { "id": "vanilla", "name": "Vanilla", "tier": "C", "baseValue": 10, "unlock": "Starter", "notes": "Reliable early cash." },
-    { "id": "strawberry", "name": "Strawberry", "tier": "B", "baseValue": 18, "unlock": "Level 5", "notes": "Solid mid-early pick." },
-    { "id": "blueberry", "name": "Blueberry", "tier": "B", "baseValue": 22, "unlock": "Level 8", "notes": "Slightly slower blend, higher payout." },
-    { "id": "mango", "name": "Mango", "tier": "A", "baseValue": 35, "unlock": "Level 12", "notes": "Best mid-game cash per blend." },
-    { "id": "mint-chip", "name": "Mint Chip", "tier": "A", "baseValue": 40, "unlock": "Level 15", "notes": "Pairs well with cool mutations." },
-    { "id": "rainbow", "name": "Rainbow", "tier": "S", "baseValue": 75, "unlock": "Late unlock / event", "notes": "Top-tier base before mutations." },
-    { "id": "void-berry", "name": "Void Berry", "tier": "S", "baseValue": 90, "unlock": "Endgame", "notes": "Highest base; watch blend time." }
+    {
+      "id": "vanilla",
+      "name": "Vanilla",
+      "tier": "C",
+      "baseValue": 10,
+      "unlock": "Starter",
+      "notes": "Reliable early cash."
+    },
+    {
+      "id": "strawberry",
+      "name": "Strawberry",
+      "tier": "B",
+      "baseValue": 18,
+      "unlock": "Level 5",
+      "notes": "Solid mid-early pick."
+    },
+    {
+      "id": "blueberry",
+      "name": "Blueberry",
+      "tier": "B",
+      "baseValue": 22,
+      "unlock": "Level 8",
+      "notes": "Slightly slower blend, higher payout."
+    },
+    {
+      "id": "mango",
+      "name": "Mango",
+      "tier": "A",
+      "baseValue": 35,
+      "unlock": "Level 12",
+      "notes": "Best mid-game cash per blend."
+    },
+    {
+      "id": "mint-chip",
+      "name": "Mint Chip",
+      "tier": "A",
+      "baseValue": 40,
+      "unlock": "Level 15",
+      "notes": "Pairs well with cool mutations."
+    },
+    {
+      "id": "rainbow",
+      "name": "Rainbow",
+      "tier": "S",
+      "baseValue": 75,
+      "unlock": "Late unlock / event",
+      "notes": "Top-tier base before mutations."
+    },
+    {
+      "id": "void-berry",
+      "name": "Void Berry",
+      "tier": "S",
+      "baseValue": 90,
+      "unlock": "Endgame",
+      "notes": "Highest base; watch blend time."
+    }
   ],
   "mutations": [
-    { "id": "none", "name": "None", "reduceMult": 1, "rarity": "Common", "notes": "No mutation applied." },
-    { "id": "frosted", "name": "Frosted", "reduceMult": 1.15, "rarity": "Uncommon", "notes": "Mild value bump." },
-    { "id": "sparkling", "name": "Sparkling", "reduceMult": 1.35, "rarity": "Rare", "notes": "Strong mid-tier mutation." },
-    { "id": "golden", "name": "Golden", "reduceMult": 1.75, "rarity": "Epic", "notes": "Excellent for farming." },
-    { "id": "prismatic", "name": "Prismatic", "reduceMult": 2.25, "rarity": "Legendary", "notes": "Best common endgame mut." },
-    { "id": "cursed", "name": "Cursed", "reduceMult": 0.85, "rarity": "Special", "notes": "Lower value but may unlock niche recipes." }
+    {
+      "id": "none",
+      "name": "None",
+      "reduceMult": 1,
+      "rarity": "Common",
+      "notes": "No mutation applied."
+    },
+    {
+      "id": "frosted",
+      "name": "Frosted",
+      "reduceMult": 1.15,
+      "rarity": "Uncommon",
+      "notes": "Mild value bump."
+    },
+    {
+      "id": "sparkling",
+      "name": "Sparkling",
+      "reduceMult": 1.35,
+      "rarity": "Rare",
+      "notes": "Strong mid-tier mutation."
+    },
+    {
+      "id": "golden",
+      "name": "Golden",
+      "reduceMult": 1.75,
+      "rarity": "Epic",
+      "notes": "Excellent for farming."
+    },
+    {
+      "id": "prismatic",
+      "name": "Prismatic",
+      "reduceMult": 2.25,
+      "rarity": "Legendary",
+      "notes": "Best common endgame mut."
+    },
+    {
+      "id": "cursed",
+      "name": "Cursed",
+      "reduceMult": 0.85,
+      "rarity": "Special",
+      "notes": "Lower value but may unlock niche recipes."
+    }
   ],
   "totems": [
-    { "id": "none", "name": "No Totem", "stackMult": 1, "notes": "Baseline." },
-    { "id": "sugar", "name": "Sugar Totem", "stackMult": 1.1, "notes": "+10% unit value." },
-    { "id": "ice", "name": "Ice Totem", "stackMult": 1.2, "notes": "+20% unit value." },
-    { "id": "festival", "name": "Festival Totem", "stackMult": 1.35, "notes": "Event / premium stack." },
-    { "id": "dual", "name": "Dual Stack (Ice+Sugar)", "stackMult": 1.32, "notes": "Approximate combined stack when both apply." }
+    {
+      "id": "none",
+      "name": "No Totem",
+      "stackMult": 1,
+      "notes": "Baseline."
+    },
+    {
+      "id": "sugar",
+      "name": "Sugar Totem",
+      "stackMult": 1.1,
+      "notes": "+10% unit value."
+    },
+    {
+      "id": "ice",
+      "name": "Ice Totem",
+      "stackMult": 1.2,
+      "notes": "+20% unit value."
+    },
+    {
+      "id": "festival",
+      "name": "Festival Totem",
+      "stackMult": 1.35,
+      "notes": "Event / premium stack."
+    },
+    {
+      "id": "dual",
+      "name": "Dual Stack (Ice+Sugar)",
+      "stackMult": 1.32,
+      "notes": "Approximate combined stack when both apply."
+    }
   ],
   "tierList": {
     "updatedAt": "2026-07-29",
     "summary": "Tiers reflect mid-to-late game cash efficiency assuming Perfect Blend and at least Sparkling mutation. Early game, prefer unlock order over raw tier.",
     "ranks": [
-      { "tier": "S", "items": ["Rainbow", "Void Berry", "Prismatic mutation", "Festival Totem"] },
-      { "tier": "A", "items": ["Mango", "Mint Chip", "Golden mutation", "Ice Totem"] },
-      { "tier": "B", "items": ["Blueberry", "Strawberry", "Sparkling mutation", "Sugar Totem"] },
-      { "tier": "C", "items": ["Vanilla", "Frosted mutation", "No Totem"] },
-      { "tier": "D", "items": ["Cursed mutation (cash farming)"] }
+      {
+        "tier": "S",
+        "items": [
+          "Rainbow",
+          "Void Berry",
+          "Prismatic mutation",
+          "Festival Totem"
+        ]
+      },
+      {
+        "tier": "A",
+        "items": [
+          "Mango",
+          "Mint Chip",
+          "Golden mutation",
+          "Ice Totem"
+        ]
+      },
+      {
+        "tier": "B",
+        "items": [
+          "Blueberry",
+          "Strawberry",
+          "Sparkling mutation",
+          "Sugar Totem"
+        ]
+      },
+      {
+        "tier": "C",
+        "items": [
+          "Vanilla",
+          "Frosted mutation",
+          "No Totem"
+        ]
+      },
+      {
+        "tier": "D",
+        "items": [
+          "Cursed mutation (cash farming)"
+        ]
+      }
     ]
   },
   "guides": [
@@ -253,5 +408,6 @@
         "Revisit the [tier list](/games/snowcone-stand/tier-list) after any major balance patch; numbers here are fan-maintained planning aids. Mutation picks still start from the [table](/games/snowcone-stand/flavor-mutation-table)."
       ]
     }
-  ]
+  ],
+  "expiredCodes": []
 }

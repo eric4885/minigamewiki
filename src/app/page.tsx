@@ -5,16 +5,16 @@ import { Card } from "@/components/ui/Card";
 import { getLatestGuides } from "@/lib/snowcone";
 
 export const metadata: Metadata = {
-  title: "Roblox Snowcone Stand Tools & Calculators",
+  title: "Snowcone Stand Wiki & Tools for Roblox",
   description:
-    "Free Snowcone Stand tools for Roblox: blender planner, flavor × mutation table, tier list, codes tracker, and guides.",
+    "Snowcone Stand wiki-style tools for Roblox: blender calculator, flavor × mutation table, tier list, latest codes status, and guides.",
   alternates: { canonical: "/" },
 };
 
 const tools = [
   {
     href: "/games/snowcone-stand/blender-planner",
-    title: "Blender Planner",
+    title: "Blender Calculator",
     body: "Model Perfect Blend, mutations, and totems. Compare unit value and per-second output before you spend cash.",
   },
   {
@@ -38,7 +38,7 @@ export default function HomePage() {
         <div>
           <p className="mb-2 text-sm font-medium text-brand">MiniGameWiki</p>
           <h1 className="text-3xl font-semibold tracking-tight text-fg sm:text-4xl">
-            Roblox Snowcone Stand Tools & Calculators
+            Snowcone Stand Wiki & Tools for Roblox
           </h1>
           <p className="mt-4 max-w-prose text-muted">
             Plan blends, compare mutations, and read honest guides — without
@@ -50,7 +50,7 @@ export default function HomePage() {
               href="/games/snowcone-stand/blender-planner"
               className="inline-flex rounded-md bg-brand px-4 py-2 text-sm font-medium text-bg transition hover:opacity-90"
             >
-              Open Blender Planner
+              Open Blender Calculator
             </Link>
             <Link
               href="/games/snowcone-stand"

@@ -7,16 +7,16 @@ import { SiteDisclaimer } from "@/components/SiteDisclaimer";
 import { snowcone } from "@/lib/snowcone";
 
 export const metadata: Metadata = {
-  title: "Snowcone Stand Hub",
+  title: "Snowcone Stand Wiki & Tools",
   description:
-    "Snowcone Stand tools for Roblox: blender planner, flavor × mutation table, tier list, codes, FAQ, and guides.",
+    "Snowcone Stand wiki & tools for Roblox: blender calculator, flavor × mutation table, tier list, latest codes status, FAQ, and guides.",
   alternates: { canonical: "/games/snowcone-stand" },
 };
 
 const links = [
   {
     href: "/games/snowcone-stand/blender-planner",
-    title: "Blender Planner",
+    title: "Blender Calculator",
     body: "Perfect Blend, mutations, totems → unit & per-second.",
   },
   {
@@ -31,8 +31,8 @@ const links = [
   },
   {
     href: "/games/snowcone-stand/codes",
-    title: "Codes",
-    body: "Honest tracker — empty when no verified codes exist.",
+    title: "Latest Codes",
+    body: "Live status page — empty when no verified codes exist.",
   },
   {
     href: "/games/snowcone-stand/how-to-redeem-codes",
@@ -67,17 +67,17 @@ export default function SnowconeStandHubPage() {
           ]}
         />
         <h1 className="mt-2 text-3xl font-semibold text-fg">
-          {snowcone.game} Tools & Guides
+          Snowcone Stand Wiki & Tools
         </h1>
         <p className="mt-2 font-mono text-xs text-muted">
           Data last reviewed: {snowcone.dataReviewedAt} · Codes checked:{" "}
           {snowcone.codesLastChecked}
         </p>
         <p className="mt-4 max-w-prose text-muted">
-          {snowcone.description} Use the planner before big upgrades, cross-check
-          the flavor table when a new mutation drops, and read guides when you
-          want the why — not just the number. Data is maintained in JSON and
-          reviewed independently; it is not an official game wiki.
+          {snowcone.description} Use the calculator before big upgrades,
+          cross-check the flavor table when a new mutation drops, and read
+          guides when you want the why — not just the number. Data is maintained
+          in JSON and reviewed independently; it is not an official game wiki.
         </p>
         <p className="mt-3 text-sm text-muted">
           Play on Roblox:{" "}

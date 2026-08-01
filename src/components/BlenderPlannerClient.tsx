@@ -1,11 +1,69 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Input } from "@/components/ui/Input";
-import { calcPerSec, calcUnit, snowcone } from "@/lib/snowcone";
+import { SITE_URL, calcPerSec, calcUnit, snowcone } from "@/lib/snowcone";
+
+type Preset = {
+  id: string;
+  label: string;
+  flavorId: string;
+  mutationId: string;
+  totemId: string;
+  perfect: boolean;
+  blendTime: number;
+};
+
+const presets: Preset[] = [
+  {
+    id: "early",
+    label: "Early farm",
+    flavorId: "vanilla",
+    mutationId: "none",
+    totemId: "none",
+    perfect: true,
+    blendTime: 4,
+  },
+  {
+    id: "mid",
+    label: "Mid Mango",
+    flavorId: "mango",
+    mutationId: "golden",
+    totemId: "ice",
+    perfect: true,
+    blendTime: 3.5,
+  },
+  {
+    id: "end",
+    label: "Endgame Void",
+    flavorId: "void-berry",
+    mutationId: "prismatic",
+    totemId: "festival",
+    perfect: true,
+    blendTime: 3.2,
+  },
+];
+
+function buildSharePath(params: {
+  flavorId: string;
+  mutationId: string;
+  totemId: string;
+  perfect: boolean;
+  blendTime: number;
+  customBase: string;
+}) {
+  const q = new URLSearchParams();
+  q.set("flavor", params.flavorId);
+  q.set("mut", params.mutationId);
+  q.set("totem", params.totemId);
+  q.set("perfect", params.perfect ? "1" : "0");
+  q.set("t", String(params.blendTime));
+  if (params.customBase.trim() !== "") q.set("base", params.customBase.trim());
+  return `/games/snowcone-stand/blender-planner?${q.toString()}`;
+}
 
 export function BlenderPlannerClient() {
   const [flavorId, setFlavorId] = useState(snowcone.flavors[0]?.id ?? "");
@@ -14,6 +72,51 @@ export function BlenderPlannerClient() {
   const [perfect, setPerfect] = useState(true);
   const [blendTime, setBlendTime] = useState(4);
   const [customBase, setCustomBase] = useState<string>("");
+  const [copyState, setCopyState] = useState<"idle" | "copied" | "error">(
+    "idle"
+  );
+  const [hydrated, setHydrated] = useState(false);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const flavor = params.get("flavor");
+    const mut = params.get("mut");
+    const totem = params.get("totem");
+    const perfectParam = params.get("perfect");
+    const t = params.get("t");
+    const base = params.get("base");
+
+    if (flavor && snowcone.flavors.some((f) => f.id === flavor)) {
+      setFlavorId(flavor);
+    }
+    if (mut && snowcone.mutations.some((m) => m.id === mut)) {
+      setMutationId(mut);
+    }
+    if (totem && snowcone.totems.some((tItem) => tItem.id === totem)) {
+      setTotemId(totem);
+    }
+    if (perfectParam === "0" || perfectParam === "1") {
+      setPerfect(perfectParam === "1");
+    }
+    if (t !== null && !Number.isNaN(Number(t)) && Number(t) > 0) {
+      setBlendTime(Number(t));
+    }
+    if (base !== null) setCustomBase(base);
+    setHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    if (!hydrated) return;
+    const path = buildSharePath({
+      flavorId,
+      mutationId,
+      totemId,
+      perfect,
+      blendTime,
+      customBase,
+    });
+    window.history.replaceState(null, "", path);
+  }, [hydrated, flavorId, mutationId, totemId, perfect, blendTime, customBase]);
 
   const flavor = snowcone.flavors.find((f) => f.id === flavorId);
   const mutation = snowcone.mutations.find((m) => m.id === mutationId);
@@ -27,13 +130,61 @@ export function BlenderPlannerClient() {
   const mutReduce = mutation?.reduceMult ?? 1;
   const totemStack = totem?.stackMult ?? 1;
 
-  const { unit, perSec } = useMemo(() => {
-    const u = calcUnit(base, perfect, mutReduce, totemStack);
-    return { unit: u, perSec: calcPerSec(u, blendTime) };
+  const results = useMemo(() => {
+    const unitOn = calcUnit(base, true, mutReduce, totemStack);
+    const unitOff = calcUnit(base, false, mutReduce, totemStack);
+    return {
+      unitOn,
+      unitOff,
+      perSecOn: calcPerSec(unitOn, blendTime),
+      perSecOff: calcPerSec(unitOff, blendTime),
+      unit: calcUnit(base, perfect, mutReduce, totemStack),
+      perSec: calcPerSec(
+        calcUnit(base, perfect, mutReduce, totemStack),
+        blendTime
+      ),
+    };
   }, [base, perfect, mutReduce, totemStack, blendTime]);
 
   const selectClass =
     "w-full rounded-md border border-border bg-bg px-3 py-2 text-fg outline-none ring-brand focus:ring-2";
+
+  function applyPreset(preset: Preset) {
+    setFlavorId(preset.flavorId);
+    setMutationId(preset.mutationId);
+    setTotemId(preset.totemId);
+    setPerfect(preset.perfect);
+    setBlendTime(preset.blendTime);
+    setCustomBase("");
+  }
+
+  async function copyShareSummary() {
+    const path = buildSharePath({
+      flavorId,
+      mutationId,
+      totemId,
+      perfect,
+      blendTime,
+      customBase,
+    });
+    const url = `${SITE_URL}${path}`;
+    const summary = [
+      "Snowcone Stand build (MiniGameWiki)",
+      `${flavor?.name ?? "Flavor"} + ${mutation?.name ?? "Mutation"} + ${totem?.name ?? "Totem"}`,
+      `Perfect: ${perfect ? `ON (×${snowcone.perfectMult})` : "OFF"} · Blend time: ${blendTime}s`,
+      `Unit: ${results.unit.toFixed(2)} · Per-sec: ${results.perSec.toFixed(2)}`,
+      `Perfect ON vs OFF per-sec: ${results.perSecOn.toFixed(2)} / ${results.perSecOff.toFixed(2)}`,
+      url,
+    ].join("\n");
+
+    try {
+      await navigator.clipboard.writeText(summary);
+      setCopyState("copied");
+    } catch {
+      setCopyState("error");
+    }
+    window.setTimeout(() => setCopyState("idle"), 2000);
+  }
 
   return (
     <div className="space-y-8">
@@ -42,26 +193,37 @@ export function BlenderPlannerClient() {
           <Link href="/games/snowcone-stand" className="hover:underline">
             {snowcone.game}
           </Link>{" "}
-          / Blender Planner
+          / Blender Calculator
         </p>
-        <h1 className="mt-2 text-3xl font-semibold text-fg">Blender Planner</h1>
+        <h1 className="mt-2 text-3xl font-semibold text-fg">
+          Snowcone Stand Blender Calculator
+        </h1>
         <p className="mt-4 max-w-prose text-muted">
           Buying the next flavor or totem without math is how Snowcone Stand
           players burn a session&apos;s cash on a shiny upgrade that loses
-          per-second. The blender is a timed machine: unit value only matters
-          when divided by blend time, and Perfect Blend multiplies everything
-          downstream. This planner uses the site formula{" "}
+          per-second. This calculator uses{" "}
           <span className="font-mono text-fg">
             unit = base × (perfect ? {snowcone.perfectMult} : 1) × mutReduce ×
             totemStack
           </span>
           , then{" "}
           <span className="font-mono text-fg">perSec = unit / blendTime</span>.
-          Dial in the flavor you own, toggle Perfect, stack the mutation and
-          totem you actually have, and compare setups before you commit. It will
-          not replace practice on the Perfect window — it stops you from
-          upgrading in the wrong order.
+          Use presets, compare Perfect ON vs OFF, and copy a shareable build
+          link for Discord or Reddit.
         </p>
+      </div>
+
+      <div className="flex flex-wrap gap-2">
+        {presets.map((preset) => (
+          <Button
+            key={preset.id}
+            type="button"
+            variant="secondary"
+            onClick={() => applyPreset(preset)}
+          >
+            {preset.label}
+          </Button>
+        ))}
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
@@ -151,14 +313,23 @@ export function BlenderPlannerClient() {
         </Card>
 
         <Card className="space-y-4">
-          <h2 className="text-lg font-semibold text-fg">Results</h2>
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <h2 className="text-lg font-semibold text-fg">Results</h2>
+            <Button type="button" variant="secondary" onClick={copyShareSummary}>
+              {copyState === "copied"
+                ? "Copied"
+                : copyState === "error"
+                  ? "Copy failed"
+                  : "Copy build + link"}
+            </Button>
+          </div>
           <dl className="space-y-3 text-sm">
             <div className="flex justify-between gap-4 border-b border-border pb-2">
               <dt className="text-muted">Base</dt>
               <dd className="font-mono tabular-nums text-fg">{base}</dd>
             </div>
             <div className="flex justify-between gap-4 border-b border-border pb-2">
-              <dt className="text-muted">Perfect</dt>
+              <dt className="text-muted">Perfect (selected)</dt>
               <dd className="font-mono tabular-nums text-fg">
                 {perfect ? snowcone.perfectMult : 1}
               </dd>
@@ -174,19 +345,26 @@ export function BlenderPlannerClient() {
             <div className="flex justify-between gap-4 border-b border-border pb-2">
               <dt className="text-muted">Unit value</dt>
               <dd className="font-mono text-lg tabular-nums text-brand">
-                {unit.toFixed(2)}
+                {results.unit.toFixed(2)}
+              </dd>
+            </div>
+            <div className="flex justify-between gap-4 border-b border-border pb-2">
+              <dt className="text-muted">Per second</dt>
+              <dd className="font-mono text-lg tabular-nums text-brand">
+                {results.perSec.toFixed(2)}
               </dd>
             </div>
             <div className="flex justify-between gap-4">
-              <dt className="text-muted">Per second</dt>
-              <dd className="font-mono text-lg tabular-nums text-brand">
-                {perSec.toFixed(2)}
+              <dt className="text-muted">Perfect ON / OFF per-sec</dt>
+              <dd className="font-mono tabular-nums text-fg">
+                {results.perSecOn.toFixed(2)} / {results.perSecOff.toFixed(2)}
               </dd>
             </div>
           </dl>
           <p className="text-xs text-muted">
-            Compare two builds by changing one control at a time. Prefer higher
-            per-second at the Perfect rate you can actually sustain.
+            Prefer higher per-second at the Perfect rate you can actually
+            sustain. Share the copied summary when asking friends which upgrade
+            to buy next.
           </p>
         </Card>
       </div>
