@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/Card";
 import { snowcone } from "@/lib/snowcone";
 
 export const metadata: Metadata = pageMeta({
-  title: "Roblox Mini-Game Hubs",
+  title: "Mini-Game Hubs",
   description:
     "Browse Roblox mini-game hubs on MiniGameWiki. First launch: Snowcone Stand tools, calculators, codes status, and guides.",
   path: "/games",
