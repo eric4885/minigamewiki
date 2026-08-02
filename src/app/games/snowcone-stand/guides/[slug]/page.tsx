@@ -13,6 +13,20 @@ import {
 } from "@/lib/snowcone";
 import { renderBlocks } from "@/lib/renderBlocks";
 
+/** Shorter browser/SERP titles; H1 still uses the full guide.title. */
+const GUIDE_SEO_TITLE: Record<string, string> = {
+  "make-money-fast": "Make Money Faster",
+  "beginner-mistakes": "Five Beginner Mistakes",
+  "mutations-plain-english": "Mutations Explained Simply",
+  "beginner-economy-loop": "Beginner Economy Loop",
+  "perfect-blend-timing": "Perfect Blend Timing",
+  "mutation-stacking-guide": "Mutation Stacking Guide",
+  "totem-efficiency": "Totem Efficiency Guide",
+  "flavor-tier-explainer": "How We Rank Flavors",
+  "codes-policy": "Our Codes Policy",
+  "endgame-farm-route": "Endgame Farm Route",
+};
+
 export const dynamicParams = false;
 
 export function generateStaticParams() {
@@ -31,12 +45,12 @@ export async function generateMetadata({
   if (!guide) {
     return { title: "Guide not found" };
   }
+  const path = `/games/snowcone-stand/guides/${guide.slug}`;
   return {
-    title: guide.title,
+    title: GUIDE_SEO_TITLE[guide.slug] ?? guide.title,
     description: guide.excerpt,
-    alternates: {
-      canonical: `/games/snowcone-stand/guides/${guide.slug}`,
-    },
+    alternates: { canonical: path },
+    openGraph: { url: path, description: guide.excerpt },
   };
 }
 

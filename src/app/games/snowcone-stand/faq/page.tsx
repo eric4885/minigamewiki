@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -7,12 +8,12 @@ import { RelatedLinks } from "@/components/RelatedLinks";
 import { SiteDisclaimer } from "@/components/SiteDisclaimer";
 import { snowcone, SITE_URL } from "@/lib/snowcone";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Snowcone Stand FAQ",
   description:
-    "Frequently asked questions about MiniGameWiki Snowcone Stand tools, codes, tiers, and data accuracy.",
-  alternates: { canonical: "/games/snowcone-stand/faq" },
-};
+    "FAQ for MiniGameWiki Snowcone Stand tools: codes status, blender calculator math, tiers, and data accuracy.",
+  path: "/games/snowcone-stand/faq",
+});
 
 type FaqItem = {
   q: string;
@@ -99,15 +100,15 @@ const faqs: FaqItem[] = [
   {
     q: "What if a number is wrong after a patch?",
     plain:
-      "Email hello@minigamewiki.com with the page URL, what changed in-game, and a screenshot if possible. We update JSON data after verification.",
+      "Use the Contact page with the page URL, what changed in-game, and a screenshot if possible. We update JSON data after verification.",
     a: (
       <>
-        Email hello@minigamewiki.com with the page URL, what changed in-game,
-        and a screenshot if possible. You can also use{" "}
+        Use the{" "}
         <Link href="/contact" className="text-accent hover:underline">
-          Contact
-        </Link>
-        . We update JSON data after verification.
+          Contact page
+        </Link>{" "}
+        with the page URL, what changed in-game, and a screenshot if possible.
+        We update JSON data after verification.
       </>
     ),
   },

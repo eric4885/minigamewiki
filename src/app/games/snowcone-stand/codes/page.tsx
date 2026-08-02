@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
@@ -8,9 +9,11 @@ import { Table, Td } from "@/components/ui/Table";
 import { SITE_URL, snowcone } from "@/lib/snowcone";
 
 export const metadata: Metadata = {
-  title: "Latest Snowcone Stand Codes",
-  description: `Latest verified Snowcone Stand codes for Roblox. Last checked ${snowcone.codesLastChecked}. We list only confirmed codes — the table stays empty when none are active.`,
-  alternates: { canonical: "/games/snowcone-stand/codes" },
+  ...pageMeta({
+    title: "Latest Snowcone Stand Codes",
+    description: `Latest verified Snowcone Stand codes for Roblox. Last checked ${snowcone.codesLastChecked}. Only confirmed codes — empty when none are active.`,
+    path: "/games/snowcone-stand/codes",
+  }),
 };
 
 export default function CodesPage() {

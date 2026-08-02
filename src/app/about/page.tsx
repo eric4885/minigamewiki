@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
-import { CONTACT_EMAIL } from "@/lib/snowcone";
+import { ContactEmail } from "@/components/ContactEmail";
 
-export const metadata: Metadata = {
-  title: "About",
+export const metadata: Metadata = pageMeta({
+  title: "About | MiniGameWiki",
   description:
-    "About MiniGameWiki — independent Roblox mini-game tools and guides, starting with Snowcone Stand.",
-  alternates: { canonical: "/about" },
-};
+    "About MiniGameWiki: an independent fan site for Roblox mini-game tools, calculators, and guides, starting with Snowcone Stand.",
+  path: "/about",
+  absolute: true,
+});
 
 export default function AboutPage() {
   return (
@@ -54,12 +56,7 @@ export default function AboutPage() {
             DMCA
           </Link>{" "}
           page or{" "}
-          <a
-            href={`mailto:${CONTACT_EMAIL}`}
-            className="text-accent hover:underline"
-          >
-            {CONTACT_EMAIL}
-          </a>{" "}
+          <ContactEmail linkToContact className="font-mono" />{" "}
           and we will respond promptly.
         </p>
       </blockquote>

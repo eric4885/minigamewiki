@@ -16,13 +16,9 @@ export const metadata: Metadata = {
   },
   description:
     "Independent Roblox mini-game tools, calculators, and guides. First launch: Snowcone Stand blender planner, flavor tables, and tier lists.",
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: SITE_URL,
     siteName: SITE_NAME,
     title: `${SITE_NAME} — Roblox Mini-Game Tools & Guides`,
     description:

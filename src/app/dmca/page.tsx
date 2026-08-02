@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
-import { CONTACT_EMAIL } from "@/lib/snowcone";
+import { ContactEmail } from "@/components/ContactEmail";
 
-export const metadata: Metadata = {
-  title: "DMCA & Copyright",
+export const metadata: Metadata = pageMeta({
+  title: "DMCA & Copyright | MiniGameWiki",
   description:
-    "DMCA and copyright notice procedure for MiniGameWiki.com.",
-  alternates: { canonical: "/dmca" },
-};
+    "DMCA and copyright notice process for MiniGameWiki.com: how rights holders request correction or removal.",
+  path: "/dmca",
+  absolute: true,
+});
 
 export default function DmcaPage() {
   return (
@@ -33,7 +35,13 @@ export default function DmcaPage() {
       </p>
 
       <h2 className="text-xl font-semibold text-fg">How to send a notice</h2>
-      <p>Email {CONTACT_EMAIL} with the subject line &quot;DMCA / Copyright&quot; and include:</p>
+      <p>
+        Email <ContactEmail className="font-mono text-fg" /> (or use{" "}
+        <Link href="/contact" className="text-accent hover:underline">
+          Contact
+        </Link>
+        ) with the subject line &quot;DMCA / Copyright&quot; and include:
+      </p>
       <ul className="list-disc space-y-1 pl-5">
         <li>Your name, organization (if any), and contact email</li>
         <li>A description of the copyrighted work you claim is infringed</li>

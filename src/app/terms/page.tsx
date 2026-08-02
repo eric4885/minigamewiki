@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
-import { CONTACT_EMAIL } from "@/lib/snowcone";
+import { ContactEmail } from "@/components/ContactEmail";
 
-export const metadata: Metadata = {
-  title: "Terms of Use",
-  description: "Terms of Use for MiniGameWiki.com.",
-  alternates: { canonical: "/terms" },
-};
+export const metadata: Metadata = pageMeta({
+  title: "Terms of Use | MiniGameWiki",
+  description:
+    "Terms of Use for MiniGameWiki.com: fan-site disclaimer, informational tools, acceptable use, IP, and liability limits.",
+  path: "/terms",
+  absolute: true,
+});
 
 export default function TermsPage() {
   return (
@@ -67,13 +70,7 @@ export default function TermsPage() {
       <h2 className="text-xl font-semibold text-fg">Contact</h2>
       <p>
         Questions about these Terms:{" "}
-        <a
-          href={`mailto:${CONTACT_EMAIL}`}
-          className="text-accent hover:underline"
-        >
-          {CONTACT_EMAIL}
-        </a>
-        .
+        <ContactEmail linkToContact className="font-mono" />.
       </p>
     </article>
   );

@@ -5,10 +5,13 @@ import { Card } from "@/components/ui/Card";
 import { getLatestGuides } from "@/lib/snowcone";
 
 export const metadata: Metadata = {
-  title: "Snowcone Stand Wiki & Tools for Roblox",
+  title: {
+    absolute: "Snowcone Stand Wiki & Tools for Roblox | MiniGameWiki",
+  },
   description:
     "Snowcone Stand wiki-style tools for Roblox: blender calculator, flavor × mutation table, tier list, latest codes status, and guides.",
   alternates: { canonical: "/" },
+  openGraph: { url: "/" },
 };
 
 const tools = [

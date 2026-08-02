@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { Card } from "@/components/ui/Card";
 import { snowcone } from "@/lib/snowcone";
 
-export const metadata: Metadata = {
-  title: "Games",
+export const metadata: Metadata = pageMeta({
+  title: "Roblox Mini-Game Hubs",
   description:
-    "Browse Roblox mini-game hubs on MiniGameWiki. First launch: Snowcone Stand tools and guides.",
-};
+    "Browse Roblox mini-game hubs on MiniGameWiki. First launch: Snowcone Stand tools, calculators, codes status, and guides.",
+  path: "/games",
+});
 
 export default function GamesPage() {
   return (

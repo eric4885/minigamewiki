@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { SiteDisclaimer } from "@/components/SiteDisclaimer";
 import { snowcone } from "@/lib/snowcone";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Snowcone Stand Changelog",
   description:
-    "Changelog for MiniGameWiki Snowcone Stand data, tools, and guide updates.",
-  alternates: { canonical: "/games/snowcone-stand/updates" },
-};
+    "Changelog for MiniGameWiki Snowcone Stand: data reviews, tool updates, guide edits, and codes status checks.",
+  path: "/games/snowcone-stand/updates",
+});
 
 export default function SnowconeUpdatesPage() {
   return (

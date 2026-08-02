@@ -1,21 +1,17 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
-import { CONTACT_EMAIL } from "@/lib/snowcone";
+import { ContactEmail } from "@/components/ContactEmail";
 
-export const metadata: Metadata = {
-  title: "Contact",
+export const metadata: Metadata = pageMeta({
+  title: "Contact | MiniGameWiki",
   description:
-    "Contact MiniGameWiki for corrections, code tips, DMCA notices, or rights requests.",
-  alternates: { canonical: "/contact" },
-};
+    "Contact MiniGameWiki to report wrong data, tip verified Snowcone Stand codes, or send DMCA and rights requests.",
+  path: "/contact",
+  absolute: true,
+});
 
 export default function ContactPage() {
-  const mailtoReport = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
-    "Data correction — Snowcone Stand"
-  )}&body=${encodeURIComponent(
-    "Page URL:\nWhat looks wrong:\nWhat you see in-game:\nGame/version or date noticed:\nScreenshot link (optional):\n"
-  )}`;
-
   return (
     <article className="space-y-6">
       <h1 className="text-3xl font-semibold text-fg">Contact</h1>
@@ -25,27 +21,21 @@ export default function ContactPage() {
         verify before publishing.
       </p>
       <p className="text-fg">
-        Email:{" "}
-        <a
-          href={`mailto:${CONTACT_EMAIL}`}
-          className="text-accent hover:underline"
-        >
-          {CONTACT_EMAIL}
-        </a>
+        Email: <ContactEmail />
+      </p>
+      <p className="text-sm text-muted">
+        Copy the address into your email app (we avoid clickable mailto links so
+        scanners do not flag Cloudflare email-protection URLs as broken pages).
       </p>
 
       <section className="rounded-xl border border-border bg-surface p-5 space-y-3">
         <h2 className="font-semibold text-fg">Report wrong data</h2>
         <p className="text-sm text-muted">
-          Please include: the page URL, what our site shows, what you see
-          in-game, and when you noticed the difference. A screenshot helps.
+          Email <ContactEmail className="font-mono text-fg" /> with subject
+          &quot;Data correction — Snowcone Stand&quot;. Include: the page URL,
+          what our site shows, what you see in-game, and when you noticed the
+          difference. A screenshot helps.
         </p>
-        <a
-          href={mailtoReport}
-          className="inline-flex rounded-md bg-brand px-4 py-2 text-sm font-medium text-bg transition hover:opacity-90"
-        >
-          Draft correction email
-        </a>
       </section>
 
       <p className="text-sm text-muted">

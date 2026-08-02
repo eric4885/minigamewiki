@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Card } from "@/components/ui/Card";
@@ -6,12 +7,12 @@ import { RelatedLinks } from "@/components/RelatedLinks";
 import { SiteDisclaimer } from "@/components/SiteDisclaimer";
 import { snowcone } from "@/lib/snowcone";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Snowcone Stand Wiki & Tools",
   description:
-    "Snowcone Stand wiki & tools for Roblox: blender calculator, flavor × mutation table, tier list, latest codes status, FAQ, and guides.",
-  alternates: { canonical: "/games/snowcone-stand" },
-};
+    "Snowcone Stand wiki and tools for Roblox: blender calculator, flavor table, tier list, latest codes status, FAQ, and guides.",
+  path: "/games/snowcone-stand",
+});
 
 const links = [
   {

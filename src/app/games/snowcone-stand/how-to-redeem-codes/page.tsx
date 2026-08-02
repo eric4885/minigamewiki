@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { SiteDisclaimer } from "@/components/SiteDisclaimer";
 import { snowcone } from "@/lib/snowcone";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "How to Redeem Snowcone Stand Codes",
   description:
-    "How to redeem Roblox Snowcone Stand codes, plus MiniGameWiki’s honest policy on unverified codes.",
-  alternates: { canonical: "/games/snowcone-stand/how-to-redeem-codes" },
-};
+    "How to redeem Roblox Snowcone Stand codes, plus MiniGameWiki honest policy on unverified and expired codes.",
+  path: "/games/snowcone-stand/how-to-redeem-codes",
+});
 
 export default function HowToRedeemCodesPage() {
   return (

@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
-import { CONTACT_EMAIL } from "@/lib/snowcone";
+import { pageMeta } from "@/lib/seo";
+import { ContactEmail } from "@/components/ContactEmail";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy",
+export const metadata: Metadata = pageMeta({
+  title: "Privacy Policy | MiniGameWiki",
   description:
-    "Privacy Policy for MiniGameWiki.com — analytics, cookies, AdSense, and data practices.",
-  alternates: { canonical: "/privacy-policy" },
-};
+    "Privacy Policy for MiniGameWiki.com: analytics cookies, optional ads, data practices, and how to contact us about privacy.",
+  path: "/privacy-policy",
+  absolute: true,
+});
 
 export default function PrivacyPolicyPage() {
   return (
@@ -133,14 +135,7 @@ export default function PrivacyPolicyPage() {
       <h2 className="text-xl font-semibold text-fg">Contact Us</h2>
       <p>
         If you have any questions about this Privacy Policy, You can contact Us
-        by email:{" "}
-        <a
-          href={`mailto:${CONTACT_EMAIL}`}
-          className="text-accent hover:underline"
-        >
-          {CONTACT_EMAIL}
-        </a>
-        .
+        by email: <ContactEmail linkToContact className="font-mono" />.
       </p>
     </article>
   );

@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { SiteDisclaimer } from "@/components/SiteDisclaimer";
 import { Card } from "@/components/ui/Card";
 import { snowcone } from "@/lib/snowcone";
 
-export const metadata: Metadata = {
-  title: "Snowcone Stand Tier List (Roblox)",
+export const metadata: Metadata = pageMeta({
+  title: "Snowcone Stand Tier List",
   description:
-    "Snowcone Stand tier list for Roblox: S–D rankings for flavors, mutations, and totems with clear assumptions.",
-  alternates: { canonical: "/games/snowcone-stand/tier-list" },
-};
+    "Snowcone Stand tier list for Roblox: S-D rankings for flavors, mutations, and totems with clear assumptions.",
+  path: "/games/snowcone-stand/tier-list",
+});
 
 export default function TierListPage() {
   const { tierList } = snowcone;
