@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { pageMeta } from "@/lib/seo";
 import { BlenderPlannerClient } from "@/components/BlenderPlannerClient";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { SiteDisclaimer } from "@/components/SiteDisclaimer";
+import { snowcone } from "@/lib/snowcone";
 
 export const metadata: Metadata = pageMeta({
   title: "Snowcone Stand Blender Calculator",
@@ -14,6 +16,31 @@ export const metadata: Metadata = pageMeta({
 export default function BlenderPlannerPage() {
   return (
     <div className="space-y-8">
+      <div>
+        <Breadcrumbs
+          items={[
+            { href: "/games", label: "Games" },
+            { href: "/games/snowcone-stand", label: snowcone.game },
+            { label: "Blender Calculator" },
+          ]}
+        />
+        <h1 className="mt-2 text-3xl font-semibold text-fg">
+          Snowcone Stand Blender Calculator
+        </h1>
+        <p className="mt-4 max-w-prose text-muted">
+          Buying the next flavor or totem without math is how Snowcone Stand
+          players burn a session&apos;s cash on a shiny upgrade that loses
+          per-second. This calculator uses{" "}
+          <span className="font-mono text-fg">
+            unit = base × (perfect ? {snowcone.perfectMult} : 1) × mutReduce ×
+            totemStack
+          </span>
+          , then{" "}
+          <span className="font-mono text-fg">perSec = unit / blendTime</span>.
+          Use presets, compare Perfect ON vs OFF, and copy a shareable build
+          link for Discord or Reddit.
+        </p>
+      </div>
       <BlenderPlannerClient />
       <SiteDisclaimer />
       <RelatedLinks excludeHref="/games/snowcone-stand/blender-planner" />

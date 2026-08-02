@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { SiteDisclaimer } from "@/components/SiteDisclaimer";
@@ -89,12 +89,14 @@ export default async function GuideArticlePage({ params }: PageProps) {
     <article className="space-y-6">
       <JsonLd data={articleLd} />
       <div>
-        <p className="text-sm text-brand">
-          <Link href="/games/snowcone-stand/guides" className="hover:underline">
-            Guides
-          </Link>{" "}
-          / {guide.slug}
-        </p>
+        <Breadcrumbs
+          items={[
+            { href: "/games", label: "Games" },
+            { href: "/games/snowcone-stand", label: snowcone.game },
+            { href: "/games/snowcone-stand/guides", label: "Guides" },
+            { label: guide.title },
+          ]}
+        />
         <h1 className="mt-2 text-3xl font-semibold text-fg">{guide.title}</h1>
         <time
           dateTime={guide.updatedAt}

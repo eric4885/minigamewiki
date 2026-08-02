@@ -8,9 +8,17 @@
   "dataReviewedAt": "2026-07-30",
   "perfectMult": 1.5,
   "codes": [],
-  "codesLastChecked": "2026-08-01",
+  "codesLastChecked": "2026-08-02",
   "codesNote": "As of the last check date, there are no active public promo codes for Snowcone Stand. We do not invent codes. Bookmark this status page — when verified codes appear, they land in the active table first.",
   "changelog": [
+    {
+      "date": "2026-08-02",
+      "items": [
+        "Unified Breadcrumbs across Snowcone tool and guide pages; guide crumbs use article titles.",
+        "Nav now includes Calculator and Codes; home hero and tool lists tightened for consistency.",
+        "About page styling aligned with other legal pages; codes last-checked refreshed."
+      ]
+    },
     {
       "date": "2026-08-01",
       "items": [

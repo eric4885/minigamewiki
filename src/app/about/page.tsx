@@ -13,22 +13,22 @@ export const metadata: Metadata = pageMeta({
 
 export default function AboutPage() {
   return (
-    <article className="prose-invert max-w-none space-y-6">
+    <article className="space-y-6 text-muted">
       <h1 className="text-3xl font-semibold text-fg">About MiniGameWiki</h1>
-      <p className="text-muted">
+      <p>
         MiniGameWiki publishes free calculators, reference tables, and guides
         for Roblox mini-games. Our first focus is Snowcone Stand: blender
         planning, flavor and mutation data, tier lists, and an honest codes
         tracker.
       </p>
-      <p className="text-muted">
+      <p>
         We keep data in structured JSON, ship a fully static site, and avoid
         fake promo codes or paywalled tools. Numbers are planning aids — always
         verify in-game after patches.
       </p>
 
       <h2 className="text-xl font-semibold text-fg">Who maintains this site</h2>
-      <p className="text-muted">
+      <p>
         MiniGameWiki is maintained by an independent editor-operator (published
         under the MiniGameWiki name). We aim to review Snowcone Stand numbers and
         the codes page at least weekly, and after major game patches when we are
@@ -39,7 +39,7 @@ export default function AboutPage() {
       <h2 className="text-xl font-semibold text-fg">
         Independent Author Statement
       </h2>
-      <blockquote className="rounded-xl border border-border bg-surface p-5 text-muted">
+      <blockquote className="rounded-xl border border-border bg-surface p-5">
         <p>
           MiniGameWiki is an independently operated fan website. It is not
           affiliated with, endorsed by, sponsored by, or otherwise connected to

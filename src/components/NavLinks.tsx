@@ -4,14 +4,24 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const nav = [
-  { href: "/", label: "Home" },
-  { href: "/games", label: "Games" },
-  { href: "/games/snowcone-stand", label: "Snowcone Stand" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", label: "Home", match: "exact" as const },
+  { href: "/games", label: "Games", match: "exact" as const },
+  {
+    href: "/games/snowcone-stand/blender-planner",
+    label: "Calculator",
+    match: "exact" as const,
+  },
+  {
+    href: "/games/snowcone-stand/codes",
+    label: "Codes",
+    match: "exact" as const,
+  },
+  { href: "/about", label: "About", match: "exact" as const },
+  { href: "/contact", label: "Contact", match: "exact" as const },
 ];
 
-function isActive(pathname: string, href: string) {
+function isActive(pathname: string, href: string, match: "exact" | "prefix") {
+  if (match === "exact") return pathname === href;
   if (href === "/") return pathname === "/";
   return pathname === href || pathname.startsWith(`${href}/`);
 }
@@ -25,7 +35,7 @@ export function NavLinks() {
       className="flex flex-wrap items-center justify-end gap-x-4 gap-y-1 text-sm"
     >
       {nav.map((item) => {
-        const active = isActive(pathname, item.href);
+        const active = isActive(pathname, item.href, item.match);
         return (
           <Link
             key={item.href}

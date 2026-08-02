@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -188,31 +187,6 @@ export function BlenderPlannerClient() {
 
   return (
     <div className="space-y-8">
-      <div>
-        <p className="text-sm text-brand">
-          <Link href="/games/snowcone-stand" className="hover:underline">
-            {snowcone.game}
-          </Link>{" "}
-          / Blender Calculator
-        </p>
-        <h1 className="mt-2 text-3xl font-semibold text-fg">
-          Snowcone Stand Blender Calculator
-        </h1>
-        <p className="mt-4 max-w-prose text-muted">
-          Buying the next flavor or totem without math is how Snowcone Stand
-          players burn a session&apos;s cash on a shiny upgrade that loses
-          per-second. This calculator uses{" "}
-          <span className="font-mono text-fg">
-            unit = base × (perfect ? {snowcone.perfectMult} : 1) × mutReduce ×
-            totemStack
-          </span>
-          , then{" "}
-          <span className="font-mono text-fg">perSec = unit / blendTime</span>.
-          Use presets, compare Perfect ON vs OFF, and copy a shareable build
-          link for Discord or Reddit.
-        </p>
-      </div>
-
       <div className="flex flex-wrap gap-2">
         {presets.map((preset) => (
           <Button

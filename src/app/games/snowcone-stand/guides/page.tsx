@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { SiteDisclaimer } from "@/components/SiteDisclaimer";
 import { Card } from "@/components/ui/Card";
@@ -19,12 +20,13 @@ export default function GuidesIndexPage() {
   return (
     <div className="space-y-8">
       <div>
-        <p className="text-sm text-brand">
-          <Link href="/games/snowcone-stand" className="hover:underline">
-            {snowcone.game}
-          </Link>{" "}
-          / Guides
-        </p>
+        <Breadcrumbs
+          items={[
+            { href: "/games", label: "Games" },
+            { href: "/games/snowcone-stand", label: snowcone.game },
+            { label: "Guides" },
+          ]}
+        />
         <h1 className="mt-2 text-3xl font-semibold text-fg">
           Snowcone Stand Guides
         </h1>

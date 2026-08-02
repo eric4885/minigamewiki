@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { SiteDisclaimer } from "@/components/SiteDisclaimer";
 import { Table, Td } from "@/components/ui/Table";
@@ -17,12 +18,13 @@ export default function FlavorMutationTablePage() {
   return (
     <div className="space-y-8">
       <div>
-        <p className="text-sm text-brand">
-          <Link href="/games/snowcone-stand" className="hover:underline">
-            {snowcone.game}
-          </Link>{" "}
-          / Flavor × Mutation Table
-        </p>
+        <Breadcrumbs
+          items={[
+            { href: "/games", label: "Games" },
+            { href: "/games/snowcone-stand", label: snowcone.game },
+            { label: "Flavor × Mutation Table" },
+          ]}
+        />
         <h1 className="mt-2 text-3xl font-semibold text-fg">
           Snowcone Stand Flavor & Mutation Table
         </h1>
