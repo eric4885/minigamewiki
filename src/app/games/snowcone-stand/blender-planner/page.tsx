@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { pageMeta } from "@/lib/seo";
 import { BlenderPlannerClient } from "@/components/BlenderPlannerClient";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -41,6 +42,31 @@ export default function BlenderPlannerPage() {
           link for Discord or Reddit.
         </p>
       </div>
+      <p className="rounded-xl border border-border bg-surface p-4 text-sm text-muted">
+        Use this calculator to maximize profit comparisons (Perfect ON vs OFF).
+        Pull mutReduce from the{" "}
+        <Link
+          href="/games/snowcone-stand/flavor-mutation-table"
+          className="text-accent hover:underline"
+        >
+          flavor × mutation table
+        </Link>
+        , then read{" "}
+        <Link
+          href="/games/snowcone-stand/guides/make-money-fast"
+          className="text-accent hover:underline"
+        >
+          make money faster
+        </Link>{" "}
+        or{" "}
+        <Link
+          href="/games/snowcone-stand/guides/mutations-plain-english"
+          className="text-accent hover:underline"
+        >
+          mutations explained simply
+        </Link>{" "}
+        for the decision context.
+      </p>
       <BlenderPlannerClient />
       <SiteDisclaimer />
       <RelatedLinks excludeHref="/games/snowcone-stand/blender-planner" />

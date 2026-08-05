@@ -57,6 +57,31 @@ export default function TierListPage() {
         </p>
       </div>
 
+      <p className="rounded-xl border border-border bg-surface p-4 text-sm text-muted">
+        Before you trust an S-tier upgrade for profit, check bases on the{" "}
+        <Link
+          href="/games/snowcone-stand/flavor-mutation-table"
+          className="text-accent hover:underline"
+        >
+          flavor × mutation table
+        </Link>{" "}
+        and compare per-second in the{" "}
+        <Link
+          href="/games/snowcone-stand/blender-planner"
+          className="text-accent hover:underline"
+        >
+          Blender Calculator
+        </Link>
+        . Cash-first path:{" "}
+        <Link
+          href="/games/snowcone-stand/guides/make-money-fast"
+          className="text-accent hover:underline"
+        >
+          how to make money faster
+        </Link>
+        .
+      </p>
+
       <Card>
         <h2 className="font-semibold text-fg">Assumptions</h2>
         <p className="mt-2 text-sm text-muted">{tierList.summary}</p>

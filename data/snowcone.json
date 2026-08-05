@@ -8,9 +8,17 @@
   "dataReviewedAt": "2026-07-30",
   "perfectMult": 1.5,
   "codes": [],
-  "codesLastChecked": "2026-08-02",
+  "codesLastChecked": "2026-08-05",
   "codesNote": "As of the last check date, there are no active public promo codes for Snowcone Stand. We do not invent codes. Bookmark this status page — when verified codes appear, they land in the active table first.",
   "changelog": [
+    {
+      "date": "2026-08-05",
+      "items": [
+        "Codes status refreshed; still no verified active public codes.",
+        "Strengthened internal links from profit/mutation guides to the Blender Calculator and flavor × mutation table.",
+        "Tool pages now point more clearly to related guides for maximize-profit and best-mutation search intents."
+      ]
+    },
     {
       "date": "2026-08-02",
       "items": [
@@ -229,11 +237,11 @@
     {
       "slug": "make-money-fast",
       "title": "How to Make Money Faster in Snowcone Stand",
-      "updatedAt": "2026-07-30",
-      "excerpt": "Where early cash actually comes from, what to buy first, and why Perfect Blend beats chasing fancy flavors too soon.",
+      "updatedAt": "2026-08-05",
+      "excerpt": "Maximize profit in Snowcone Stand: what to buy first, why Perfect Blend beats fancy flavors, and how to compare builds in the Blender Calculator.",
       "content": [
         "Most slow starts in Snowcone Stand aren’t about “bad luck.” They’re about spending cash on the wrong thing while the blender sits idle or misses the Perfect window.",
-        "Cash comes from finished blends. So the boring question is the right one: how much value do you get per second of blending, and how often do you actually nail Perfect?",
+        "Cash comes from finished blends. If you are trying to **maximize profit**, ask how much value you get per second of blending, and how often you actually nail Perfect. Open the [Blender Calculator](/games/snowcone-stand/blender-planner) with your real blend time before you spend a big cash pile.",
         "## What to buy first",
         "Flavor unlocks that raise base value come before cosmetics. A nicer stand doesn’t pay the next unlock for you.",
         "If you have a choice between a tiny blend-time upgrade and a decoration, take the speed. Shorter cycles mean more chances to hit Perfect in the same play session.",
@@ -247,7 +255,7 @@
         "- Once you’re on something like Mango, open the [Blender Planner](/games/snowcone-stand/blender-planner) and compare setups with your real blend time.",
         "Don’t wait for a mythical code dump to “fix” your economy. If our [codes page](/games/snowcone-stand/codes) is empty, that’s the honest status — keep farming.",
         "## When the numbers lie",
-        "Patches move values. If a flavor suddenly feels weak, check the [flavor table](/games/snowcone-stand/flavor-mutation-table) again and re-run the planner. Treat this site as a worksheet, not a promise."
+        "Patches move values. If a flavor suddenly feels weak, check the [flavor × mutation table](/games/snowcone-stand/flavor-mutation-table) again and re-run the [Blender Calculator](/games/snowcone-stand/blender-planner). Treat this site as a worksheet, not a promise. For mutation choices that affect profit, read [mutations explained simply](/games/snowcone-stand/guides/mutations-plain-english)."
       ]
     },
     {
@@ -275,10 +283,10 @@
     {
       "slug": "mutations-plain-english",
       "title": "Snowcone Stand Mutations, Explained Simply",
-      "updatedAt": "2026-07-30",
-      "excerpt": "What mutReduce means in practice, which mutations are worth chasing for cash, and when to ignore the flashy ones.",
+      "updatedAt": "2026-08-05",
+      "excerpt": "What the best mutation means for cash farms: mutReduce in plain English, which muts to chase, and how to confirm picks in the flavor table and calculator.",
       "content": [
-        "Mutations sound like collectible stickers. For money, they’re just multipliers sitting on top of your flavor base — after Perfect, in the way we model it here.",
+        "Players search for the **best mutation** in Snowcone Stand as if there were one sticker to collect. For money, mutations are just multipliers on your flavor base — after Perfect, in the way we model it here.",
         "We call that multiplier **mutReduce** on the [tables](/games/snowcone-stand/flavor-mutation-table). Bigger number, bigger payout, assuming everything else stays equal.",
         "## The short ladder",
         "- Frosted: small bump. Fine while you’re learning.",
@@ -289,7 +297,7 @@
         "## Perfect still matters more than you want",
         "A rare mutation doesn’t save bad timing. Perfect multiplies first in our formula, so whiffing the window taxes Golden and Prismatic the same way it taxes Frosted — just with bigger numbers on the receipt. Timing notes: [Perfect Blend timing](/games/snowcone-stand/guides/perfect-blend-timing).",
         "## How to use this site",
-        "Open the [Flavor × Mutation table](/games/snowcone-stand/flavor-mutation-table) when you’re deciding what to chase. Then plug the same combo into the [Blender Planner](/games/snowcone-stand/blender-planner) with your blend time.",
+        "Open the [Flavor × Mutation table](/games/snowcone-stand/flavor-mutation-table) when you are deciding what to chase (that is the reference for mutReduce). Then plug the same combo into the [Blender Calculator](/games/snowcone-stand/blender-planner) with your blend time and Perfect ON/OFF compare. Share the copied build link if you ask friends which mut is worth it.",
         "If two options look close on paper, pick the one you can Perfect consistently. Hands beat theory screenshots. For a longer mid-game chase order, see the [mutation stacking guide](/games/snowcone-stand/guides/mutation-stacking-guide).",
         "## Patches",
         "If the live game nerfs or buffs a mutation, our JSON will lag until we re-check. Send a correction via [Contact](/contact) if you catch a mismatch — bring a screenshot if you can."
@@ -298,7 +306,7 @@
     {
       "slug": "beginner-economy-loop",
       "title": "Beginner Economy Loop: First Hour in Snowcone Stand",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-08-05",
       "excerpt": "A clear first-hour plan: unlock order, when to chase Perfect Blend, and how not to waste early cash on vanity upgrades.",
       "content": [
         "Snowcone Stand rewards players who treat the blender as a timed economy, not a spam button. Your first hour should prioritize consistent Perfect Blends and unlocking the next flavor tier before cosmetic spending.",
@@ -307,10 +315,10 @@
         "- Keep at least one upgrade path aimed at blend time reduction.",
         "- Ignore rare mutations until your base flavor is at least mid-tier.",
         "## Perfect Blend habit",
-        "A Perfect Blend multiplies unit value by **1.5**. Missing the window repeatedly costs more than a slightly slower flavor with reliable timing.",
+        "A Perfect Blend multiplies unit value by **1.5**. Missing the window repeatedly costs more than a slightly slower flavor with reliable timing. When you can hit Perfect most of the time, use the [Blender Calculator](/games/snowcone-stand/blender-planner) to compare the next unlock before you buy.",
         "## Cash checkpoints",
         "Aim to reach Strawberry or Blueberry before heavy totem investment. Totems amplify what you already produce; they do not fix a weak base loop.",
-        "Once you can land Perfect Blends on autopilot, move to the [Blender Planner](/games/snowcone-stand/blender-planner) and test Mango with Sparkling versus Blueberry with Golden. For a cash-first checklist, see [how to make money faster](/games/snowcone-stand/guides/make-money-fast)."
+        "Once you can land Perfect Blends on autopilot, move to the [Blender Calculator](/games/snowcone-stand/blender-planner) and test Mango with Sparkling versus Blueberry with Golden. For a cash-first checklist, see [how to make money faster](/games/snowcone-stand/guides/make-money-fast). Mutation basics: [mutations explained simply](/games/snowcone-stand/guides/mutations-plain-english)."
       ]
     },
     {
@@ -334,10 +342,10 @@
     {
       "slug": "mutation-stacking-guide",
       "title": "Mutation Stacking Guide for Mid-Game Farms",
-      "updatedAt": "2026-07-26",
-      "excerpt": "Which mutations are worth chasing, when Cursed is a trap, and how mutation multipliers interact with Perfect Blend.",
+      "updatedAt": "2026-08-05",
+      "excerpt": "Best mid-game mutation chase order for Snowcone Stand farms, when Cursed is a trap, and how to verify stacks with the table and Blender Calculator.",
       "content": [
-        "Mutations multiply after Perfect Blend in our model. That means Perfect + Golden is multiplicative, not additive — missing Perfect hurts more once you invest in rare muts.",
+        "Mutations multiply after Perfect Blend in our model. That means Perfect + Golden is multiplicative, not additive — missing Perfect hurts more once you invest in rare muts. Looking for the best mutation for your current stand? Start with the ladder below, then confirm on the [flavor × mutation table](/games/snowcone-stand/flavor-mutation-table) and [Blender Calculator](/games/snowcone-stand/blender-planner).",
         "## Recommended chase order",
         "- Frosted for early learning (cheap, mild).",
         "- Sparkling as the default mid-game farm mut.",
@@ -346,7 +354,7 @@
         "## Cursed caveat",
         "Cursed reduces cash efficiency. Only keep it if a quest, recipe, or collection goal explicitly requires it.",
         "## Table workflow",
-        "Open the [Flavor × Mutation table](/games/snowcone-stand/flavor-mutation-table), filter by the flavors you own, and mark any combination whose [planner](/games/snowcone-stand/blender-planner) per-second beats your current stand setup by 15% or more. Prefer the plain-English [mutations overview](/games/snowcone-stand/guides/mutations-plain-english) if the labels feel noisy."
+        "Open the [Flavor × Mutation table](/games/snowcone-stand/flavor-mutation-table), note the flavors you own, and mark any combination whose [Blender Calculator](/games/snowcone-stand/blender-planner) per-second beats your current setup by about 15% or more. Prefer the plain-English [mutations overview](/games/snowcone-stand/guides/mutations-plain-english) if the labels feel noisy. Cross-check ranks on the [tier list](/games/snowcone-stand/tier-list) only after you can land Perfect reliably."
       ]
     },
     {
@@ -369,7 +377,7 @@
     {
       "slug": "flavor-tier-explainer",
       "title": "How We Rank Flavors (And When to Ignore the Tier List)",
-      "updatedAt": "2026-07-24",
+      "updatedAt": "2026-08-05",
       "excerpt": "Our S–D flavor tiers assume Perfect Blend and mid mutations. Early unlock order can beat the published list.",
       "content": [
         "Tier lists are decision aids, not absolute truth. Snowcone Stand progression gates matter more than theoretical S-tier until you can actually craft those flavors.",
@@ -381,7 +389,7 @@
         "- First hour: follow unlock price, not S-tier.",
         "- Questlines that force specific flavors.",
         "- Event-only ingredients that change temporary value.",
-        "Cross-check any upgrade with the [Blender Planner](/games/snowcone-stand/blender-planner) before spending a large cash pile. The live [tier list](/games/snowcone-stand/tier-list) is the ranked view; this article is the “when to ignore it” note."
+        "Cross-check any upgrade with the [Blender Calculator](/games/snowcone-stand/blender-planner) before spending a large cash pile. Confirm bases and mutReduce on the [flavor × mutation table](/games/snowcone-stand/flavor-mutation-table). The live [tier list](/games/snowcone-stand/tier-list) is the ranked view; this article is the “when to ignore it” note."
       ]
     },
     {

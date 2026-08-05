@@ -56,6 +56,25 @@ export default function FlavorMutationTablePage() {
         </p>
       </div>
 
+      <p className="rounded-xl border border-border bg-surface p-4 text-sm text-muted">
+        Next step for &quot;best mutation&quot; decisions: shortlist here, then confirm
+        per-second in the{" "}
+        <Link
+          href="/games/snowcone-stand/blender-planner"
+          className="text-accent hover:underline"
+        >
+          Blender Calculator
+        </Link>
+        . Plain-English walkthrough:{" "}
+        <Link
+          href="/games/snowcone-stand/guides/mutations-plain-english"
+          className="text-accent hover:underline"
+        >
+          mutations explained simply
+        </Link>
+        .
+      </p>
+
       <section className="space-y-3">
         <h2 className="text-xl font-semibold text-fg">Flavors</h2>
         <Table headers={["Flavor", "Tier", "Base", "Unlock", "Notes"]}>
