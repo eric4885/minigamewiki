@@ -5,7 +5,7 @@
   "robloxUrl": "https://www.roblox.com/discover/?Keyword=Snowcone%20Stand",
   "robloxSearchUrl": "https://www.roblox.com/discover/?Keyword=Snowcone%20Stand",
   "description": "Run a snowcone stand in Roblox: unlock flavors, stack mutations, time your blender, and climb the economy.",
-  "dataReviewedAt": "2026-07-30",
+  "dataReviewedAt": "2026-08-08",
   "perfectMult": 1.5,
   "codes": [],
   "codesLastChecked": "2026-08-08",
@@ -14,6 +14,9 @@
     {
       "date": "2026-08-08",
       "items": [
+        "Blender Calculator: Perfect hit-rate slider, expected per-sec / per-hour, blender count and rough offline total; share URL updated.",
+        "Hub: Start here path (beginner → calculator → codes).",
+        "New guides: offline-blend-planning and rotating-shop-checks (process only; no invented shop numbers).",
         "Codes status refreshed after web-wide check; still no verified active public codes."
       ]
     },
@@ -435,6 +438,51 @@
         "## Decision rule",
         "Choose the higher **per-second** figure at your real Perfect success rate. If you Perfect only half the time, model half your blends at 1.0x and half at 1.5x mentally, or run the planner twice and average.",
         "Revisit the [tier list](/games/snowcone-stand/tier-list) after any major balance patch; numbers here are fan-maintained planning aids. Mutation picks still start from the [table](/games/snowcone-stand/flavor-mutation-table)."
+      ]
+    },
+    {
+      "slug": "offline-blend-planning",
+      "title": "Offline Blend Planning (Process Guide)",
+      "updatedAt": "2026-08-08",
+      "excerpt": "Plan AFK blends with calculator hit rate and fleet scale — without inventing server offline rates.",
+      "content": [
+        "This is a **process guide** for planning offline or AFK blender runs. It does not claim a fixed in-game offline multiplier or guaranteed cash per hour. Use MiniGameWiki [Blender Calculator](/games/snowcone-stand/blender-planner) estimates as relative comparisons only.",
+        "## Before you go AFK",
+        "- Pick flavor + mutation + totem in the Blender Calculator.",
+        "- Set Perfect hit rate to what you can sustain when active (often 50–80%, not 100%).",
+        "- Set blender count to how many blenders you will leave running.",
+        "- Set offline hours to your AFK window.",
+        "- Copy the build + link so you can revisit the same assumptions later.",
+        "## Checklist while you are away",
+        "Confirm blenders are loaded and started. Avoid leaving a build that needs constant Perfect taps if you cannot hit them offline. Prefer stable mid-tier combos over max-endgame setups that only look good at 100% Perfect.",
+        "Note shop stock before AFK — rotating stock can change your next purchase, not your current blend math. See [rotating shop checks](/games/snowcone-stand/guides/rotating-shop-checks).",
+        "## After you return",
+        "Compare actual cash gained to the calculator rough offline total. If reality is much lower, lower your hit-rate assumption or blender uptime next time. Log notes for yourself (flavor, hours, result) — we do not store player data.",
+        "Then re-check [codes status](/games/snowcone-stand/codes) and the shop before spending.",
+        "## Related tools",
+        "Start with the [beginner economy loop](/games/snowcone-stand/guides/beginner-economy-loop) if you are still in the first hour. For cash comparisons, stay in the [Blender Calculator](/games/snowcone-stand/blender-planner)."
+      ]
+    },
+    {
+      "slug": "rotating-shop-checks",
+      "title": "Rotating Shop Checks (What to Verify In-Game)",
+      "updatedAt": "2026-08-08",
+      "excerpt": "A verification checklist for rotating shop stock — process only, no invented prices or stock timers.",
+      "content": [
+        "Shop stock and prices can rotate. Fan sites often paste outdated buy lists. This guide tells you **what to verify in-game** before you spend — we will not invent current stock, timers, or prices here.",
+        "## Open-shop checklist",
+        "- Note every item visible and its price.",
+        "- Mark which items are upgrades vs cosmetics vs consumables.",
+        "- Check whether you already own the upgrade.",
+        "- Ask: does this unlock a higher base flavor, more blenders, or only a small convenience?",
+        "- Screenshot or write the stock if you compare across sessions.",
+        "## Spend decision order",
+        "Prioritize unlocks that raise base value or blender capacity before vanity. If cash is tight, skip temporary buffs until your Perfect habit is stable.",
+        "Use the [Blender Calculator](/games/snowcone-stand/blender-planner) after a purchase to see whether the new flavor/mutation path actually beats your old per-second.",
+        "## When stock rotates",
+        "If an item disappears, do not chase rumor restock times from random posts. Re-open the shop next session and re-run the checklist. Update your own notes; treat community timers as unverified until you confirm them yourself.",
+        "## Related pages",
+        "Read the [beginner economy loop](/games/snowcone-stand/guides/beginner-economy-loop) for early buy-order mindset. [Codes status](/games/snowcone-stand/codes) stays empty unless we verify a code — same honesty standard as shop rumors. For AFK planning after shopping, see [offline blend planning](/games/snowcone-stand/guides/offline-blend-planning)."
       ]
     }
   ],

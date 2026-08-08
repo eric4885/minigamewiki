@@ -25,6 +25,8 @@ const GUIDE_SEO_TITLE: Record<string, string> = {
   "flavor-tier-explainer": "How We Rank Flavors",
   "codes-policy": "Our Codes Policy",
   "endgame-farm-route": "Endgame Farm Route",
+  "offline-blend-planning": "Offline Blend Planning",
+  "rotating-shop-checks": "Rotating Shop Checks",
 };
 
 export const dynamicParams = false;

@@ -10,7 +10,7 @@ import { snowcone } from "@/lib/snowcone";
 export const metadata: Metadata = pageMeta({
   title: "Snowcone Stand Blender Calculator",
   description:
-    "Free Snowcone Stand blender calculator for Roblox with Perfect Blend math, presets, and shareable build links.",
+    "Free Snowcone Stand blender calculator for Roblox: Perfect hit rate, expected per-second and per-hour, fleet scale, and shareable build links.",
   path: "/games/snowcone-stand/blender-planner",
 });
 
@@ -38,12 +38,12 @@ export default function BlenderPlannerPage() {
           </span>
           , then{" "}
           <span className="font-mono text-fg">perSec = unit / blendTime</span>.
-          Use presets, compare Perfect ON vs OFF, and copy a shareable build
-          link for Discord or Reddit.
+          Set a realistic Perfect hit rate to get expected per-second and
+          per-hour, scale by blender count, and copy a shareable build link.
         </p>
       </div>
       <p className="rounded-xl border border-border bg-surface p-4 text-sm text-muted">
-        Use this calculator to maximize profit comparisons (Perfect ON vs OFF).
+        Use hit-weighted estimates to compare builds — not 100% Perfect fantasy.
         Pull mutReduce from the{" "}
         <Link
           href="/games/snowcone-stand/flavor-mutation-table"
@@ -51,21 +51,21 @@ export default function BlenderPlannerPage() {
         >
           flavor × mutation table
         </Link>
-        , then read{" "}
+        . For AFK planning see{" "}
+        <Link
+          href="/games/snowcone-stand/guides/offline-blend-planning"
+          className="text-accent hover:underline"
+        >
+          offline blend planning
+        </Link>
+        ; for cash context read{" "}
         <Link
           href="/games/snowcone-stand/guides/make-money-fast"
           className="text-accent hover:underline"
         >
           make money faster
-        </Link>{" "}
-        or{" "}
-        <Link
-          href="/games/snowcone-stand/guides/mutations-plain-english"
-          className="text-accent hover:underline"
-        >
-          mutations explained simply
-        </Link>{" "}
-        for the decision context.
+        </Link>
+        .
       </p>
       <BlenderPlannerClient />
       <SiteDisclaimer />

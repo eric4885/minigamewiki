@@ -53,6 +53,9 @@ function buildSharePath(params: {
   perfect: boolean;
   blendTime: number;
   customBase: string;
+  hitRate: number;
+  blenders: number;
+  offlineHours: number;
 }) {
   const q = new URLSearchParams();
   q.set("flavor", params.flavorId);
@@ -60,8 +63,15 @@ function buildSharePath(params: {
   q.set("totem", params.totemId);
   q.set("perfect", params.perfect ? "1" : "0");
   q.set("t", String(params.blendTime));
+  q.set("hit", String(params.hitRate));
+  q.set("blenders", String(params.blenders));
+  q.set("offline", String(params.offlineHours));
   if (params.customBase.trim() !== "") q.set("base", params.customBase.trim());
   return `/games/snowcone-stand/blender-planner?${q.toString()}`;
+}
+
+function clamp(n: number, min: number, max: number) {
+  return Math.min(max, Math.max(min, n));
 }
 
 export function BlenderPlannerClient() {
@@ -71,6 +81,9 @@ export function BlenderPlannerClient() {
   const [perfect, setPerfect] = useState(true);
   const [blendTime, setBlendTime] = useState(4);
   const [customBase, setCustomBase] = useState<string>("");
+  const [hitRate, setHitRate] = useState(70);
+  const [blenders, setBlenders] = useState(1);
+  const [offlineHours, setOfflineHours] = useState(2);
   const [copyState, setCopyState] = useState<"idle" | "copied" | "error">(
     "idle"
   );
@@ -84,6 +97,9 @@ export function BlenderPlannerClient() {
     const perfectParam = params.get("perfect");
     const t = params.get("t");
     const base = params.get("base");
+    const hit = params.get("hit");
+    const blendersParam = params.get("blenders");
+    const offline = params.get("offline");
 
     if (flavor && snowcone.flavors.some((f) => f.id === flavor)) {
       setFlavorId(flavor);
@@ -101,6 +117,15 @@ export function BlenderPlannerClient() {
       setBlendTime(Number(t));
     }
     if (base !== null) setCustomBase(base);
+    if (hit !== null && !Number.isNaN(Number(hit))) {
+      setHitRate(clamp(Number(hit), 0, 100));
+    }
+    if (blendersParam !== null && !Number.isNaN(Number(blendersParam))) {
+      setBlenders(clamp(Math.round(Number(blendersParam)), 1, 20));
+    }
+    if (offline !== null && !Number.isNaN(Number(offline))) {
+      setOfflineHours(clamp(Number(offline), 0, 24));
+    }
     setHydrated(true);
   }, []);
 
@@ -113,9 +138,23 @@ export function BlenderPlannerClient() {
       perfect,
       blendTime,
       customBase,
+      hitRate,
+      blenders,
+      offlineHours,
     });
     window.history.replaceState(null, "", path);
-  }, [hydrated, flavorId, mutationId, totemId, perfect, blendTime, customBase]);
+  }, [
+    hydrated,
+    flavorId,
+    mutationId,
+    totemId,
+    perfect,
+    blendTime,
+    customBase,
+    hitRate,
+    blenders,
+    offlineHours,
+  ]);
 
   const flavor = snowcone.flavors.find((f) => f.id === flavorId);
   const mutation = snowcone.mutations.find((m) => m.id === mutationId);
@@ -128,22 +167,42 @@ export function BlenderPlannerClient() {
 
   const mutReduce = mutation?.reduceMult ?? 1;
   const totemStack = totem?.stackMult ?? 1;
+  const hit = clamp(hitRate, 0, 100) / 100;
 
   const results = useMemo(() => {
     const unitOn = calcUnit(base, true, mutReduce, totemStack);
     const unitOff = calcUnit(base, false, mutReduce, totemStack);
+    const perSecOn = calcPerSec(unitOn, blendTime);
+    const perSecOff = calcPerSec(unitOff, blendTime);
+    const expectedPerSec = perSecOn * hit + perSecOff * (1 - hit);
+    const expectedPerHour = expectedPerSec * 3600;
+    const fleetPerHour = expectedPerHour * blenders;
+    const offlineEstimate = fleetPerHour * offlineHours;
     return {
       unitOn,
       unitOff,
-      perSecOn: calcPerSec(unitOn, blendTime),
-      perSecOff: calcPerSec(unitOff, blendTime),
+      perSecOn,
+      perSecOff,
       unit: calcUnit(base, perfect, mutReduce, totemStack),
       perSec: calcPerSec(
         calcUnit(base, perfect, mutReduce, totemStack),
         blendTime
       ),
+      expectedPerSec,
+      expectedPerHour,
+      fleetPerHour,
+      offlineEstimate,
     };
-  }, [base, perfect, mutReduce, totemStack, blendTime]);
+  }, [
+    base,
+    perfect,
+    mutReduce,
+    totemStack,
+    blendTime,
+    hit,
+    blenders,
+    offlineHours,
+  ]);
 
   const selectClass =
     "w-full rounded-md border border-border bg-bg px-3 py-2 text-fg outline-none ring-brand focus:ring-2";
@@ -165,14 +224,21 @@ export function BlenderPlannerClient() {
       perfect,
       blendTime,
       customBase,
+      hitRate,
+      blenders,
+      offlineHours,
     });
     const url = `${SITE_URL}${path}`;
     const summary = [
       "Snowcone Stand build (MiniGameWiki)",
       `${flavor?.name ?? "Flavor"} + ${mutation?.name ?? "Mutation"} + ${totem?.name ?? "Totem"}`,
-      `Perfect: ${perfect ? `ON (×${snowcone.perfectMult})` : "OFF"} · Blend time: ${blendTime}s`,
-      `Unit: ${results.unit.toFixed(2)} · Per-sec: ${results.perSec.toFixed(2)}`,
-      `Perfect ON vs OFF per-sec: ${results.perSecOn.toFixed(2)} / ${results.perSecOff.toFixed(2)}`,
+      `Perfect selected: ${perfect ? `ON (×${snowcone.perfectMult})` : "OFF"} · Blend time: ${blendTime}s`,
+      `Perfect hit rate: ${hitRate}% · Blenders: ${blenders} · Offline hours: ${offlineHours}`,
+      `Unit (selected): ${results.unit.toFixed(2)} · Per-sec (selected): ${results.perSec.toFixed(2)}`,
+      `Expected per-sec (hit-weighted): ${results.expectedPerSec.toFixed(2)}`,
+      `Expected per-hour (1 blender): ${results.expectedPerHour.toFixed(1)}`,
+      `Fleet per-hour (${blenders} blenders): ${results.fleetPerHour.toFixed(1)}`,
+      `Rough offline total (${offlineHours}h): ${results.offlineEstimate.toFixed(1)}`,
       url,
     ].join("\n");
 
@@ -268,6 +334,52 @@ export function BlenderPlannerClient() {
             onChange={(e) => setBlendTime(Number(e.target.value) || 0)}
           />
 
+          <label className="block text-sm">
+            <span className="mb-1.5 flex items-center justify-between text-muted">
+              <span>Perfect hit rate</span>
+              <span className="font-mono text-fg">{hitRate}%</span>
+            </span>
+            <input
+              type="range"
+              min={0}
+              max={100}
+              step={5}
+              value={hitRate}
+              onChange={(e) => setHitRate(Number(e.target.value))}
+              className="w-full accent-[var(--brand,#3b82f6)]"
+            />
+            <span className="mt-1 block text-xs text-muted">
+              Expected output mixes Perfect ON/OFF by this rate — use what you
+              can sustain, not 100% fantasy.
+            </span>
+          </label>
+
+          <Input
+            label="Blender count (rough fleet scale)"
+            type="number"
+            inputMode="numeric"
+            min={1}
+            max={20}
+            step={1}
+            value={blenders}
+            onChange={(e) =>
+              setBlenders(clamp(Math.round(Number(e.target.value) || 1), 1, 20))
+            }
+          />
+
+          <Input
+            label="Offline / AFK hours (rough)"
+            type="number"
+            inputMode="decimal"
+            min={0}
+            max={24}
+            step={0.5}
+            value={offlineHours}
+            onChange={(e) =>
+              setOfflineHours(clamp(Number(e.target.value) || 0, 0, 24))
+            }
+          />
+
           <div className="flex flex-wrap items-center gap-3">
             <Button
               type="button"
@@ -317,28 +429,62 @@ export function BlenderPlannerClient() {
               <dd className="font-mono tabular-nums text-fg">{totemStack}</dd>
             </div>
             <div className="flex justify-between gap-4 border-b border-border pb-2">
-              <dt className="text-muted">Unit value</dt>
+              <dt className="text-muted">Unit value (selected)</dt>
               <dd className="font-mono text-lg tabular-nums text-brand">
                 {results.unit.toFixed(2)}
               </dd>
             </div>
             <div className="flex justify-between gap-4 border-b border-border pb-2">
-              <dt className="text-muted">Per second</dt>
+              <dt className="text-muted">Per second (selected)</dt>
               <dd className="font-mono text-lg tabular-nums text-brand">
                 {results.perSec.toFixed(2)}
               </dd>
             </div>
-            <div className="flex justify-between gap-4">
+            <div className="flex justify-between gap-4 border-b border-border pb-2">
               <dt className="text-muted">Perfect ON / OFF per-sec</dt>
               <dd className="font-mono tabular-nums text-fg">
                 {results.perSecOn.toFixed(2)} / {results.perSecOff.toFixed(2)}
               </dd>
             </div>
+            <div className="flex justify-between gap-4 border-b border-border pb-2">
+              <dt className="text-muted">Expected per-sec (hit-weighted)</dt>
+              <dd className="font-mono text-lg tabular-nums text-brand">
+                {results.expectedPerSec.toFixed(2)}
+              </dd>
+            </div>
+            <div className="flex justify-between gap-4 border-b border-border pb-2">
+              <dt className="text-muted">Expected per-hour (1 blender)</dt>
+              <dd className="font-mono tabular-nums text-fg">
+                {results.expectedPerHour.toFixed(1)}
+              </dd>
+            </div>
+            <div className="flex justify-between gap-4 border-b border-border pb-2">
+              <dt className="text-muted">Fleet per-hour ({blenders})</dt>
+              <dd className="font-mono tabular-nums text-fg">
+                {results.fleetPerHour.toFixed(1)}
+              </dd>
+            </div>
+            <div className="flex justify-between gap-4">
+              <dt className="text-muted">
+                Rough offline total ({offlineHours}h)
+              </dt>
+              <dd className="font-mono tabular-nums text-fg">
+                {results.offlineEstimate.toFixed(1)}
+              </dd>
+            </div>
           </dl>
           <p className="text-xs text-muted">
-            Prefer higher per-second at the Perfect rate you can actually
-            sustain. Share the copied summary when asking friends which upgrade
-            to buy next.
+            Hourly and offline figures are planning estimates from our unit
+            formula × hit rate × blender count. Real servers add downtime, shop
+            stock, and serving — treat them as relative comparisons, not
+            promises. Offline workflow:{" "}
+            <a
+              href="/games/snowcone-stand/guides/offline-blend-planning"
+              className="text-accent hover:underline"
+            >
+              offline blend planning
+            </a>
+            .
           </p>
         </Card>
       </div>

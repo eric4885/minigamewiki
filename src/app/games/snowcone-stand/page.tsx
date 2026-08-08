@@ -14,11 +14,29 @@ export const metadata: Metadata = pageMeta({
   path: "/games/snowcone-stand",
 });
 
+const startHere = [
+  {
+    href: "/games/snowcone-stand/guides/beginner-economy-loop",
+    title: "1. Start here — first hour",
+    body: "Unlock order, Perfect habit, and what not to buy yet.",
+  },
+  {
+    href: "/games/snowcone-stand/blender-planner",
+    title: "2. Blender Calculator",
+    body: "Compare builds with hit rate, per-hour, and rough offline totals.",
+  },
+  {
+    href: "/games/snowcone-stand/codes",
+    title: "3. Latest codes status",
+    body: "Verified only — empty when no active public codes exist.",
+  },
+];
+
 const links = [
   {
     href: "/games/snowcone-stand/blender-planner",
     title: "Blender Calculator",
-    body: "Perfect Blend, mutations, totems → unit & per-second.",
+    body: "Perfect hit rate, unit & per-second, fleet and offline estimates.",
   },
   {
     href: "/games/snowcone-stand/flavor-mutation-table",
@@ -43,7 +61,7 @@ const links = [
   {
     href: "/games/snowcone-stand/guides",
     title: "Guides",
-    body: "Economy loops, timing, mutations, and endgame routes.",
+    body: "Economy, shop checks, offline blends, mutations, endgame.",
   },
   {
     href: "/games/snowcone-stand/faq",
@@ -93,14 +111,50 @@ export default function SnowconeStandHubPage() {
         </p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
-        {links.map((item) => (
-          <Card key={item.href} href={item.href}>
-            <h2 className="font-semibold text-fg">{item.title}</h2>
-            <p className="mt-2 text-sm text-muted">{item.body}</p>
-          </Card>
-        ))}
-      </div>
+      <section className="space-y-3">
+        <h2 className="text-xl font-semibold text-fg">Start here</h2>
+        <p className="max-w-prose text-sm text-muted">
+          Three steps for new players: learn the first-hour loop, compare builds
+          in the calculator, then bookmark codes status (often empty on purpose).
+        </p>
+        <div className="grid gap-3 sm:grid-cols-3">
+          {startHere.map((item) => (
+            <Card key={item.href} href={item.href}>
+              <h3 className="font-semibold text-fg">{item.title}</h3>
+              <p className="mt-2 text-sm text-muted">{item.body}</p>
+            </Card>
+          ))}
+        </div>
+        <p className="text-sm text-muted">
+          Also useful early:{" "}
+          <Link
+            href="/games/snowcone-stand/guides/rotating-shop-checks"
+            className="text-accent hover:underline"
+          >
+            rotating shop checks
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="/games/snowcone-stand/guides/offline-blend-planning"
+            className="text-accent hover:underline"
+          >
+            offline blend planning
+          </Link>
+          .
+        </p>
+      </section>
+
+      <section className="space-y-3">
+        <h2 className="text-xl font-semibold text-fg">All tools & pages</h2>
+        <div className="grid gap-4 sm:grid-cols-2">
+          {links.map((item) => (
+            <Card key={item.href} href={item.href}>
+              <h3 className="font-semibold text-fg">{item.title}</h3>
+              <p className="mt-2 text-sm text-muted">{item.body}</p>
+            </Card>
+          ))}
+        </div>
+      </section>
 
       <SiteDisclaimer />
       <RelatedLinks excludeHref="/games/snowcone-stand" limit={4} />
