@@ -5,16 +5,35 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { SiteDisclaimer } from "@/components/SiteDisclaimer";
+import { Card } from "@/components/ui/Card";
 import { Table, Td } from "@/components/ui/Table";
 import { SITE_URL, snowcone } from "@/lib/snowcone";
 
 export const metadata: Metadata = {
   ...pageMeta({
-    title: "Latest Snowcone Stand Codes",
-    description: `Latest verified Snowcone Stand codes for Roblox. Last checked ${snowcone.codesLastChecked}. Only confirmed codes — empty when none are active.`,
+    title: `Snowcone Stand Codes (Roblox) — Checked ${snowcone.codesLastChecked}`,
+    description: `Snowcone Stand codes for Roblox: live status last checked ${snowcone.codesLastChecked}. Verified active codes only — empty when none exist. No fake lists.`,
     path: "/games/snowcone-stand/codes",
   }),
 };
+
+const nextSteps = [
+  {
+    href: "/games/snowcone-stand/guides/make-money-fast",
+    title: "Make money without codes",
+    body: "Perfect habit, buy order, and what actually raises cash per second.",
+  },
+  {
+    href: "/games/snowcone-stand/blender-planner",
+    title: "Blender Calculator",
+    body: "Compare flavor + mutation + totem builds with hit rate and per-hour estimates.",
+  },
+  {
+    href: "/games/snowcone-stand/guides/beginner-economy-loop",
+    title: "First-hour loop",
+    body: "If you are new, start here before chasing rumor code lists.",
+  },
+];
 
 export default function CodesPage() {
   const codes = snowcone.codes;
@@ -63,21 +82,33 @@ export default function CodesPage() {
           ]}
         />
         <h1 className="mt-2 text-3xl font-semibold text-fg">
-          Latest Snowcone Stand Codes
+          Snowcone Stand Codes (Roblox)
         </h1>
         <p className="mt-2 font-mono text-xs text-muted">
-          Status page · Last checked {snowcone.codesLastChecked}
+          Live status · Last checked {snowcone.codesLastChecked}
         </p>
         <p className="mt-4 max-w-prose text-muted">
-          This is a live codes status page for Roblox Snowcone Stand — not a
-          recycled screenshot dump. We answer one question: are there any
-          verified public codes right now? We do not invent entries to look
-          complete. When the active table is empty, that is the status. See also{" "}
+          Looking for Snowcone Stand codes? This page answers whether any{" "}
+          <strong className="font-medium text-fg">verified public promo codes</strong>{" "}
+          are active right now for the Roblox game. An empty table means we have
+          not confirmed a working code — not that we forgot to paste a fake list.
+          Promo codes (when they exist) are free in-game rewards from the
+          developer; they are not required to play or earn cash.
+        </p>
+        <p className="mt-3 max-w-prose text-sm text-muted">
+          Redeem steps:{" "}
           <Link
             href="/games/snowcone-stand/how-to-redeem-codes"
             className="text-accent hover:underline"
           >
             how to redeem codes
+          </Link>
+          . Policy:{" "}
+          <Link
+            href="/games/snowcone-stand/guides/codes-policy"
+            className="text-accent hover:underline"
+          >
+            no fake codes
           </Link>
           .
         </p>
@@ -115,6 +146,27 @@ export default function CodesPage() {
           with the code text and where you saw it. We verify before publishing.
         </p>
       </div>
+
+      {!hasActive && (
+        <section className="space-y-3">
+          <h2 className="text-xl font-semibold text-fg">
+            No codes right now — what to do instead
+          </h2>
+          <p className="max-w-prose text-sm text-muted">
+            Most players progress by Perfect blends, more blenders, and smart
+            shop buys. Use these next — bookmark this status page for when a
+            real code drop appears.
+          </p>
+          <div className="grid gap-3 sm:grid-cols-3">
+            {nextSteps.map((item) => (
+              <Card key={item.href} href={item.href}>
+                <h3 className="font-semibold text-fg">{item.title}</h3>
+                <p className="mt-2 text-sm text-muted">{item.body}</p>
+              </Card>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="space-y-3">
         <h2 className="text-xl font-semibold text-fg">Active verified codes</h2>

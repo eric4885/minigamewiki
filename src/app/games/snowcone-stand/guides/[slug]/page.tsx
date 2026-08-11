@@ -21,7 +21,7 @@ const GUIDE_SEO_TITLE: Record<string, string> = {
   "beginner-economy-loop": "Beginner Economy Loop",
   "perfect-blend-timing": "Perfect Blend Timing",
   "mutation-stacking-guide": "Mutation Stacking Guide",
-  "totem-efficiency": "Totem Efficiency Guide",
+  "totem-efficiency": "Are Totems Worth Buying?",
   "flavor-tier-explainer": "How We Rank Flavors",
   "codes-policy": "Our Codes Policy",
   "endgame-farm-route": "Endgame Farm Route",

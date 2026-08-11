@@ -9,8 +9,14 @@
   "perfectMult": 1.5,
   "codes": [],
   "codesLastChecked": "2026-08-10",
-  "codesNote": "As of the last check date, there are no active public promo codes for Snowcone Stand. We do not invent codes. Bookmark this status page — when verified codes appear, they land in the active table first.",
+  "codesNote": "As of the last check date, there are no active public promo codes for Snowcone Stand. We do not invent codes. Bookmark this status page — when verified codes appear, they land in the active table first. Until then, use the Blender Calculator and money guides linked on this page.",
   "changelog": [
+    {
+      "date": "2026-08-11",
+      "items": [
+        "Codes status page: clearer Roblox/codes title and first-screen intent; empty-state next steps to money guide and calculator. Totem guide retitled for worth-it CTR and stronger Calculator CTA."
+      ]
+    },
     {
       "date": "2026-08-10",
       "items": [
@@ -381,19 +387,22 @@
     },
     {
       "slug": "totem-efficiency",
-      "title": "Totem Efficiency: When Stacks Are Worth the Cost",
-      "updatedAt": "2026-07-25",
-      "excerpt": "Sugar, Ice, and Festival totems explained with simple break-even thinking so you do not overspend for a tiny stack.",
+      "title": "Are Totems Worth Buying in Snowcone Stand?",
+      "updatedAt": "2026-08-11",
+      "excerpt": "Totem worth it? Simple break-even for Sugar, Ice, and Festival stacks — check the Blender Calculator before you spend.",
       "content": [
-        "Totems apply last in the unit formula. They scale everything you already do right — and everything you do wrong.",
+        "Searching whether a **totem is worth buying** in Snowcone Stand? Totems apply last in the unit formula. They scale everything you already do right — and everything you do wrong. Buy one to multiply a stable Perfect farm; do not buy one to paper over missed Perfects.",
+        "## Quick answer",
+        "- Buy a totem when you already land Perfect reliably and the shop flavor you will farm matches the totem.",
+        "- Skip premium totems if your cash is still unlocking blenders or the next base flavor.",
+        "- Always compare before/after unit value in the [Blender Calculator](/games/snowcone-stand/blender-planner) before spending.",
         "## Simple break-even",
-        "If a totem costs a large cash dump, estimate how many blends you need at the new stackMult to recover that cost. Use the [Blender Planner](/games/snowcone-stand/blender-planner): note unit before and after, then divide cost by the unit delta.",
+        "If a totem costs a large cash dump, estimate how many blends you need at the new stackMult to recover that cost. Open the [Blender Calculator](/games/snowcone-stand/blender-planner): note unit before and after, then divide cost by the unit delta. If recovery takes longer than you will keep that flavor active, wait.",
         "## Stack choices",
         "- Sugar Totem: cheap starter stack.",
         "- Ice Totem: better default once mid-game cash is stable.",
         "- Festival Totem: best raw mult; buy when you will actively farm for a long session.",
-        "- Dual Stack: use the planner's Dual option as an approximation when multiple buffs apply.",
-        "Do not buy a premium totem to \"fix\" a low Perfect rate. Fix timing first — see [Perfect Blend timing](/games/snowcone-stand/guides/perfect-blend-timing)."
+        "Do not buy a premium totem to \"fix\" a low Perfect rate. Fix timing first — see [Perfect Blend timing](/games/snowcone-stand/guides/perfect-blend-timing). For mid-game mutation order before stacking totems, read [mutation stacking](/games/snowcone-stand/guides/mutation-stacking-guide)."
       ]
     },
     {
