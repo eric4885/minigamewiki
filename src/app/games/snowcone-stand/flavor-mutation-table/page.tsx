@@ -3,6 +3,7 @@ import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedLinks } from "@/components/RelatedLinks";
+import { DataTrustNote } from "@/components/DataTrustNote";
 import { SiteDisclaimer } from "@/components/SiteDisclaimer";
 import { Table, Td } from "@/components/ui/Table";
 import { snowcone } from "@/lib/snowcone";
@@ -10,7 +11,7 @@ import { snowcone } from "@/lib/snowcone";
 export const metadata: Metadata = pageMeta({
   title: "Flavor & Mutation Table",
   description:
-    "Snowcone Stand flavor base values and mutation multipliers in one Roblox reference table for planning blends.",
+    "Snowcone Stand flavor and mutation planning table for Roblox. Editorial values for comparing builds — verify in-game after patches.",
   path: "/games/snowcone-stand/flavor-mutation-table",
 });
 
@@ -29,32 +30,30 @@ export default function FlavorMutationTablePage() {
           Snowcone Stand Flavor & Mutation Table
         </h1>
         <p className="mt-4 max-w-prose text-muted">
-          Mid-game Snowcone Stand decisions stall when flavor bases and mutation
-          multipliers live in separate patch notes, Discord pins, and half-updated
-          spreadsheets. You need a single place to see what a flavor is worth
-          before Perfect and totems, and what each mutation does as{" "}
-          <span className="font-mono text-fg">mutReduce</span>. This table is
-          that reference: scrollable on phones, readable on desktop, and wired
-          to the same JSON the{" "}
+          Use one table to shortlist flavor bases and{" "}
+          <span className="font-mono text-fg">mutReduce</span> values before you
+          open the{" "}
           <Link
             href="/games/snowcone-stand/blender-planner"
             className="text-accent hover:underline"
           >
             Blender Calculator
-          </Link>{" "}
-          uses so numbers do not drift between pages. Use it to shortlist
-          combinations, then confirm per-second output in the calculator with
-          your real blend time. Looking for free drops instead? See the{" "}
+          </Link>
+          . Numbers here are editorial planning data wired to the same JSON as
+          the calculator — not an official Roblox datasheet and not copied from
+          unverified fan-wiki price lists. Re-check in-game after patches. For
+          promo drops see the{" "}
           <Link
             href="/games/snowcone-stand/codes"
             className="text-accent hover:underline"
           >
             latest codes status
           </Link>
-          . Values are fan-maintained planning data — re-check in-game after
-          balance patches.
+          .
         </p>
       </div>
+
+      <DataTrustNote variant="tools" />
 
       <p className="rounded-xl border border-border bg-surface p-4 text-sm text-muted">
         Next step for &quot;best mutation&quot; decisions: shortlist here, then confirm

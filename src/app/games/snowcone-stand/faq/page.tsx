@@ -31,7 +31,7 @@ const faqs: FaqItem[] = [
   {
     q: "Why is the codes page empty?",
     plain:
-      "Because we only list codes we can verify. An empty table means no confirmed active public codes at the last check date — not a broken page.",
+      "Because we only list codes we can verify. An empty table means no confirmed active public codes at the last check date — not a broken page. We ignore aggregator sites that invent placeholder codes.",
     a: (
       <>
         Because we only list codes we can verify. An empty table on the{" "}
@@ -42,7 +42,8 @@ const faqs: FaqItem[] = [
           latest codes status page
         </Link>{" "}
         means no confirmed active public codes at the last check date — not a
-        broken page. See also{" "}
+        broken page. Sites that fill tables with generic “active” strings
+        without proof are treated as unverified marketing. See also{" "}
         <Link
           href="/games/snowcone-stand/how-to-redeem-codes"
           className="text-accent hover:underline"
@@ -54,8 +55,40 @@ const faqs: FaqItem[] = [
     ),
   },
   {
+    q: "Are your flavor and mutation numbers official?",
+    plain:
+      "No. Official Roblox text confirms the core loop. Our tables and calculator use editorial planning models for comparisons. Re-check values in-game after patches. We do not treat unverified fan-wiki price lists as fact.",
+    a: (
+      <>
+        No. The official Roblox game description confirms the core loop (Perfect
+        timing, offline blending, rotating shop, weight leaderboard,
+        mutations/totems). Our{" "}
+        <Link
+          href="/games/snowcone-stand/flavor-mutation-table"
+          className="text-accent hover:underline"
+        >
+          flavor × mutation table
+        </Link>{" "}
+        and{" "}
+        <Link
+          href="/games/snowcone-stand/blender-planner"
+          className="text-accent hover:underline"
+        >
+          Blender Calculator
+        </Link>{" "}
+        use editorial planning models so you can compare builds — not a claim of
+        exact live payouts. We do not import unverified fan-wiki upgrade price
+        sheets. If in-game values differ,{" "}
+        <Link href="/contact" className="text-accent hover:underline">
+          report them
+        </Link>
+        .
+      </>
+    ),
+  },
+  {
     q: "How does the Blender Calculator formula work?",
-    plain: `unit = base × (perfect ? ${snowcone.perfectMult} : 1) × mutReduce × totemStack, then perSec = unit ÷ blendTime. Perfect Blend is modeled as a ${snowcone.perfectMult}× multiplier.`,
+    plain: `Planning model: unit = base × (perfect ? ${snowcone.perfectMult} : 1) × mutReduce × totemStack, then perSec = unit ÷ blendTime. Use it to compare builds; confirm in-game.`,
     a: (
       <>
         On the{" "}
@@ -65,9 +98,10 @@ const faqs: FaqItem[] = [
         >
           Blender Calculator
         </Link>
-        : unit = base × (perfect ? {snowcone.perfectMult} : 1) × mutReduce ×
-        totemStack, then perSec = unit ÷ blendTime. Perfect Blend is modeled as
-        a {snowcone.perfectMult}× multiplier.
+        , we use a planning model: unit = base × (perfect ?{" "}
+        {snowcone.perfectMult} : 1) × mutReduce × totemStack, then perSec = unit
+        ÷ blendTime. Perfect is modeled as a {snowcone.perfectMult}× multiplier.
+        Treat outputs as relative comparisons, not guaranteed server cash.
       </>
     ),
   },

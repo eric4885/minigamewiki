@@ -3,6 +3,7 @@ import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedLinks } from "@/components/RelatedLinks";
+import { DataTrustNote } from "@/components/DataTrustNote";
 import { SiteDisclaimer } from "@/components/SiteDisclaimer";
 import { Card } from "@/components/ui/Card";
 import { snowcone } from "@/lib/snowcone";
@@ -10,7 +11,7 @@ import { snowcone } from "@/lib/snowcone";
 export const metadata: Metadata = pageMeta({
   title: "Snowcone Stand Tier List",
   description:
-    "Snowcone Stand tier list for Roblox: S-D rankings for flavors, mutations, and totems with clear assumptions.",
+    "Editorial Snowcone Stand tier list for Roblox with explicit assumptions — not an official developer ranking.",
   path: "/games/snowcone-stand/tier-list",
 });
 
@@ -31,20 +32,18 @@ export default function TierListPage() {
           Snowcone Stand Tier List
         </h1>
         <p className="mt-4 max-w-prose text-muted">
-          Tier lists become harmful when they hide their assumptions. Early
-          Snowcone Stand players who chase S-tier flavors they cannot unlock yet
+          This is an editorial tier list — not an official Steel Sharpens Steel
+          ranking. Early players who chase S-tier flavors they cannot unlock yet
           stall their economy; late players who ignore per-second math overrate
-          peak unit value. This list ranks flavors, mutations, and totems for
-          mid-to-late cash efficiency assuming Perfect Blend and at least a
-          mid-tier mutation mindset. Read the summary, treat D-tier Cursed as a
-          quest exception, and always validate a promotion with the{" "}
+          peak unit value. Read the assumptions below, then validate any upgrade
+          with the{" "}
           <Link
             href="/games/snowcone-stand/blender-planner"
             className="text-accent hover:underline"
           >
             Blender Calculator
-          </Link>{" "}
-          using your blend time. For promo drops, check the{" "}
+          </Link>
+          . For promo drops, check the{" "}
           <Link
             href="/games/snowcone-stand/codes"
             className="text-accent hover:underline"
@@ -52,10 +51,11 @@ export default function TierListPage() {
             latest codes status
           </Link>
           . Updated{" "}
-          <span className="font-mono text-fg">{tierList.updatedAt}</span> —
-          re-rank after patches.
+          <span className="font-mono text-fg">{tierList.updatedAt}</span>.
         </p>
       </div>
+
+      <DataTrustNote variant="tools" />
 
       <p className="rounded-xl border border-border bg-surface p-4 text-sm text-muted">
         Before you trust an S-tier upgrade for profit, check bases on the{" "}

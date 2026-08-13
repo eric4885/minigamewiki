@@ -4,6 +4,7 @@ import { pageMeta } from "@/lib/seo";
 import { BlenderPlannerClient } from "@/components/BlenderPlannerClient";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedLinks } from "@/components/RelatedLinks";
+import { DataTrustNote } from "@/components/DataTrustNote";
 import { SiteDisclaimer } from "@/components/SiteDisclaimer";
 import { snowcone } from "@/lib/snowcone";
 
@@ -40,8 +41,11 @@ export default function BlenderPlannerPage() {
           <span className="font-mono text-fg">perSec = unit / blendTime</span>.
           Set a realistic Perfect hit rate to get expected per-second and
           per-hour, scale by blender count, and copy a shareable build link.
+          Results are relative planning estimates — not a guarantee of live
+          server cash.
         </p>
       </div>
+      <DataTrustNote variant="tools" />
       <p className="rounded-xl border border-border bg-surface p-4 text-sm text-muted">
         Use hit-weighted estimates to compare builds — not 100% Perfect fantasy.
         Pull mutReduce from the{" "}

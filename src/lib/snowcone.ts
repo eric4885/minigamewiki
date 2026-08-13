@@ -50,6 +50,8 @@ export type SnowconeData = {
   robloxSearchUrl: string;
   description: string;
   dataReviewedAt: string;
+  /** Editorial note on what is official vs planning-model data */
+  dataTrustNote?: string;
   perfectMult: number;
   codes: { code: string; reward: string; status: string }[];
   expiredCodes: { code: string; reward: string; status: string }[];

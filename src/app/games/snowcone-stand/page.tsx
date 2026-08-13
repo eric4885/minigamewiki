@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Card } from "@/components/ui/Card";
 import { RelatedLinks } from "@/components/RelatedLinks";
+import { DataTrustNote } from "@/components/DataTrustNote";
 import { SiteDisclaimer } from "@/components/SiteDisclaimer";
 import { snowcone } from "@/lib/snowcone";
 
@@ -95,21 +96,32 @@ export default function SnowconeStandHubPage() {
         <p className="mt-4 max-w-prose text-muted">
           {snowcone.description} Use the calculator before big upgrades,
           cross-check the flavor table when a new mutation drops, and read
-          guides when you want the why — not just the number. Data is maintained
-          in JSON and reviewed independently; it is not an official game wiki.
+          guides when you want the why — not just the number. This is not an
+          official game wiki.
         </p>
         <p className="mt-3 text-sm text-muted">
           Play on Roblox:{" "}
+          <a
+            href={snowcone.robloxUrl}
+            className="text-accent hover:underline"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Open Snowcone Stand
+          </a>
+          {" · "}
           <a
             href={snowcone.robloxSearchUrl}
             className="text-accent hover:underline"
             rel="noopener noreferrer"
             target="_blank"
           >
-            Search Snowcone Stand
+            Search
           </a>
         </p>
       </div>
+
+      <DataTrustNote />
 
       <section className="space-y-3">
         <h2 className="text-xl font-semibold text-fg">Start here</h2>

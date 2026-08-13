@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { RelatedLinks } from "@/components/RelatedLinks";
+import { DataTrustNote } from "@/components/DataTrustNote";
 import { SiteDisclaimer } from "@/components/SiteDisclaimer";
 import { Card } from "@/components/ui/Card";
 import { Table, Td } from "@/components/ui/Table";
@@ -113,6 +114,8 @@ export default function CodesPage() {
           .
         </p>
       </div>
+
+      <DataTrustNote variant="codes" />
 
       <div className="rounded-xl border border-border bg-surface p-5">
         <div className="flex flex-wrap items-center justify-between gap-3">

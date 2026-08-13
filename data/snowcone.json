@@ -4,13 +4,19 @@
   "developer": "Independent Roblox experience (fan tools by MiniGameWiki)",
   "robloxUrl": "https://www.roblox.com/discover/?Keyword=Snowcone%20Stand",
   "robloxSearchUrl": "https://www.roblox.com/discover/?Keyword=Snowcone%20Stand",
-  "description": "Run a snowcone stand in Roblox: unlock flavors, stack mutations, time your blender, and climb the economy.",
-  "dataReviewedAt": "2026-08-08",
+  "description": "Roblox idle snowcone shop by Steel Sharpens Steel: blend flavors, hit Perfect, serve for cash, and reinvest in flavors and blenders. Official description also notes offline blending, a rotating shop, random cone weight for a heaviest-cone leaderboard, and value stacking with mutations and totems. MiniGameWiki tools use planning models — always confirm numbers in-game.",
+  "dataReviewedAt": "2026-08-13",
   "perfectMult": 1.5,
   "codes": [],
-  "codesLastChecked": "2026-08-10",
-  "codesNote": "As of the last check date, there are no active public promo codes for Snowcone Stand. We do not invent codes. Bookmark this status page — when verified codes appear, they land in the active table first. Until then, use the Blender Calculator and money guides linked on this page.",
+  "codesLastChecked": "2026-08-13",
+  "codesNote": "As of the last check date, there are no verified active public promo codes for Snowcone Stand. We checked the official Roblox description and reputable status pages; we ignore aggregator sites that list placeholder codes (e.g. invented strings presented as “active”). We do not invent codes. When a code is verified in-game or posted by the developer, it appears in the active table first.",
   "changelog": [
+    {
+      "date": "2026-08-13",
+      "items": [
+        "Data trust pass (2026-08-13): re-checked public sources — still no verified codes; ignore placeholder aggregator code lists; clarify tables/calculator as planning models; strengthen FAQ/hub/tool disclaimers; do not import unverified upgrade prices."
+      ]
+    },
     {
       "date": "2026-08-11",
       "items": [
@@ -215,8 +221,8 @@
     }
   ],
   "tierList": {
-    "updatedAt": "2026-07-29",
-    "summary": "Tiers reflect mid-to-late game cash efficiency assuming Perfect Blend and at least Sparkling mutation. Early game, prefer unlock order over raw tier.",
+    "updatedAt": "2026-08-13",
+    "summary": "Editorial ranks for mid-to-late cash efficiency assuming Perfect Blend and at least a mid-tier mutation mindset — not an official developer ranking. Early game, prefer unlock order and cash on hand over raw tier. Re-check bases in-game after patches; do not treat fan-wiki price sheets as source of truth.",
     "ranks": [
       {
         "tier": "S",
@@ -426,10 +432,11 @@
     {
       "slug": "codes-policy",
       "title": "Our Codes Policy: No Fake Promo Codes",
-      "updatedAt": "2026-07-23",
-      "excerpt": "Why the codes page may be empty, how we verify drops, and how to report a working code.",
+      "updatedAt": "2026-08-13",
+      "excerpt": "Why the codes page may be empty, why we ignore placeholder aggregator lists, and how to report a working code.",
       "content": [
         "Many Roblox wiki sites list expired or invented codes. MiniGameWiki does not. If our [Snowcone Stand codes](/games/snowcone-stand/codes) table is empty, that is an honest status — not a missing page.",
+        "Some code-farm sites publish placeholder strings (generic words presented as “active codes”) with no proof they redeem. Treat those as unverified marketing. We only list codes after in-game or developer confirmation — an empty table is intentional honesty.",
         "## Verification rules",
         "- A code must be publicly announced or reproducibly redeemable.",
         "- Expired codes are removed, not grayed out forever as clickbait.",
@@ -501,5 +508,6 @@
       ]
     }
   ],
-  "expiredCodes": []
+  "expiredCodes": [],
+  "dataTrustNote": "Official Roblox description confirms the core loop (Perfect timing, offline blending, rotating shop, random weight leaderboard, mutations/totems). Numeric tables and calculator multipliers on this site are editorial planning models — re-verify in-game. Fan-wiki upgrade price lists are not treated as fact."
 }

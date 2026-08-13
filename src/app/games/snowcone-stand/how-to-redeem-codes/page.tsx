@@ -3,6 +3,7 @@ import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedLinks } from "@/components/RelatedLinks";
+import { DataTrustNote } from "@/components/DataTrustNote";
 import { SiteDisclaimer } from "@/components/SiteDisclaimer";
 import { snowcone } from "@/lib/snowcone";
 
@@ -28,9 +29,11 @@ export default function HowToRedeemCodesPage() {
           How to Redeem Snowcone Stand Codes
         </h1>
         <p className="mt-4 max-w-prose text-muted">
-          Players search for working codes every week. Many sites invent expired
-          strings to farm clicks. This page explains the usual Roblox redeem
-          flow and how MiniGameWiki treats codes — including when our{" "}
+          Players search for working codes every week. Many sites invent
+          placeholder or expired strings to farm clicks. This page explains a
+          typical Roblox-style redeem flow (button placement can change — always
+          confirm in-game) and how MiniGameWiki treats codes — including when
+          our{" "}
           <Link
             href="/games/snowcone-stand/codes"
             className="text-accent hover:underline"
@@ -42,17 +45,25 @@ export default function HowToRedeemCodesPage() {
         </p>
       </div>
 
+      <DataTrustNote variant="codes" />
+
       <section className="space-y-3">
-        <h2 className="text-xl font-semibold text-fg">Typical redeem steps</h2>
+        <h2 className="text-xl font-semibold text-fg">
+          Typical redeem steps (confirm in-game)
+        </h2>
         <ol className="list-decimal space-y-2 pl-5 text-muted">
           <li>Open Snowcone Stand on Roblox and wait until you are fully loaded in.</li>
-          <li>Look for a Codes, Shop, Settings, or Twitter/X icon on the HUD (placement varies by update).</li>
-          <li>Enter the code exactly — codes are often case-sensitive.</li>
+          <li>
+            Look for a Codes, Shop, or Settings control on the HUD. Exact
+            placement is not documented by an official public UI guide — follow
+            what the live game shows.
+          </li>
+          <li>Enter a verified code exactly — codes are often case-sensitive.</li>
           <li>Confirm and check inventory / currency for the reward.</li>
         </ol>
         <p className="text-sm text-muted">
-          If the game UI changed after a patch, use in-game tips or the
-          developer&apos;s official social channels — not random screenshot farms.
+          Prefer the official Roblox game page and the developer group over
+          random screenshot farms or “active codes” lists with no proof.
         </p>
       </section>
 
