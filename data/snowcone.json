@@ -8,9 +8,15 @@
   "dataReviewedAt": "2026-08-13",
   "perfectMult": 1.5,
   "codes": [],
-  "codesLastChecked": "2026-08-13",
-  "codesNote": "As of the last check date, there are no verified active public promo codes for Snowcone Stand. We checked the official Roblox description and reputable status pages; we ignore aggregator sites that list placeholder codes (e.g. invented strings presented as “active”). We do not invent codes. When a code is verified in-game or posted by the developer, it appears in the active table first.",
+  "codesLastChecked": "2026-08-16",
+  "codesNote": "As of the last check date, there are no verified active public promo codes for Snowcone Stand. We re-checked the official Roblox game description and reputable status pages (including Earnaldo and GameLand Insider). Major code trackers still have no dedicated verified list. We ignore aggregator sites that publish placeholder strings as active codes. We do not invent codes. When a code is verified in-game or posted by the developer, it appears in the active table first.",
   "changelog": [
+    {
+      "date": "2026-08-16",
+      "items": [
+        "Codes status refreshed (2026-08-16): official Roblox description and reputable trackers still show no verified active public codes; placeholder aggregator lists ignored."
+      ]
+    },
     {
       "date": "2026-08-13",
       "items": [
