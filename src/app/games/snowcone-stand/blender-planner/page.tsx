@@ -9,9 +9,9 @@ import { SiteDisclaimer } from "@/components/SiteDisclaimer";
 import { snowcone } from "@/lib/snowcone";
 
 export const metadata: Metadata = pageMeta({
-  title: "Snowcone Stand Blender Calculator",
+  title: "Snowcone Stand Blender Calculator & Planner",
   description:
-    "Free Snowcone Stand blender calculator for Roblox: Perfect hit rate, expected per-second and per-hour, fleet scale, and shareable build links.",
+    "Free Snowcone Stand blender calculator and planner for Roblox: Perfect hit rate, expected $/sec and $/hr, fleet scale, offline estimate, shareable builds.",
   path: "/games/snowcone-stand/blender-planner",
 });
 
@@ -30,7 +30,10 @@ export default function BlenderPlannerPage() {
           Snowcone Stand Blender Calculator
         </h1>
         <p className="mt-4 max-w-prose text-muted">
-          Buying the next flavor or totem without math is how Snowcone Stand
+          Need a Snowcone Stand{" "}
+          <strong className="font-medium text-fg">blender calculator</strong> or{" "}
+          <strong className="font-medium text-fg">blender planner</strong> before
+          the next shop buy? Buying the next flavor or totem without math is how
           players burn a session&apos;s cash on a shiny upgrade that loses
           per-second. This calculator uses{" "}
           <span className="font-mono text-fg">
@@ -53,7 +56,14 @@ export default function BlenderPlannerPage() {
           href="/games/snowcone-stand/flavor-mutation-table"
           className="text-accent hover:underline"
         >
-          flavor × mutation table
+          mutation table
+        </Link>
+        . Wondering if a totem is worth it? Read{" "}
+        <Link
+          href="/games/snowcone-stand/guides/totem-efficiency"
+          className="text-accent hover:underline"
+        >
+          are totems worth buying
         </Link>
         . For AFK planning see{" "}
         <Link
