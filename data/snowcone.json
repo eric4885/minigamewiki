@@ -5,12 +5,18 @@
   "robloxUrl": "https://www.roblox.com/games/76113971506717/Snowcone-Stand",
   "robloxSearchUrl": "https://www.roblox.com/discover/?Keyword=Snowcone%20Stand",
   "description": "Roblox idle snowcone shop by Steel Sharpens Steel: blend flavors, hit Perfect, serve for cash, and reinvest in flavors and blenders. Official description also notes offline blending, a rotating shop, random cone weight for a heaviest-cone leaderboard, and value stacking with mutations and totems. MiniGameWiki tools use planning models — always confirm numbers in-game.",
-  "dataReviewedAt": "2026-08-13",
+  "dataReviewedAt": "2026-08-21",
   "perfectMult": 1.5,
   "codes": [],
   "codesLastChecked": "2026-08-16",
   "codesNote": "As of the last check date, there are no verified active public promo codes for Snowcone Stand. We re-checked the official Roblox game description and reputable status pages (including Earnaldo and GameLand Insider). Major code trackers still have no dedicated verified list. We ignore aggregator sites that publish placeholder strings as active codes. We do not invent codes. When a code is verified in-game or posted by the developer, it appears in the active table first.",
   "changelog": [
+    {
+      "date": "2026-08-21",
+      "items": [
+        "Long-tail page fill (2026-08-21): added what-are-codes, vs Grow a Garden, and heaviest-cone leaderboard guides; tightened Codes/Table/Totem/Calculator SERP copy for GSC intents (what are codes for, mutation table, totem worth it)."
+      ]
+    },
     {
       "date": "2026-08-16",
       "items": [
@@ -322,11 +328,11 @@
     },
     {
       "slug": "mutations-plain-english",
-      "title": "Snowcone Stand Mutations, Explained Simply",
-      "updatedAt": "2026-08-05",
-      "excerpt": "What the best mutation means for cash farms: mutReduce in plain English, which muts to chase, and how to confirm picks in the flavor table and calculator.",
+      "title": "Best Mutation in Snowcone Stand? Explained Simply",
+      "updatedAt": "2026-08-21",
+      "excerpt": "What the best mutation means for cash farms: mutReduce in plain English, which muts to chase, and how to confirm picks in the mutation table and calculator.",
       "content": [
-        "Players search for the **best mutation** in Snowcone Stand as if there were one sticker to collect. For money, mutations are just multipliers on your flavor base — after Perfect, in the way we model it here.",
+        "Players search for the **best mutation** or a **mutation table** shortcut in Snowcone Stand as if there were one sticker to collect. For money, mutations are just multipliers on your flavor base — after Perfect, in the way we model it here.",
         "We call that multiplier **mutReduce** on the [tables](/games/snowcone-stand/flavor-mutation-table). Bigger number, bigger payout, assuming everything else stays equal.",
         "## The short ladder",
         "- Frosted: small bump. Fine while you’re learning.",
@@ -382,8 +388,8 @@
     {
       "slug": "mutation-stacking-guide",
       "title": "Mutation Stacking Guide for Mid-Game Farms",
-      "updatedAt": "2026-08-05",
-      "excerpt": "Best mid-game mutation chase order for Snowcone Stand farms, when Cursed is a trap, and how to verify stacks with the table and Blender Calculator.",
+      "updatedAt": "2026-08-21",
+      "excerpt": "Best mid-game mutation chase order for Snowcone Stand — use the mutation table and Blender Calculator to verify stacks, and when Cursed is a trap.",
       "content": [
         "Mutations multiply after Perfect Blend in our model. That means Perfect + Golden is multiplicative, not additive — missing Perfect hurts more once you invest in rare muts. Looking for the best mutation for your current stand? Start with the ladder below, then confirm on the [flavor × mutation table](/games/snowcone-stand/flavor-mutation-table) and [Blender Calculator](/games/snowcone-stand/blender-planner).",
         "## Recommended chase order",
@@ -400,16 +406,16 @@
     {
       "slug": "totem-efficiency",
       "title": "Are Totems Worth Buying in Snowcone Stand?",
-      "updatedAt": "2026-08-11",
-      "excerpt": "Totem worth it? Simple break-even for Sugar, Ice, and Festival stacks — check the Blender Calculator before you spend.",
+      "updatedAt": "2026-08-21",
+      "excerpt": "Are Totems worth buying in Snowcone Stand? Cost vs gain break-even for Sugar, Ice, and Festival — check the Blender Calculator before you spend.",
       "content": [
-        "Searching whether a **totem is worth buying** in Snowcone Stand? Totems apply last in the unit formula. They scale everything you already do right — and everything you do wrong. Buy one to multiply a stable Perfect farm; do not buy one to paper over missed Perfects.",
+        "Searching whether a **totem is worth buying** — or how much a totem should cost relative to your farm — in Snowcone Stand? Totems apply last in the unit formula. They scale everything you already do right — and everything you do wrong. Buy one to multiply a stable Perfect farm; do not buy one to paper over missed Perfects.",
         "## Quick answer",
         "- Buy a totem when you already land Perfect reliably and the shop flavor you will farm matches the totem.",
         "- Skip premium totems if your cash is still unlocking blenders or the next base flavor.",
         "- Always compare before/after unit value in the [Blender Calculator](/games/snowcone-stand/blender-planner) before spending.",
-        "## Simple break-even",
-        "If a totem costs a large cash dump, estimate how many blends you need at the new stackMult to recover that cost. Open the [Blender Calculator](/games/snowcone-stand/blender-planner): note unit before and after, then divide cost by the unit delta. If recovery takes longer than you will keep that flavor active, wait.",
+        "## Simple break-even (cost vs gain)",
+        "If a totem costs a large cash dump, estimate how many blends you need at the new stackMult to recover that cost. Open the [Blender Calculator](/games/snowcone-stand/blender-planner): note unit before and after, then divide cost by the unit delta. If recovery takes longer than you will keep that flavor active, wait. Shop prices rotate — verify the live price in-game; we will not invent a price list here.",
         "## Stack choices",
         "- Sugar Totem: cheap starter stack.",
         "- Ice Totem: better default once mid-game cash is stable.",
@@ -511,6 +517,75 @@
         "If an item disappears, do not chase rumor restock times from random posts. Re-open the shop next session and re-run the checklist. Update your own notes; treat community timers as unverified until you confirm them yourself.",
         "## Related pages",
         "Read the [beginner economy loop](/games/snowcone-stand/guides/beginner-economy-loop) for early buy-order mindset. [Codes status](/games/snowcone-stand/codes) stays empty unless we verify a code — same honesty standard as shop rumors. For AFK planning after shopping, see [offline blend planning](/games/snowcone-stand/guides/offline-blend-planning)."
+      ]
+    },
+    {
+      "slug": "what-are-snowcone-stand-codes",
+      "title": "What Are Snowcone Stand Codes For? (And Does the Game Have Any?)",
+      "updatedAt": "2026-08-21",
+      "excerpt": "What Snowcone Stand promo codes are for in Roblox, whether the game has any right now, and what to do when the codes page is empty.",
+      "content": [
+        "Searching **what is the Snowcone code for** or **does Snowcone Stand have codes**? Short answer: promo codes (when they exist) are free developer rewards you redeem for in-game cash or items. They are a bonus — not a required unlock, not Robux, and not needed to run a profitable stand.",
+        "## What are codes for?",
+        "- Free rewards from the developer or official social posts (cash, items, or temporary boosts — exact rewards depend on the drop).",
+        "- A catch-up boost for players who already know the Perfect / blender loop.",
+        "- **Not** a substitute for Perfect timing, more blenders, or better flavors.",
+        "- **Not** the same as third-party “free Robux” scams. Ignore those.",
+        "## Does Snowcone Stand have codes right now?",
+        "Check the live [codes status page](/games/snowcone-stand/codes) for the last-checked date. At publish time of this guide we still list **no verified active public codes**. An empty table means honesty, not a broken page. Aggregator sites that paste generic “active” strings without proof are ignored — see our [codes policy](/games/snowcone-stand/guides/codes-policy).",
+        "## How to redeem (when a real code appears)",
+        "Follow [how to redeem codes](/games/snowcone-stand/how-to-redeem-codes). Exact UI can change; always trust the in-game Codes UI over a blog screenshot.",
+        "## What to do instead of waiting for codes",
+        "- Learn the [first-hour economy loop](/games/snowcone-stand/guides/beginner-economy-loop).",
+        "- Compare builds in the [Blender Calculator](/games/snowcone-stand/blender-planner).",
+        "- Read [make money faster](/games/snowcone-stand/guides/make-money-fast) for Perfect habit and buy order.",
+        "Think you found a working code? [Report it on Contact](/contact) with the code text and where you saw it. We verify before publishing."
+      ]
+    },
+    {
+      "slug": "vs-grow-a-garden",
+      "title": "Snowcone Stand vs Grow a Garden: Which Should You Play?",
+      "updatedAt": "2026-08-21",
+      "excerpt": "Honest comparison of Snowcone Stand and Grow a Garden loops, idle level, mutations/weight chase, and codes — then which fit fits you.",
+      "content": [
+        "Players coming from **Grow a Garden** often ask whether **Snowcone Stand** is the same game with a different coat of paint. They share DNA (mutations, lucky heavy rolls, idle-friendly progress) but the day-to-day loop feels different.",
+        "## Quick comparison",
+        "- **Theme:** Snowcone shop vs plant-and-harvest garden.",
+        "- **Core action:** Blend flavors and stop for a Perfect cone vs plant seeds, wait, and harvest crops.",
+        "- **Value stack:** Mutations + totems + random cone weight vs mutations + crop size/weight luck.",
+        "- **Idle level:** Grow a Garden is more hands-off on real timers; Snowcone Stand is idle-friendly (offline blends) but rewards active Perfect timing when you are online.",
+        "- **Codes:** Grow a Garden has an established code ecosystem. Snowcone Stand still has **no verified public codes** on our [codes status](/games/snowcone-stand/codes) page — check that date before trusting any list.",
+        "## Who should play which?",
+        "- Choose **Grow a Garden** if you want a deeply established, check-in-few-times-a-day idle farm with frequent code drops and a huge community.",
+        "- Choose **Snowcone Stand** if you want a fresher shop theme, a satisfying Perfect timing skill, and mutation/weight chase without needing the garden meta.",
+        "- Play both if you like the mutation-and-weight fantasy — instincts transfer, loops do not.",
+        "## Transfer tips if you already play Grow a Garden",
+        "- Treat Perfect timing like the skill hook that replaces pure wait-and-harvest.",
+        "- Use the [Blender Calculator](/games/snowcone-stand/blender-planner) the way you would theorycraft a seed line — compare before you dump cash.",
+        "- Do not expect a Snowcone code list to match Grow a Garden’s cadence; bookmark [codes status](/games/snowcone-stand/codes) instead of random aggregators.",
+        "Start on this site with the [Snowcone Stand hub](/games/snowcone-stand), then the [first-hour loop](/games/snowcone-stand/guides/beginner-economy-loop)."
+      ]
+    },
+    {
+      "slug": "heaviest-cone-leaderboard",
+      "title": "Heaviest Cone Leaderboard: How the Weight Chase Works",
+      "updatedAt": "2026-08-21",
+      "excerpt": "How Snowcone Stand’s heaviest cone / weight leaderboard works in plain English — process tips only, no invented weight formulas.",
+      "content": [
+        "The official Roblox description is clear on the fantasy: every cone rolls a **random weight**, and the **heaviest** climbs the leaderboard. Players search for heaviest-cone tips expecting a secret formula. Public sources do not publish a reliable weight equation or odds table — so this page stays process-only.",
+        "## What we can say safely",
+        "- Weight is rolled per cone; big rolls are rare by design.",
+        "- Climbing the board is a volume + quality chase: more serious blends, better bases, and stable Perfects raise your odds of seeing a standout roll over time — without guaranteeing one.",
+        "- Mutations and totems raise **value** in the shop loop; they are not a published weight formula. Do not treat fan-wiki “weight %” tables as fact.",
+        "## Process checklist (no fake numbers)",
+        "1. Keep Perfect habit steady — missed Perfects waste the rolls that could have been board candidates.",
+        "2. Scale blenders when cash allows so you generate more cones per session.",
+        "3. Prefer higher base flavors you can actually sustain (see the [flavor × mutation table](/games/snowcone-stand/flavor-mutation-table) and [tier list](/games/snowcone-stand/tier-list)).",
+        "4. Compare farm builds in the [Blender Calculator](/games/snowcone-stand/blender-planner) so cash farms fund more attempts.",
+        "5. Treat leaderboard climbs as a long grind goal, not a one-code shortcut.",
+        "## What we will not publish",
+        "Invented weight formulas, fake drop rates, or “guaranteed heaviest” routes. If you measure in-game weight behavior after a patch, [send evidence on Contact](/contact).",
+        "Related: [endgame farm route](/games/snowcone-stand/guides/endgame-farm-route), [make money faster](/games/snowcone-stand/guides/make-money-fast)."
       ]
     }
   ],
