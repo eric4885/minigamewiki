@@ -11,7 +11,7 @@ import { snowcone } from "@/lib/snowcone";
 export const metadata: Metadata = pageMeta({
   title: "Snowcone Stand Wiki & Tools",
   description:
-    "Snowcone Stand wiki and tools for Roblox: blender calculator, flavor table, tier list, latest codes status, FAQ, and guides.",
+    "Snowcone Stand wiki and tools for Roblox: blender calculator, mutation table, tier list, codes status, vs Grow a Garden, FAQ, and guides.",
   path: "/games/snowcone-stand",
 });
 
@@ -41,8 +41,8 @@ const links = [
   },
   {
     href: "/games/snowcone-stand/flavor-mutation-table",
-    title: "Flavor × Mutation Table",
-    body: "Full reference for bases and mutation multipliers.",
+    title: "Mutation Table",
+    body: "Flavor bases and mutReduce reference for best-mutation planning.",
   },
   {
     href: "/games/snowcone-stand/tier-list",
@@ -55,9 +55,24 @@ const links = [
     body: "Live status page — empty when no verified codes exist.",
   },
   {
+    href: "/games/snowcone-stand/guides/what-are-snowcone-stand-codes",
+    title: "What Are Codes For?",
+    body: "What promo codes do, whether any exist, and what to do instead.",
+  },
+  {
     href: "/games/snowcone-stand/how-to-redeem-codes",
     title: "How to Redeem Codes",
     body: "Redeem flow + our no-fake-codes policy.",
+  },
+  {
+    href: "/games/snowcone-stand/guides/vs-grow-a-garden",
+    title: "vs Grow a Garden",
+    body: "Loop, idle level, and codes contrast — which fit fits you.",
+  },
+  {
+    href: "/games/snowcone-stand/guides/heaviest-cone-leaderboard",
+    title: "Heaviest Cone Leaderboard",
+    body: "Weight chase process tips — no invented formulas.",
   },
   {
     href: "/games/snowcone-stand/guides",
@@ -95,7 +110,7 @@ export default function SnowconeStandHubPage() {
         </p>
         <p className="mt-4 max-w-prose text-muted">
           {snowcone.description} Use the calculator before big upgrades,
-          cross-check the flavor table when a new mutation drops, and read
+          cross-check the mutation table when a new mut drops, and read
           guides when you want the why — not just the number. This is not an
           official game wiki.
         </p>
@@ -144,13 +159,20 @@ export default function SnowconeStandHubPage() {
             className="text-accent hover:underline"
           >
             rotating shop checks
-          </Link>{" "}
-          and{" "}
+          </Link>
+          ,{" "}
           <Link
             href="/games/snowcone-stand/guides/offline-blend-planning"
             className="text-accent hover:underline"
           >
             offline blend planning
+          </Link>
+          , and{" "}
+          <Link
+            href="/games/snowcone-stand/guides/vs-grow-a-garden"
+            className="text-accent hover:underline"
+          >
+            vs Grow a Garden
           </Link>
           .
         </p>
