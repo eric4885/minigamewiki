@@ -13,7 +13,7 @@ import { SITE_URL, snowcone } from "@/lib/snowcone";
 export const metadata: Metadata = {
   ...pageMeta({
     title: `Snowcone Stand Codes (Roblox) — Checked ${snowcone.codesLastChecked}`,
-    description: `Snowcone Stand codes for Roblox: live status last checked ${snowcone.codesLastChecked}. Verified active codes only — empty when none exist. No fake lists.`,
+    description: `What are Snowcone Stand codes for? Live Roblox codes status last checked ${snowcone.codesLastChecked}. Verified only — empty when none exist. No fake lists.`,
     path: "/games/snowcone-stand/codes",
   }),
 };
@@ -97,7 +97,14 @@ export default function CodesPage() {
           developer; they are not required to play or earn cash.
         </p>
         <p className="mt-3 max-w-prose text-sm text-muted">
-          Redeem steps:{" "}
+          Deep dive:{" "}
+          <Link
+            href="/games/snowcone-stand/guides/what-are-snowcone-stand-codes"
+            className="text-accent hover:underline"
+          >
+            what are codes for / does the game have any
+          </Link>
+          . Redeem steps:{" "}
           <Link
             href="/games/snowcone-stand/how-to-redeem-codes"
             className="text-accent hover:underline"
@@ -114,6 +121,32 @@ export default function CodesPage() {
           .
         </p>
       </div>
+
+      <section className="space-y-3 rounded-xl border border-border bg-surface p-5">
+        <h2 className="text-xl font-semibold text-fg">
+          What are Snowcone Stand codes for?
+        </h2>
+        <p className="max-w-prose text-sm text-muted">
+          When the developer publishes a working promo code, redeeming it grants
+          free in-game rewards (cash or items depending on the drop). Codes are a
+          bonus on top of Perfect blends and shop upgrades — not a paid Robux
+          product and not required to progress. Full explainer:{" "}
+          <Link
+            href="/games/snowcone-stand/guides/what-are-snowcone-stand-codes"
+            className="text-accent hover:underline"
+          >
+            What are Snowcone Stand codes for?
+          </Link>
+        </p>
+        <h2 className="pt-2 text-xl font-semibold text-fg">
+          Does Snowcone Stand have codes?
+        </h2>
+        <p className="max-w-prose text-sm text-muted">
+          {hasActive
+            ? "Yes — verified active codes are listed in the table below."
+            : `As of ${snowcone.codesLastChecked}, we have no verified active public codes. Empty is intentional. Ignore aggregator “active code” lists that cannot be redeemed.`}
+        </p>
+      </section>
 
       <DataTrustNote variant="codes" />
 
