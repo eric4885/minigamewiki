@@ -9,9 +9,9 @@ import { Table, Td } from "@/components/ui/Table";
 import { snowcone } from "@/lib/snowcone";
 
 export const metadata: Metadata = pageMeta({
-  title: "Flavor & Mutation Table",
+  title: "Snowcone Stand Mutation Table (Flavor × Mut)",
   description:
-    "Snowcone Stand flavor and mutation planning table for Roblox. Editorial values for comparing builds — verify in-game after patches.",
+    "Snowcone Stand mutation table and flavor bases for Roblox. Compare mutReduce for best-mutation planning — editorial values, verify in-game after patches.",
   path: "/games/snowcone-stand/flavor-mutation-table",
 });
 
@@ -23,13 +23,16 @@ export default function FlavorMutationTablePage() {
           items={[
             { href: "/games", label: "Games" },
             { href: "/games/snowcone-stand", label: snowcone.game },
-            { label: "Flavor × Mutation Table" },
+            { label: "Mutation Table" },
           ]}
         />
         <h1 className="mt-2 text-3xl font-semibold text-fg">
-          Snowcone Stand Flavor & Mutation Table
+          Snowcone Stand Mutation Table
         </h1>
         <p className="mt-4 max-w-prose text-muted">
+          Looking for a Snowcone Stand{" "}
+          <strong className="font-medium text-fg">mutation table</strong> or the{" "}
+          <strong className="font-medium text-fg">best mutation</strong> for cash?
           Use one table to shortlist flavor bases and{" "}
           <span className="font-mono text-fg">mutReduce</span> values before you
           open the{" "}
@@ -69,7 +72,14 @@ export default function FlavorMutationTablePage() {
           href="/games/snowcone-stand/guides/mutations-plain-english"
           className="text-accent hover:underline"
         >
-          mutations explained simply
+          best mutation explained simply
+        </Link>
+        . Chase order:{" "}
+        <Link
+          href="/games/snowcone-stand/guides/mutation-stacking-guide"
+          className="text-accent hover:underline"
+        >
+          mutation stacking guide
         </Link>
         .
       </p>
