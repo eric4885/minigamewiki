@@ -17,7 +17,7 @@ import { renderBlocks } from "@/lib/renderBlocks";
 const GUIDE_SEO_TITLE: Record<string, string> = {
   "make-money-fast": "Make Money Faster",
   "beginner-mistakes": "Five Beginner Mistakes",
-  "mutations-plain-english": "Mutations Explained Simply",
+  "mutations-plain-english": "Best Mutation Explained",
   "beginner-economy-loop": "Beginner Economy Loop",
   "perfect-blend-timing": "Perfect Blend Timing",
   "mutation-stacking-guide": "Mutation Stacking Guide",
@@ -27,6 +27,9 @@ const GUIDE_SEO_TITLE: Record<string, string> = {
   "endgame-farm-route": "Endgame Farm Route",
   "offline-blend-planning": "Offline Blend Planning",
   "rotating-shop-checks": "Rotating Shop Checks",
+  "what-are-snowcone-stand-codes": "What Are Codes For?",
+  "vs-grow-a-garden": "vs Grow a Garden",
+  "heaviest-cone-leaderboard": "Heaviest Cone Leaderboard",
 };
 
 export const dynamicParams = false;
