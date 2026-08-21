@@ -29,6 +29,51 @@ const faqs: FaqItem[] = [
     a: "No. We are an independent fan site. We are not affiliated with Roblox Corporation or the game’s developers.",
   },
   {
+    q: "What are Snowcone Stand codes for?",
+    plain:
+      "Promo codes (when they exist) redeem for free in-game rewards from the developer. They are a bonus — not required to play, not Robux, and not a substitute for Perfect timing and blenders.",
+    a: (
+      <>
+        Promo codes (when they exist) redeem for free in-game rewards from the
+        developer. They are a bonus — not required to play, not Robux, and not a
+        substitute for Perfect timing and blenders. Read{" "}
+        <Link
+          href="/games/snowcone-stand/guides/what-are-snowcone-stand-codes"
+          className="text-accent hover:underline"
+        >
+          what are codes for
+        </Link>{" "}
+        and check live status on the{" "}
+        <Link
+          href="/games/snowcone-stand/codes"
+          className="text-accent hover:underline"
+        >
+          codes page
+        </Link>
+        .
+      </>
+    ),
+  },
+  {
+    q: "Snowcone Stand vs Grow a Garden — which should I play?",
+    plain:
+      "Grow a Garden is more hands-off idle with an established code system. Snowcone Stand is idle-friendly but rewards Perfect timing. Pick by loop preference; see our comparison guide.",
+    a: (
+      <>
+        Grow a Garden is more hands-off idle with an established code system.
+        Snowcone Stand is idle-friendly but rewards Perfect timing when you are
+        online. Full comparison:{" "}
+        <Link
+          href="/games/snowcone-stand/guides/vs-grow-a-garden"
+          className="text-accent hover:underline"
+        >
+          Snowcone Stand vs Grow a Garden
+        </Link>
+        .
+      </>
+    ),
+  },
+  {
     q: "Why is the codes page empty?",
     plain:
       "Because we only list codes we can verify. An empty table means no confirmed active public codes at the last check date — not a broken page. We ignore aggregator sites that invent placeholder codes.",
