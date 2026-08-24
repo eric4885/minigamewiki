@@ -8,9 +8,15 @@
   "dataReviewedAt": "2026-08-21",
   "perfectMult": 1.5,
   "codes": [],
-  "codesLastChecked": "2026-08-16",
-  "codesNote": "As of the last check date, there are no verified active public promo codes for Snowcone Stand. We re-checked the official Roblox game description and reputable status pages (including Earnaldo and GameLand Insider). Major code trackers still have no dedicated verified list. We ignore aggregator sites that publish placeholder strings as active codes. We do not invent codes. When a code is verified in-game or posted by the developer, it appears in the active table first.",
+  "codesLastChecked": "2026-08-24",
+  "codesNote": "As of the last check date, there are no verified active public promo codes for Snowcone Stand. We re-checked the official Roblox game description (universe 10257007695, last game update 2026-08-01) via the public Roblox API, plus Earnaldo, GameLand Insider, RoUniverse, and snowcone-stand.wiki — all report no active codes. Aggregator sites such as gotocodes.com publish unverified placeholder strings (e.g. SWEETTREAT, SUMMERFUN, FREEMONEY); we ignore those until a code redeems in-game or is posted by the developer. We do not invent codes. When a code is verified, it appears in the active table first.",
   "changelog": [
+    {
+      "date": "2026-08-24",
+      "items": [
+        "Codes audit (2026-08-24): re-checked Roblox official description/API, Earnaldo, GameLand Insider, RoUniverse, snowcone-stand.wiki, and gotocodes.com. Still no verified active public codes; placeholder aggregator strings (SWEETTREAT, SUMMERFUN, ICECREAM, FREEMONEY, GEMBOOST, NEWUPDATE) ignored."
+      ]
+    },
     {
       "date": "2026-08-21",
       "items": [
