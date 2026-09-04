@@ -8,7 +8,7 @@ type ContactEmailProps = {
 };
 
 /**
- * Public email without mailto:.
+ * Public email as plain text (no mailto:).
  * Avoids Cloudflare Email Obfuscation rewriting links to /cdn-cgi/l/email-protection
  * (Ahrefs and other crawlers flag those as internal 404s).
  */
@@ -16,12 +16,9 @@ export function ContactEmail({
   className = "font-mono text-fg",
   linkToContact = false,
 }: ContactEmailProps) {
-  const [user, domain] = CONTACT_EMAIL.split("@");
-  const label = `${user} [at] ${domain}`;
-
   const address = (
     <span className={className} title={CONTACT_EMAIL} aria-label={CONTACT_EMAIL}>
-      {label}
+      {CONTACT_EMAIL}
     </span>
   );
 
