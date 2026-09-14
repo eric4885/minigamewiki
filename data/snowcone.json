@@ -8,9 +8,15 @@
   "dataReviewedAt": "2026-08-21",
   "perfectMult": 1.5,
   "codes": [],
-  "codesLastChecked": "2026-09-04",
-  "codesNote": "As of the last check date, there are no verified active public promo codes for Snowcone Stand. We re-checked the official Roblox game description via public API (universe 10257007695; place last updated 2026-09-01 — description still has no code text), plus Earnaldo, GameLand Insider, RoUniverse, snowconestand.org, snowcone-stand.wiki, and Services PV (0 codes). Aggregator gotocodes.com still lists unverified placeholder strings (SWEETTREAT, SUMMERFUN, ICECREAM, FREEMONEY, GEMBOOST, NEWUPDATE); we ignore those. Fan-wiki expired-archive strings (LAUNCH, FIRSTFLAVOR, etc.) remain unverified and are not listed here. We do not invent codes. When a code is verified in-game or posted by the developer, it appears in the active table first.",
+  "codesLastChecked": "2026-09-14",
+  "codesNote": "As of the last check date, there are no verified active public promo codes for Snowcone Stand. We re-checked the official Roblox game description via public API (universe 10257007695; place last updated 2026-09-01 — description still has no code text), Earnaldo (re-checked Aug 27, 2026: no codes button in gameplay footage; description empty of codes), GameLand Insider, RoUniverse, snowconestand.org, snowcone-stand.wiki, and Services PV (0 / NO ACTIVE CODES). Aggregator gotocodes.com still lists unverified placeholder strings (SWEETTREAT, SUMMERFUN, ICECREAM, FREEMONEY, GEMBOOST, NEWUPDATE); we ignore those. Fan-wiki expired-archive strings remain unverified and are not listed here. We do not invent codes. When a code is verified in-game or posted by the developer, it appears in the active table first.",
   "changelog": [
+    {
+      "date": "2026-09-14",
+      "items": [
+        "Codes audit (2026-09-14): Roblox official description/API (still no code text after 2026-09-01 update), Earnaldo Aug 27 recheck (no codes UI/button), GameLand Insider, RoUniverse, snowconestand.org, snowcone-stand.wiki, Services PV — still no verified active public codes. Placeholder aggregator strings and unverified fan-wiki expired lists ignored."
+      ]
+    },
     {
       "date": "2026-09-04",
       "items": [
