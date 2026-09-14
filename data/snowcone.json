@@ -5,7 +5,7 @@
   "robloxUrl": "https://www.roblox.com/games/76113971506717/Snowcone-Stand",
   "robloxSearchUrl": "https://www.roblox.com/discover/?Keyword=Snowcone%20Stand",
   "description": "Roblox idle snowcone shop by Steel Sharpens Steel: blend flavors, hit Perfect, serve for cash, and reinvest in flavors and blenders. Official description also notes offline blending, a rotating shop, random cone weight for a heaviest-cone leaderboard, and value stacking with mutations and totems. MiniGameWiki tools use planning models — always confirm numbers in-game.",
-  "dataReviewedAt": "2026-08-21",
+  "dataReviewedAt": "2026-09-14",
   "perfectMult": 1.5,
   "codes": [],
   "codesLastChecked": "2026-09-14",
@@ -14,6 +14,7 @@
     {
       "date": "2026-09-14",
       "items": [
+        "Content maintenance (2026-09-14): refreshed make-money-fast, perfect-blend-timing, beginner-economy-loop, and offline-blend-planning for September; bumped dataReviewedAt; noted Roblox place update 2026-09-01 with unchanged core loop and still no verified codes; expanded FAQ freshness.",
         "Codes audit (2026-09-14): Roblox official description/API (still no code text after 2026-09-01 update), Earnaldo Aug 27 recheck (no codes UI/button), GameLand Insider, RoUniverse, snowconestand.org, snowcone-stand.wiki, Services PV — still no verified active public codes. Placeholder aggregator strings and unverified fan-wiki expired lists ignored."
       ]
     },
@@ -300,26 +301,30 @@
   "guides": [
     {
       "slug": "make-money-fast",
-      "title": "How to Make Money Faster in Snowcone Stand",
-      "updatedAt": "2026-08-05",
-      "excerpt": "Maximize profit in Snowcone Stand: what to buy first, why Perfect Blend beats fancy flavors, and how to compare builds in the Blender Calculator.",
+      "title": "How to Make Money Faster in Snowcone Stand (September 2026)",
+      "updatedAt": "2026-09-14",
+      "excerpt": "September 2026 cash routine: Perfect first, buy order next, then compare builds in the Blender Calculator — no fake codes required.",
       "content": [
-        "Most slow starts in Snowcone Stand aren’t about “bad luck.” They’re about spending cash on the wrong thing while the blender sits idle or misses the Perfect window.",
-        "Cash comes from finished blends. If you are trying to **maximize profit**, ask how much value you get per second of blending, and how often you actually nail Perfect. Open the [Blender Calculator](/games/snowcone-stand/blender-planner) with your real blend time before you spend a big cash pile.",
-        "## What to buy first",
-        "Flavor unlocks that raise base value come before cosmetics. A nicer stand doesn’t pay the next unlock for you.",
-        "If you have a choice between a tiny blend-time upgrade and a decoration, take the speed. Shorter cycles mean more chances to hit Perfect in the same play session.",
-        "Skip expensive totems until your flavor is at least mid-tier and you’re landing Perfect more often than not. Totems multiply whatever you’re already doing — including mistakes.",
+        "Most slow starts in Snowcone Stand are not bad luck. They are spending cash on the wrong upgrade while the blender sits idle or misses the Perfect window. As of September 2026 the official Roblox description still describes the same loop: blend, hit Perfect, serve, reinvest — and still lists **no promo codes**. Cash comes from finished blends, not from waiting on a rumor list.",
+        "If you are trying to **maximize profit**, ask two questions every session: (1) how much value per second of blending, and (2) how often you actually nail Perfect. Open the [Blender Calculator](/games/snowcone-stand/blender-planner) with your real blend time and hit rate before you dump a big cash pile.",
+        "## What to buy first (still true after the 2026-09-01 game update)",
+        "- Flavor unlocks that raise base value come before cosmetics. A nicer stand does not pay the next unlock for you.",
+        "- If you choose between a small blend-time help and a decoration, take the speed. Shorter cycles mean more Perfect chances in the same session.",
+        "- Skip expensive totems until your flavor is at least mid-tier and you land Perfect more often than not. Totems multiply what you already do — including mistakes. Worth-it check: [Are Totems Worth Buying?](/games/snowcone-stand/guides/totem-efficiency).",
+        "- Check the rotating shop before big spends — stock rotates. Use [rotating shop checks](/games/snowcone-stand/guides/rotating-shop-checks) so you verify prices in-game instead of trusting outdated fan lists.",
         "## Perfect is the real money skill",
-        "On our [Blender Planner](/games/snowcone-stand/blender-planner), Perfect is modeled as a **1.5×** bump on unit value. That’s not a small bonus. Two players with the same flavor can end a night far apart just on timing.",
-        "If you’re missing the window constantly, slow down. A slightly slower blender with a high Perfect rate usually prints more than a fast one you keep flubbing. We wrote a short [Perfect Blend timing](/games/snowcone-stand/guides/perfect-blend-timing) note if you want drills.",
-        "## A simple cash routine",
-        "- Warm up on Vanilla or your current unlock until Perfect feels automatic.",
+        "On our Blender Calculator, Perfect is modeled as a **1.5×** bump on unit value before mutation and totem stacks. That is not a small bonus. Two players with the same flavor can finish a night far apart on timing alone.",
+        "If you miss the window constantly, slow down. A slightly slower blender with a high Perfect rate usually prints more than a fast one you keep flubbing. Practice drills: [Perfect Blend timing](/games/snowcone-stand/guides/perfect-blend-timing).",
+        "## A simple September cash routine",
+        "- Warm up on your cheapest reliable flavor until Perfect feels automatic.",
         "- Dump earnings into the next flavor unlock, then repeat.",
-        "- Once you’re on something like Mango, open the [Blender Planner](/games/snowcone-stand/blender-planner) and compare setups with your real blend time.",
-        "Don’t wait for a mythical code dump to “fix” your economy. If our [codes page](/games/snowcone-stand/codes) is empty, that’s the honest status — keep farming.",
+        "- Once you are on a mid-tier base (think Mango-ish in our planning table), open the [Blender Calculator](/games/snowcone-stand/blender-planner) and compare flavor × mutation × totem with your real hit rate.",
+        "- Before AFK, set an offline plan with honest hit-rate assumptions — see [offline blend planning](/games/snowcone-stand/guides/offline-blend-planning).",
+        "- Mutation shortlists: [mutation table](/games/snowcone-stand/flavor-mutation-table) + [best mutation explained](/games/snowcone-stand/guides/mutations-plain-english).",
+        "## Codes will not fix a weak loop",
+        "Do not wait for a mythical code dump. Our [codes status page](/games/snowcone-stand/codes) is empty on purpose when nothing is verified — last checked 2026-09-14. Read [what are codes for](/games/snowcone-stand/guides/what-are-snowcone-stand-codes) if you are searching that query.",
         "## When the numbers lie",
-        "Patches move values. If a flavor suddenly feels weak, check the [flavor × mutation table](/games/snowcone-stand/flavor-mutation-table) again and re-run the [Blender Calculator](/games/snowcone-stand/blender-planner). Treat this site as a worksheet, not a promise. For mutation choices that affect profit, read [mutations explained simply](/games/snowcone-stand/guides/mutations-plain-english)."
+        "Patches can move values. If a flavor suddenly feels weak, re-check the [flavor × mutation table](/games/snowcone-stand/flavor-mutation-table) and re-run the calculator. Treat this site as a worksheet, not a promise. Coming from Grow a Garden? Start with [vs Grow a Garden](/games/snowcone-stand/guides/vs-grow-a-garden) then return here for the cash routine."
       ]
     },
     {
@@ -369,38 +374,46 @@
     },
     {
       "slug": "beginner-economy-loop",
-      "title": "Beginner Economy Loop: First Hour in Snowcone Stand",
-      "updatedAt": "2026-08-05",
-      "excerpt": "A clear first-hour plan: unlock order, when to chase Perfect Blend, and how not to waste early cash on vanity upgrades.",
+      "title": "Beginner Economy Loop: First Hour in Snowcone Stand (September 2026)",
+      "updatedAt": "2026-09-14",
+      "excerpt": "First-hour plan for September 2026: unlock order, Perfect habit, when to open the calculator — and why empty codes status is normal.",
       "content": [
-        "Snowcone Stand rewards players who treat the blender as a timed economy, not a spam button. Your first hour should prioritize consistent Perfect Blends and unlocking the next flavor tier before cosmetic spending.",
+        "Snowcone Stand rewards players who treat the blender as a timed economy, not a spam button. Your first hour should prioritize consistent Perfect Blends and unlocking the next flavor tier before cosmetics. That advice still matches the official Roblox loop as of our September 2026 review (game last updated 2026-09-01 on Roblox; description unchanged on codes).",
         "## Unlock priority",
         "- Buy the next flavor unlock before decorative stand pieces.",
-        "- Keep at least one upgrade path aimed at blend time reduction.",
-        "- Ignore rare mutations until your base flavor is at least mid-tier.",
+        "- Keep at least one path aimed at blend throughput (more blenders / faster cycles) once Perfect feels stable.",
+        "- Ignore rare mutations until your base flavor is at least mid-tier. Start with [mutations explained simply](/games/snowcone-stand/guides/mutations-plain-english).",
+        "- Verify shop stock in-game — [rotating shop checks](/games/snowcone-stand/guides/rotating-shop-checks).",
         "## Perfect Blend habit",
-        "A Perfect Blend multiplies unit value by **1.5**. Missing the window repeatedly costs more than a slightly slower flavor with reliable timing. When you can hit Perfect most of the time, use the [Blender Calculator](/games/snowcone-stand/blender-planner) to compare the next unlock before you buy.",
+        "A Perfect Blend multiplies unit value by **1.5** in our planning model. Missing the window repeatedly costs more than a slightly slower flavor with reliable timing. When you can hit Perfect most of the time, use the [Blender Calculator](/games/snowcone-stand/blender-planner) to compare the next unlock before you buy. Timing drills: [Perfect Blend timing](/games/snowcone-stand/guides/perfect-blend-timing).",
         "## Cash checkpoints",
-        "Aim to reach Strawberry or Blueberry before heavy totem investment. Totems amplify what you already produce; they do not fix a weak base loop.",
-        "Once you can land Perfect Blends on autopilot, move to the [Blender Calculator](/games/snowcone-stand/blender-planner) and test Mango with Sparkling versus Blueberry with Golden. For a cash-first checklist, see [how to make money faster](/games/snowcone-stand/guides/make-money-fast). Mutation basics: [mutations explained simply](/games/snowcone-stand/guides/mutations-plain-english)."
+        "Aim to reach a mid-tier base before heavy totem investment. Totems amplify what you already produce; they do not fix a weak loop — [are totems worth buying?](/games/snowcone-stand/guides/totem-efficiency).",
+        "Once Perfect feels automatic, open the calculator and test a mid-tier flavor with a mid-tier mutation versus a safer base. Cash checklist: [make money faster](/games/snowcone-stand/guides/make-money-fast).",
+        "## Codes (do not stall here)",
+        "New players often search codes first. Bookmark [codes status](/games/snowcone-stand/codes) — empty means no verified public codes, not a broken page. Explainer: [what are codes for](/games/snowcone-stand/guides/what-are-snowcone-stand-codes). Coming from Grow a Garden? [vs Grow a Garden](/games/snowcone-stand/guides/vs-grow-a-garden)."
       ]
     },
     {
       "slug": "perfect-blend-timing",
-      "title": "Perfect Blend Timing: How the 1.5x Window Works",
-      "updatedAt": "2026-07-27",
-      "excerpt": "Why Perfect Blend is the highest-ROI skill in Snowcone Stand and how to practice the timing window without burning ingredients.",
+      "title": "Perfect Blend Timing: Still the Highest-ROI Skill (September 2026)",
+      "updatedAt": "2026-09-14",
+      "excerpt": "Why Perfect Blend remains the highest-ROI skill after the September 2026 checks — practice drills, planner tips, no invented millisecond windows.",
       "content": [
-        "Perfect Blend is the single most important multiplier you control every cycle. The [Blender Planner](/games/snowcone-stand/blender-planner) models it as a flat **1.5x** on base value before mutations and totems.",
+        "Perfect Blend is still the single most important multiplier you control every cycle. The official Roblox description keeps the same warning: stop at the right moment or the cone is worthless. We model Perfect as a flat **1.5×** on base value in the [Blender Calculator](/games/snowcone-stand/blender-planner) before mutations and totems — a planning estimate, not a leaked server constant.",
         "## Why timing beats raw base",
-        "A mid-tier flavor with consistent Perfect Blends often outpaces a higher base flavor with sloppy timing. Unit value is:",
-        "unit = base × (perfect ? 1.5 : 1) × mutation × totem",
-        "## Practice drill",
-        "- Run ten Vanilla blends focusing only on the Perfect window.",
-        "- Then raise blend speed one notch and repeat.",
-        "- Log your Perfect rate; if it drops below ~70%, slow the blender back down.",
+        "A mid-tier flavor with consistent Perfect Blends often outpaces a higher base flavor with sloppy timing. Unit value in our model:",
+        "unit = base × (perfect ? 1.5 : 1) × mutReduce × totemStack",
+        "Then compare **per-second** (unit ÷ blendTime), not peak unit alone. A shiny high-base flavor that takes forever can lose to a faster mid-tier you Perfect every time.",
+        "## Practice drill (no fake frame windows)",
+        "Public sources do not publish an exact millisecond Perfect window. Practice the feel instead of chasing invented frame counts:",
+        "- Run ten cheap blends focusing only on the Perfect window.",
+        "- Raise blend speed one notch and repeat.",
+        "- Log your Perfect rate. If it drops below roughly 70%, slow the blender back down until accuracy recovers.",
+        "- Only then spend on the next flavor unlock or a totem — see [make money faster](/games/snowcone-stand/guides/make-money-fast) and [totem worth it](/games/snowcone-stand/guides/totem-efficiency).",
         "## Planner tip",
-        "Use per-second output (unit ÷ blend time) when comparing setups. A higher unit with a much longer blend can lose to a lower unit with faster cycles. Pair this with the [flavor table](/games/snowcone-stand/flavor-mutation-table) when you change flavors."
+        "Set a realistic hit rate in the calculator (often 50–80% for active play, not 100% fantasy). Pair this with the [mutation table](/games/snowcone-stand/flavor-mutation-table) when you change flavors. For AFK sessions, do not assume you can Perfect offline taps — use [offline blend planning](/games/snowcone-stand/guides/offline-blend-planning).",
+        "## Leaderboard note",
+        "Heavier cones climb the board on random weight. Perfect does not publish a weight formula, but wasted blends are wasted rolls. Process tips only: [heaviest cone leaderboard](/games/snowcone-stand/guides/heaviest-cone-leaderboard)."
       ]
     },
     {
@@ -494,25 +507,24 @@
     },
     {
       "slug": "offline-blend-planning",
-      "title": "Offline Blend Planning (Process Guide)",
-      "updatedAt": "2026-08-08",
-      "excerpt": "Plan AFK blends with calculator hit rate and fleet scale — without inventing server offline rates.",
+      "title": "Offline Blend Planning (September 2026 Process Guide)",
+      "updatedAt": "2026-09-14",
+      "excerpt": "AFK blend checklist for September 2026: calculator hit rate, fleet scale, and honest offline estimates — no invented server offline rates.",
       "content": [
-        "This is a **process guide** for planning offline or AFK blender runs. It does not claim a fixed in-game offline multiplier or guaranteed cash per hour. Use MiniGameWiki [Blender Calculator](/games/snowcone-stand/blender-planner) estimates as relative comparisons only.",
+        "This is a **process guide** for planning offline or AFK blender runs. It does not claim a fixed in-game offline multiplier or guaranteed cash per hour. Official text confirms blends can finish while you are away; exact offline rates are not published. Use the [Blender Calculator](/games/snowcone-stand/blender-planner) as a relative worksheet only.",
         "## Before you go AFK",
         "- Pick flavor + mutation + totem in the Blender Calculator.",
-        "- Set Perfect hit rate to what you can sustain when active (often 50–80%, not 100%).",
+        "- Set Perfect hit rate to what you can sustain when **active** (often 50–80%, not 100%). Do not assume Perfect taps while AFK.",
         "- Set blender count to how many blenders you will leave running.",
-        "- Set offline hours to your AFK window.",
-        "- Copy the build + link so you can revisit the same assumptions later.",
+        "- Set offline hours to your AFK window and copy the shareable build link.",
+        "- Prefer stable mid-tier combos over max-endgame stacks that only look good at fantasy Perfect rates. Cash context: [make money faster](/games/snowcone-stand/guides/make-money-fast).",
         "## Checklist while you are away",
-        "Confirm blenders are loaded and started. Avoid leaving a build that needs constant Perfect taps if you cannot hit them offline. Prefer stable mid-tier combos over max-endgame setups that only look good at 100% Perfect.",
-        "Note shop stock before AFK — rotating stock can change your next purchase, not your current blend math. See [rotating shop checks](/games/snowcone-stand/guides/rotating-shop-checks).",
+        "Confirm blenders are loaded and started. Note shop stock before AFK — rotating stock changes your next purchase, not the blend already running. See [rotating shop checks](/games/snowcone-stand/guides/rotating-shop-checks).",
         "## After you return",
-        "Compare actual cash gained to the calculator rough offline total. If reality is much lower, lower your hit-rate assumption or blender uptime next time. Log notes for yourself (flavor, hours, result) — we do not store player data.",
-        "Then re-check [codes status](/games/snowcone-stand/codes) and the shop before spending.",
-        "## Related tools",
-        "Start with the [beginner economy loop](/games/snowcone-stand/guides/beginner-economy-loop) if you are still in the first hour. For cash comparisons, stay in the [Blender Calculator](/games/snowcone-stand/blender-planner)."
+        "Compare actual cash gained to the calculator rough offline total. If reality is much lower, lower your hit-rate assumption or blender uptime next time. Log notes for yourself — we do not store player data.",
+        "Then re-check [codes status](/games/snowcone-stand/codes) and the shop before spending. For mutation / totem decisions after AFK cash: [mutation table](/games/snowcone-stand/flavor-mutation-table) and [totem efficiency](/games/snowcone-stand/guides/totem-efficiency).",
+        "## Related",
+        "New players: [beginner economy loop](/games/snowcone-stand/guides/beginner-economy-loop). Timing skill: [Perfect Blend timing](/games/snowcone-stand/guides/perfect-blend-timing)."
       ]
     },
     {
