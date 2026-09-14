@@ -111,8 +111,10 @@ export default function SnowconeStandHubPage() {
         <p className="mt-4 max-w-prose text-muted">
           {snowcone.description} Use the calculator before big upgrades,
           cross-check the mutation table when a new mut drops, and read
-          guides when you want the why — not just the number. This is not an
-          official game wiki.
+          guides when you want the why — not just the number. Data last
+          reviewed {snowcone.dataReviewedAt}; codes checked{" "}
+          {snowcone.codesLastChecked}. September guide refreshes cover cash
+          routine and Perfect timing. This is not an official game wiki.
         </p>
         <p className="mt-3 text-sm text-muted">
           Play on Roblox:{" "}
