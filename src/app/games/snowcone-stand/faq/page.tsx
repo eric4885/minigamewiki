@@ -177,6 +177,52 @@ const faqs: FaqItem[] = [
     ),
   },
   {
+    q: "Did the September 2026 Roblox update change codes or the core loop?",
+    plain:
+      "Roblox shows a place update around 2026-09-01. The public description still confirms the same Perfect / offline / shop / weight loop and still lists no promo codes. Our tools remain planning models — re-check in-game after patches.",
+    a: (
+      <>
+        Roblox shows a place update around 2026-09-01. The public game description still
+        describes the same Perfect timing, offline blending, rotating shop, weight
+        leaderboard, and mutations/totems loop — and still lists no promo codes. Check{" "}
+        <Link
+          href="/games/snowcone-stand/codes"
+          className="text-accent hover:underline"
+        >
+          codes status
+        </Link>{" "}
+        (last checked {snowcone.codesLastChecked}) and treat calculator numbers as
+        planning estimates. Fresh cash routine:{" "}
+        <Link
+          href="/games/snowcone-stand/guides/make-money-fast"
+          className="text-accent hover:underline"
+        >
+          make money faster (September 2026)
+        </Link>
+        .
+      </>
+    ),
+  },
+  {
+    q: "How often do you update this site?",
+    plain:
+      "We refresh codes status on a regular audit schedule, and we refresh guides and dataReviewedAt when the live game or public sources change — not by inventing filler updates.",
+    a: (
+      <>
+        Codes get a dated audit even when the table stays empty. Guides and{" "}
+        <span className="font-mono text-fg">dataReviewedAt</span> move when we
+        re-check the live game or rewrite play advice. See the{" "}
+        <Link
+          href="/games/snowcone-stand/updates"
+          className="text-accent hover:underline"
+        >
+          changelog
+        </Link>{" "}
+        for what changed and when.
+      </>
+    ),
+  },
+  {
     q: "What if a number is wrong after a patch?",
     plain:
       "Use the Contact page with the page URL, what changed in-game, and a screenshot if possible. We update JSON data after verification.",
