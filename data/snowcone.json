@@ -8,9 +8,15 @@
   "dataReviewedAt": "2026-09-14",
   "perfectMult": 1.5,
   "codes": [],
-  "codesLastChecked": "2026-09-14",
-  "codesNote": "As of the last check date, there are no verified active public promo codes for Snowcone Stand. We re-checked the official Roblox game description via public API (universe 10257007695; place last updated 2026-09-01 — description still has no code text), Earnaldo (re-checked Aug 27, 2026: no codes button in gameplay footage; description empty of codes), GameLand Insider, RoUniverse, snowconestand.org, snowcone-stand.wiki, and Services PV (0 / NO ACTIVE CODES). Aggregator gotocodes.com still lists unverified placeholder strings (SWEETTREAT, SUMMERFUN, ICECREAM, FREEMONEY, GEMBOOST, NEWUPDATE); we ignore those. Fan-wiki expired-archive strings remain unverified and are not listed here. We do not invent codes. When a code is verified in-game or posted by the developer, it appears in the active table first.",
+  "codesLastChecked": "2026-09-27",
+  "codesNote": "As of the last check date, there are no verified active public promo codes for Snowcone Stand. We re-checked the official Roblox game description via public API (universe 10257007695; place last updated 2026-09-25 — description still has no code text), Earnaldo (Aug 27 recheck: no codes UI/button), GameLand Insider, snowconestand.org, snowcone-stand.wiki, Services PV (0 codes), and roburo.jp (有効コード 0件). Aggregator gotocodes.com still lists unverified placeholder strings (SWEETTREAT, SUMMERFUN, ICECREAM, FREEMONEY, GEMBOOST, NEWUPDATE); we ignore those. Fan-wiki expired-archive strings remain unverified and are not listed here. We do not invent codes. When a code is verified in-game or posted by the developer, it appears in the active table first.",
   "changelog": [
+    {
+      "date": "2026-09-27",
+      "items": [
+        "Codes audit (2026-09-27): Roblox official description/API after place update 2026-09-25 (still no code text), Earnaldo, GameLand Insider, snowconestand.org, snowcone-stand.wiki, Services PV, roburo.jp (0 active) — still no verified active public codes. Placeholder aggregator strings and unverified fan-wiki expired lists ignored."
+      ]
+    },
     {
       "date": "2026-09-14",
       "items": [
