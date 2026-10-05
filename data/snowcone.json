@@ -8,9 +8,15 @@
   "dataReviewedAt": "2026-09-14",
   "perfectMult": 1.5,
   "codes": [],
-  "codesLastChecked": "2026-09-27",
-  "codesNote": "As of the last check date, there are no verified active public promo codes for Snowcone Stand. We re-checked the official Roblox game description via public API (universe 10257007695; place last updated 2026-09-25 — description still has no code text), Earnaldo (Aug 27 recheck: no codes UI/button), GameLand Insider, snowconestand.org, snowcone-stand.wiki, Services PV (0 codes), and roburo.jp (有効コード 0件). Aggregator gotocodes.com still lists unverified placeholder strings (SWEETTREAT, SUMMERFUN, ICECREAM, FREEMONEY, GEMBOOST, NEWUPDATE); we ignore those. Fan-wiki expired-archive strings remain unverified and are not listed here. We do not invent codes. When a code is verified in-game or posted by the developer, it appears in the active table first.",
+  "codesLastChecked": "2026-10-05",
+  "codesNote": "As of the last check date, there are no verified active public promo codes for Snowcone Stand. We re-checked the official Roblox game description via public API (universe 10257007695; place last updated 2026-09-25 — description still has no code text), Earnaldo (Aug 27 recheck: no codes UI/button), GameLand Insider, snowconestand.org, Services PV (0 codes), and roburo.jp (0 active codes). Aggregator gotocodes.com still lists unverified placeholder strings (SWEETTREAT, SUMMERFUN, ICECREAM, FREEMONEY, GEMBOOST, NEWUPDATE); we ignore those. Discord invite strings are not in-game promo codes. We do not invent codes. When a code is verified in-game or posted by the developer, it appears in the active table first.",
   "changelog": [
+    {
+      "date": "2026-10-05",
+      "items": [
+        "Codes audit (2026-10-05): Roblox official description/API (place last updated 2026-09-25, still no code text), Earnaldo, GameLand Insider, snowconestand.org, Services PV, roburo.jp (0 active) — still no verified active public codes. Placeholder aggregator strings ignored; Discord invites are not promo codes."
+      ]
+    },
     {
       "date": "2026-09-27",
       "items": [
